@@ -928,10 +928,12 @@ select {
 
   .column,
   .columns {
-    position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    float: left; }
+	position: relative;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	float: left;
+	left: 0;
+}
 
   .large-1 {
     width: 8.33333%; }
