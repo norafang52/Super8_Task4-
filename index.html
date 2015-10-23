@@ -4,15 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Foundation | Welcome</title>
+<link rel="stylesheet" href="css/registration.css" />
 <link rel="stylesheet" href="css/foundation.css" />
 <link rel="stylesheet" href="css/custom.css" />
-<link rel="stylesheet" href="css/registration.css" />
 <script src="js/vendor/modernizr.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/objectVisibility.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/textboxBehavior.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/formValidation.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/grayOut.js"></script>
-<script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
 <div class="row">
@@ -27,7 +26,7 @@
         <nav class="top-bar" data-topbar>
           <div class="large-2 columns"> <a href="index.html"><img src="images/upmc_logo.jpg"></a> </div>
           <div class="large-8 columns">
-            <input type="search" maxlength="200"  name="searchTerm" placeholder="What are you looking for?" autocomplete="off" autocapitalize="off" autocorrect="off" data-options='{"limit":3}'
+            <input type="search" name="searchTerm" placeholder="What are you looking for?" autocomplete="off" autocapitalize="off" autocorrect="off" data-options="{'limit':3}"
 						data-touch-text="What are you looking for?" maxlength="100"/>
           </div>
           <div class="large-2 columns">
@@ -43,16 +42,16 @@
           <section class="top-bar-section">
             <ul class="left">
               <li class="divider"></li>
-              <li class="has-dropdown"> <a href="#">Menu</a>
+              <li class="has-dropdown"><a href="#">Menu</a>
                 <ul class="dropdown">
-                  <li><a href="#">Allergy & Asthma</a></li>
-                  <li><a href="#">Braces & Support</a></li>
-                  <li><a href="#">Cough, Cold & Flu</a></li>
-                  <li><a href="#">Digestive Health</a></li>
-                  <li><a href="#">First Aid</a></li>
-                  <li><a href="#">Pain & Fever</a></li>
-                  <li><a href="#">Sleep & Snoring Aids</a></li>
-                  <li><a href="#">Stop Smoking</a></li>
+                  <li><a href="searchResultPage.html">Allergy & Asthma</a></li>
+                  <li><a href="searchResultPage.html">Braces & Support</a></li>
+                  <li><a href="searchResultPage.html">Cough, Cold & Flu</a></li>
+                  <li><a href="searchResultPage.html">Digestive Health</a></li>
+                  <li><a href="searchResultPage.html">First Aid</a></li>
+                  <li><a href="searchResultPage.html">Pain & Fever</a></li>
+                  <li><a href="searchResultPage.html">Sleep & Snoring Aids</a></li>
+                  <li><a href="searchResultPage.html">Stop Smoking</a></li>
                 </ul>
               </li>
               
@@ -60,7 +59,7 @@
             <ul class="right">
               <li class="divider"></li>
               <li >
-                <div id="loginContainer" style="color:white">Hello Guest!<a href = "javascript:void(0)" title="Account Registration" target="_blank" id="map_canvas" 	onclick = "document.getElementById('loginContainerSub').style.display='block'" style="color:white" >Login ▼</a> </div>
+                <div id="loginContainer" style="color:white">Hello Guest!<a  title="Account Registration" target="_blank" id="map_canvas" 	onclick = "document.getElementById('loginContainerSub').style.display='block'" style="color:white" >Login ▼</a> </div>
                 <div id="loginContainerSub" class="white_contentLogin">
                   <div id="loginStepContainer">
                     <div> <strong>Email</strong><br />
@@ -87,7 +86,7 @@
               <li class="divider"></li>
               <li class="divider"></li>
               <li>
-                <div id="registerContainer"> <a href = "javascript:void(0)" title="Account Registration" target="_blank" onclick = "document.getElementById('registerContainerSub').style.display='block'"  style="color:white">Register</a> </div>
+                <div id="registerContainer"> <a title="Account Registration" target="_blank" onclick = "document.getElementById('registerContainerSub').style.display='block'"  style="color:white">Register</a> </div>
                 <div id="registerContainerSub" class="white_content">
                   <table width="625" border="0" cellpadding="0" cellspacing="0">
                     <tr>
