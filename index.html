@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="no-js" lang="en">
 <head>
 <meta charset="utf-8" />
@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="css/registration.css" />
 <link rel="stylesheet" href="css/foundation.css" />
 <link rel="stylesheet" href="css/custom.css" />
-<script src="js/vendor/modernizr.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/objectVisibility.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/textboxBehavior.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/formValidation.js"></script>
@@ -59,29 +58,33 @@
             <ul class="right">
               <li class="divider"></li>
               <li >
-                <div id="loginContainer" style="color:white">Hello Guest!<a  title="Account Registration" target="_blank" id="map_canvas" 	onclick = "document.getElementById('loginContainerSub').style.display='block'" style="color:white" >Login ▼</a> </div>
-                <div id="loginContainerSub" class="white_contentLogin">
-                  <div id="loginStepContainer">
-                    <div> <strong>Email</strong><br />
-                      <input name="txtUsername" type="text" class="initValStyle" id="txtUsername" placeholder="Type your email here" onfocus="onFocus(this, 'type your email here')" onblur="onBlur(this)" value="type your email here" size="35" />
-                    </div>
-                    <br />
-                    <div> <strong>Password</strong><br />
-                      <input name="txtPassword" type="password" id="txtPassword" placeholder="password"  size="35" >
-                    </div>
-                    <div>
-                      <input type="checkbox" style="color:white"/>
-                      Remember me </div>
-                    <form method="post" action="index.html">
-                      <div>
-                        <input name="btnLogin" type="submit" id="btnLogin" value="Login" />
-                        <br />
-                      </div>
-                    </form>
-                    <div id="assistMessage"> <a href="under_construction.html" style="color:white">Forgot your password?</a> OR <br />
-                      <a href="#" onclick="showObj('registerHolder'); grayOut(true)" style="color:white">Register</a> It’s free </div>
-                  </div>
-                </div>
+          <a href="#" onclick="toggleObjFading('loginContainer', false)">Login ▼</a>
+              <div id="loginContainer" class="white_contentLogin">                   
+              <script type="text/javascript">fadeOutObj('loginContainer', 1);</script> 
+								<div id="loginStepContainer">
+									<div>
+										<strong>Email</strong><br />
+										<input name="txtUsername" type="text" class="initValStyle" id="txtUsername" placeholder="Type your email here" onfocus="onFocus(this, 'type your email here')" onblur="onBlur(this)" value="type your email here" size="35" />
+									</div>
+									<br />
+									<div>
+										<strong>Password</strong><br />
+										<input name="txtPassword" type="password" id="txtPassword" placeholder="password"  size="35" >
+									</div>
+									<div>
+										<input type="checkbox" style="color:white"/> Remember me
+									</div>
+									<form method="post" action="index.html">
+										<div>
+											<input name="btnLogin" type="submit" id="btnLogin" value="Login" /><br />
+										</div>
+									</form>
+									<div id="assistMessage">
+										<a href="under_construction.html" style="color:white">Forgot your password?</a> OR <br />
+										<a href="#" onclick="showObj('registerHolder'); grayOut(true)" style="color:white">Register</a> It’s free
+									</div>
+								</div>
+              </div>
               </li>
               <li class="divider"></li>
               <li class="divider"></li>
