@@ -10,20 +10,6 @@
 <script type="text/javascript" src="../Super8_Task4-/script/textboxBehavior.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/formValidation.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/grayOut.js"></script>
-   <script>
-  $(document).foundation({
-    tab: {
-      callback : function (tab) {
-        console.log(tab);
-      }
-    }
-  });
-</script>
-<script>
-  $('#myTabs').on('toggled', function (event, tab) {
-    console.log(tab);
-  });
-</script>
     <script>
 function showHide1() {
       document.getElementById("panel2-1").style.display = "block";
@@ -50,7 +36,6 @@ function showHide1() {
           document.getElementById("panel2-3").style.display = "none";
           document.getElementById("panel2-1").style.display = "none";
         }
-		
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
 }
@@ -73,7 +58,6 @@ function MM_swapImage() { //v3.0
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
     </script>
- 
 </head>
 
 <body onLoad="MM_preloadImages('images/vitamin2_1.jpg')">
@@ -122,8 +106,9 @@ function MM_swapImage() { //v3.0
         <ul class="right">
           <li class="divider"></li>
           <li >
-  <div id="loginContainer" style="color:white">Hello Mike!<a href = "javascript:void(0)" title="Account Registration" target="_blank" id="map_canvas" 	onclick = "document.getElementById('loginContainerSub').style.display='block'" style="color:white" >Login ▼</a> </div>
-              <div id="loginContainerSub" class="white_contentLogin">                   
+          <a href="#" onclick="toggleObjFading('loginContainer', false)">Login ▼</a>
+              <div id="loginContainer" class="white_contentLogin">                   
+              <script type="text/javascript">fadeOutObj('loginContainer', 1);</script> 
 								<div id="loginStepContainer">
 									<div>
 										<strong>Email</strong><br />
