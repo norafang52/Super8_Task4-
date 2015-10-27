@@ -25,7 +25,7 @@ function multiply(quantiBox1,quantiBox2,total) {
 	var tot2 = tot + tot1;
 	var totalObj = document.getElementById(total);
 	totalObj.style.color = 'black';
-	totalObj.innerHTML = "$"+tot2;
+	totalObj.innerHTML = "Total: $"+tot2;
 	totalObj.style.display = 'block';
 }
 </script>
@@ -199,18 +199,18 @@ function multiply(quantiBox1,quantiBox2,total) {
       <a href="product detail_1.html">
       <img src="images/vitamin1_related1.jpg" width = "200" > <img src="images/vitamin1_related2.jpg" width =" 200" > <img src="images/vitamin1_related3.jpg" width = "200" > <img src="images/vitamin1_related4.jpg" width = "200" > </a> </div>
     <div class="large-8 columns">
-      <div class="row">
+<!--      <div class="row" style="margin-right:auto">
         <div class="large-2 columns small-3"> <img/> </div>
-        <div class="large-3 columns" style="align-self:left">
-          <p><a href="#">Product Name</a></p>
+        <div class="large-2 columns small-3 text-left" style="align-self:left">
+          <p>Product Name</p>
         </div>
-        <div class="large-3 columns" style="text-align:left">
-          <p><a href="#">Price</a></p>
+        <div class="large-3 columns text-left" style="text-align:left">
+          <p>Price</p>
         </div>
-        <div class="small-2 columns" style="align-self:flex-start">
-          <p><a href="#">Qty</a></p>
+        <div class="small-2 columns text-left" style="align-self:flex-start">
+          <p>Qty</p>
         </div>
-      </div>
+      </div>-->
       <div class="row">
         <hr/>
         <div class="row" style="margin-right:auto">
@@ -225,6 +225,9 @@ function multiply(quantiBox1,quantiBox2,total) {
            <!-- <input id="quantityBox"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="alert("hi");" />-->
            <input id="quantiBox1"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply('quantiBox1','quantiBox2','total')" />
           </div>
+          <div class="small-2 columns" style="align-self:flex-start">
+          	<a href="#0" class="button tiny button alert">Remove</a>
+          </div>
         </div>
         <hr/>
         <div class="row" style="margin-right:auto">
@@ -238,9 +241,12 @@ function multiply(quantiBox1,quantiBox2,total) {
           <div class="small-2 columns" style="align-self:flex-start">
             <input id="quantiBox2" type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply('quantiBox1', 'quantiBox2','total')"/>
           </div>
+          <div class="small-2 columns" style="align-self:flex-start">
+          	<a href="#0" class="button tiny button alert">Remove</a>
+          </div>
         </div>
         <hr/>
-        <h5 class="content"> <div id="total" style="display:block; color:black;" >$27.98</div></h5>
+        <h5 class="content"> <div id="total" style="display:block; color:black;" >Total: $27.98</div></h5>
         <hr/>
         <a href="checkout - Address1.html" class="button">Check Out</a> </div>
     </div>
