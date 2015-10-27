@@ -10,6 +10,20 @@
 <script type="text/javascript" src="../Super8_Task4-/script/textboxBehavior.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/formValidation.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/grayOut.js"></script>
+ <script>
+  $(document).foundation({
+    tab: {
+      callback : function (tab) {
+        console.log(tab);
+      }
+    }
+  });
+</script>
+<script>
+  $('#myTabs').on('toggled', function (event, tab) {
+    console.log(tab);
+  });
+</script>
     <script>
 function showHide1() {
       document.getElementById("panel2-1").style.display = "block";
@@ -58,6 +72,7 @@ function MM_swapImage() { //v3.0
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
     </script>
+   
 </head>
 
 <body onLoad="MM_preloadImages('images/vitamin2_1.jpg')">
@@ -379,13 +394,13 @@ function MM_swapImage() { //v3.0
         <hr/>
         <div class="large-12 columns">	
       
-        	<ul class="tabs" data-tab role="tablist">
-              <li class="tab-title active" role="presentation"><a href="#" onclick="showHide1()" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1" >Details</a></li>
-              <li class="tab-title" role="presentation"><a href="#" onclick="showHide2()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-2">Ingredients</a></li>
-              <li class="tab-title" role="presentation"><a href="#" onclick="showHide3()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-3">Reviews</a></li>
-              <li class="tab-title" role="presentation"><a href="#" onclick="showHide4()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-4">Directions</a></li>
+        	<ul class="tabs" data-tab role="tablist" >
+              <li class="tab-title active" role="presentation"><a href="#panel2-1" onclick="showHide1()" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1" >Details</a></li>
+              <li class="tab-title" role="presentation"><a href="#panel2-2" onclick="showHide2()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-2">Ingredients</a></li>
+              <li class="tab-title" role="presentation"><a href="#panel2-3" onclick="showHide3()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-3">Reviews</a></li>
+              <li class="tab-title" role="presentation"><a href="#panel2-4" onclick="showHide4()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-4">Directions</a></li>
             </ul><div class="tabs-content">
-              <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+              <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1" >
    				<style>.nutrition-facts {float:left; width:609px; font:normal 16px/17px Arial, Helvetica, sans-serif; color:#585858;}
 						.nutrition-facts h3 { font-size:16px; font-weight:bold; margin:0 0 10px 0; padding:0}
 						.orange-area{ padding:13px 0 9px 10px; background:#fbf8e7; font-size:12px; border:solid 1px #d7d7d7; border-bottom:0;}
