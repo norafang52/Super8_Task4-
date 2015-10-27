@@ -6,30 +6,11 @@
 <title>UPMC Pharmacy</title>
 <link rel="stylesheet" href="css/registration.css" />
 <link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="cssCustom/style.css"/>
 <script type="text/javascript" src="../Super8_Task4-/script/objectVisibility.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/textboxBehavior.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/formValidation.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/grayOut.js"></script>
-<script>
-function multiply(quantiBox1,quantiBox2,total) {
-	
-	var objtxtNumber1 = document.getElementById(quantiBox1);
-	
-	var objtxtNumber2 = document.getElementById(quantiBox2);
-	var a = objtxtNumber2.value;
-	if(a.length==0) {
-		a = 1;
-	}
-	var tot = objtxtNumber1.value * 13.99; 
-	var tot1 = a * 13.99;
-	var tot2 = tot + tot1;
-	var totalObj = document.getElementById(total);
-	totalObj.style.color = 'black';
-	totalObj.innerHTML = "Total: $"+tot2;
-	totalObj.style.display = 'block';
-}
-</script>
-<script type="text/javascript" src ="../Super8_Task4-/js/test.js"></script>
 </head>
 
 <body>
@@ -184,74 +165,80 @@ function multiply(quantiBox1,quantiBox2,total) {
   </div>
 </div>
 
-<div class="row">
-    <div class="large-4 small-12 columns">
-      <div class="hide-for-small panel">
-        <h3>My Cart</h3>
+      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css' class="small-offset-5">
+<body>
+<div class = "large-12 columns">
+	<div class="row">
+<div id="wrap">
+	<div id="accordian">
+
+
+
+ 		<div class="step" id="step5">
+
+			<div class="title">
+				<h3>Order complete! Thank you for shopping at UPMC!</h3></br>
+
+
+			</div>
+
+		</div>
+		<div class="content" id="final_products">
+            <div class="title">
+              <font size="5" face="verdana" color="grey">Order Detail:</font><br />
+
       </div>
-      
-      <div class="panel callout radius">
-        <h6>2 items in your cart</h6>
-      </div>
-      <div class="panel callout radius">
-        <h6>You may also like</h6>
-      </div>
-      <a href="product detail_1.html">
-      <img src="images/vitamin1_related1.jpg" width = "200" > <img src="images/vitamin1_related2.jpg" width =" 200" > <img src="images/vitamin1_related3.jpg" width = "200" > <img src="images/vitamin1_related4.jpg" width = "200" > </a> </div>
-    <div class="large-8 columns">
-<!--      <div class="row" style="margin-right:auto">
-        <div class="large-2 columns small-3"> <img/> </div>
-        <div class="large-2 columns small-3 text-left" style="align-self:left">
-          <p>Product Name</p>
-        </div>
-        <div class="large-3 columns text-left" style="text-align:left">
-          <p>Price</p>
-        </div>
-        <div class="small-2 columns text-left" style="align-self:flex-start">
-          <p>Qty</p>
-        </div>
-      </div>-->
-      <div class="row">
-        <hr/>
-        <div class="row" style="margin-right:auto">
-          <div class="large-2 columns small-3"> <a href="product detail_1.html"><img src="images/vitamin1.jpg"/></a> </div>
-          <div class="large-3 columns" style="text-align:left">
-            <p><a href="product detail_1.html"><strong>Prevagen </strong></a></p>
-          </div>
-          <div class="large-3 columns" style="text-align:left">
-            <p>$13.99</p>
-          </div>
-          <div class="small-2 columns" style="align-self:flex-start">
-           <!-- <input id="quantityBox"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="alert("hi");" />-->
-           <input id="quantiBox1"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply('quantiBox1','quantiBox2','total')" />
-          </div>
-          <div class="small-2 columns" style="align-self:flex-start">
-          	<a href="#0" class="button tiny button alert">Remove</a>
-          </div>
-        </div>
-        <hr/>
-        <div class="row" style="margin-right:auto">
-          <div class="large-2 columns small-3"><a href="product detail_2.html"><img src="images/vitamin3.jpg"/></a></div>
-          <div class="large-3 columns" style="text-align:left">
-            <p><a href="product detail_2.html"><strong>Natures Bounty</strong></a></p>
-          </div>
-          <div class="large-3 columns" style="text-align:left">
-            <p>$13.99</p>
-          </div>
-          <div class="small-2 columns" style="align-self:flex-start">
-            <input id="quantiBox2" type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply('quantiBox1', 'quantiBox2','total')"/>
-          </div>
-          <div class="small-2 columns" style="align-self:flex-start">
-          	<a href="#0" class="button tiny button alert">Remove</a>
-          </div>
-        </div>
-        <hr/>
-        <h5 class="content"> <div id="total" style="display:block; color:black;" >Total: $27.98</div></h5>
-        <hr/>
-        <a href="checkout - Address1.html" class="button">Check Out</a> </div>
-    </div>
-  </div>
+			<div class="left" id="ordered">
+				<div class="products">
+					<div class="product_image"> <a href="product detail_1.html"><img src="images/vitamin1.jpg"/></a>
+					</div>
+					<div class="product_details">
+						<span class="product_name">Prevagen</span>
+						<span class="quantity">1</span>
+						<span class="price">$39.99</span>
+					</div>
+				</div>
+				<div class="totals">
+					<span class="subtitle">Subtotal <span id="sub_price">$39.99</span></span>
+					<span class="subtitle">Tax <span id="sub_tax">$2.00</span></span>
+					<span class="subtitle">Shipping <span id="sub_ship">$4.00</span></span>
+				</div>
+				<div class="final">
+					<span class="title">Total <span id="calculated_total">$45.99</span></span>
+				</div>
+			</div>	
+			<div class="right" id="reviewed">
+				<div class="billing">
+					<span class="title">Billing:</span>
+					<div class="address_reviewed">
+						<span class="name">John Smith</span>
+						<span class="address">123 Main Street</span>
+						<span class="location">Everytown, USA, 12345</span>
+						<span class="phone">(123)867-5309</span>
+					</div>
+				</div>
+				<div class="shipping">
+					<span class="title">Shipping:</span>
+					<div class="address_reviewed">
+						<span class="name">John Smith</span>
+						<span class="address">123 Main Street</span>
+						<span class="location">Everytown, USA, 12345</span>
+						<span class="phone">(123)867-5309</span>
+					</div>
+				</div>
+				<div class="payment">
+					<span class="title">Payment:</span>
+					<div class="payment_reviewed">
+						<span class="method">Visa</span>
+						<span class="number_hidden">xxxx-xxxx-xxxx-1111</span>
+					</div>
+				</div>
+
+
+
 </div>
+
 
 <footer class="row">
         <div class="large-12 columns">
