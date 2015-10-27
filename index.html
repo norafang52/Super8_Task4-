@@ -4,6 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Foundation | Welcome</title>
+<link rel="stylesheet" href="css/script.css"/>
 <link rel="stylesheet" href="css/registration.css" />
 <link rel="stylesheet" href="css/foundation.css" />
 <link rel="stylesheet" href="css/custom.css" />
@@ -30,7 +31,7 @@
           </div>
           <div class="large-2 columns">
           <a href="searchResultPage.html">
-            <input id="goButton" type="submit" value="go"/></a>
+            <input id="goButton" type="submit" value="Search"/></a>
           </div>
         </nav>
       </div>
@@ -53,38 +54,44 @@
                   <li><a href="searchResultPage.html">Stop Smoking</a></li>
                 </ul>
               </li>
+			  <li class="divider"></li>
+			  <li><a href="http://www.upmc.com/Pages/default.aspx">About Us</a></li>
+			  <li class="divider"></li>
+			  <li class="has-dropdown"><a href="#">Contact Us</a>
+                <ul class="dropdown">
+                    <li><a href="#"><strong>UPMC</strong>, 200 Lothrop St, Pittsburgh, PA 15213<br></a></li>
+					<li><a href="#"><strong>Phone</strong>: (412) 647-8762<br></a></li>
+					<li><a href="#"><strong>E-mail</strong>: info@UPMCpharmarcy.com</a></li>
+                </ul>
+              </li>
               
             </ul>
             <ul class="right">
               <li class="divider"></li>
-              <li >
-          <a href="#" onclick="toggleObjFading('loginContainer', false)">Login ▼</a>
-              <div id="loginContainer" class="white_contentLogin">                   
-              <script type="text/javascript">fadeOutObj('loginContainer', 1);</script> 
-								<div id="loginStepContainer">
-									<div>
-										<strong>Email</strong><br />
-										<input name="txtUsername" type="text" class="initValStyle" id="txtUsername" placeholder="Type your email here" onfocus="onFocus(this, 'type your email here')" onblur="onBlur(this)" value="type your email here" size="35" />
-									</div>
-									<br />
-									<div>
-										<strong>Password</strong><br />
-										<input name="txtPassword" type="password" id="txtPassword" placeholder="password"  size="35" >
-									</div>
-									<div>
-										<input type="checkbox" style="color:white"/> Remember me
-									</div>
-									<form method="post" action="index.html">
-										<div>
-											<input name="btnLogin" type="submit" id="btnLogin" value="Login" /><br />
-										</div>
-									</form>
-									<div id="assistMessage">
-										<a href="under_construction.html" style="color:white">Forgot your password?</a> OR <br />
-										<a href="#" onclick="showObj('registerHolder'); grayOut(true)" style="color:white">Register</a> It’s free
-									</div>
-								</div>
-              </div>
+              <li>
+                <div id="loginContainer" style="color:white">Hello Mike!<a  title="Account Registration" target="_blank" id="map_canvas" 	onclick = "document.getElementById('loginContainerSub').style.display='block'" style="color:white" >Login ▼</a> </div>
+                <div id="loginContainerSub" class="white_contentLogin">
+                  <div id="loginStepContainer">
+                    <div> <strong>Email</strong><br />
+                      <input name="txtUsername" type="text" class="initValStyle" id="txtUsername" placeholder="Type your email here" onfocus="onFocus(this, 'type your email here')" onblur="onBlur(this)" value="type your email here" size="35" />
+                    </div>
+                    <br />
+                    <div> <strong>Password</strong><br />
+                      <input name="txtPassword" type="password" id="txtPassword" placeholder="password"  size="35" >
+                    </div>
+                    <div>
+                      <input type="checkbox" style="color:white"/>
+                      Remember me </div>
+                    <form method="post" action="index.html">
+                      <div>
+                        <input name="btnLogin" type="submit" id="btnLogin" value="Login" />
+                        <br />
+                      </div>
+                    </form>
+                    <div id="assistMessage"> <a href="under_construction.html" style="color:white">Forgot your password?</a> OR <br />
+                      <a href="#" onclick="showObj('registerHolder'); grayOut(true)" style="color:white">Register</a> It’s free </div>
+                  </div>
+                </div>
               </li>
               <li class="divider"></li>
               <li class="divider"></li>
@@ -172,14 +179,51 @@
         <img src="images/banner3.jpg" height="500"> </div>
       <div class="large-6 columns">
         <div class="panel">
-          <h4 class="hide-for-small">Care and Convenience
+          <h4 class="hide-for-small"><strong>Why Choose UPMC Medicines ?</strong>
             <hr/>
           </h4>
-          <div class="bodytext">At UPMC Medicines Inc. we have a proud tradition of 25 years of excellence! This tradition has helped us be a consistent leader in the pharmaceutical field, with over 35 independent certification agencies guaranteeing our drugs to 90% of the countries in the world. Learn more about our promise of excellency to you and how we are your health partner and more..</div>
+		  <div class="caption">
+			  <h6 class="subheader">At UPMC Medicines Inc. we have a proud tradition of 25 <strong>years of excellence!</strong></h6>
+			  <h6 class="subheader">With over 35 independent <strong>certification agencies</strong> guaranteeing our drugs to 90% of 
+		  the countries in the world.</h6>
+			  <h6 class="subheader">Learn more about <strong>our promise</strong> of excellency to you and
+		  how we are your health partner and more..</h6>
+			</div>
+          <!-- <div class="bodytext">
+		  At UPMC Medicines Inc. we have a proud tradition of 25 years of excellence!
+		  This tradition has helped us be a consistent leader in the pharmaceutical field, 
+		  with over 35 independent <strong>certification agencies</strong> guaranteeing our drugs to 90% of 
+		  the countries in the world. Learn more about our promise of excellency to you and
+		  how we are your health partner and more..
+		  </div> -->
         </div>
         <div class="row">
-          <div class="large-6 small-6 columns"> <a href="under_construction.html"><img src="images/banner1.png"></a> </div>
-          <div class="large-6 small-6 columns"> <a href="under_construction.html"><img src="images/banner2.png"></a> </div>
+        <div class="large-6 small-6 columns"> 
+		    <a href="product detail_1.html">
+            <div class="image-wrapper overlay-fade-in">					  
+			  <!-- <img src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1" /> -->
+			  <img src="images/banner1.png"/>					  
+			  <div class="image-overlay-content">
+				<h2>BUY 1, GET 1</h2>
+				<p class="price">FREE</p>
+				<!-- <a href="images/vitamin3.jpg" class="button">Get it</a> -->
+			  </div>                      					  
+			</div>
+            </a>			
+		</div>
+        <div class="large-6 small-6 columns"> 
+		    <a href="product detail_2.html">
+			<div class="image-wrapper overlay-fade-in">					  
+			  <!-- <img src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1" /> -->
+			  <img src="images/banner2.png"/>					  
+			  <div class="image-overlay-content">
+				<h2>BUY 1, GET 1</h2>
+				<p class="price">50% OFF</p>
+				<!-- <a href="images/vitamin3.jpg" class="button">Get it</a> -->
+			  </div>                      					  
+			</div>
+			</a> 
+		</div>
         </div>
       </div>
     </div>
@@ -205,8 +249,64 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="large-3 small-6 columns"> <a href="product detail_1.html"><img src="images/vitamin1.jpg"></a>
+	            <div class="row">			    
+				  <div class="large-3 small-6 columns">
+				    <a href="product detail_1.html">
+					<div class="image-wrapper overlay-fade-in">					  
+					  <!-- <img src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1" /> -->
+                      <img src="images/vitamin1.jpg"/>					  
+					  <div class="image-overlay-content">
+						<h2>Prevagen</h2>
+						<p class="price">$39.99</p>
+						<!-- <a href="images/vitamin1.jpg" class="button">Get it</a> -->
+					  </div>                      					  
+					</div>
+                    </a>					
+				  </div>
+                  <div class="large-3 small-6 columns">
+				    <a href="product detail_2.html">
+					<div class="image-wrapper overlay-fade-in">					  
+					  <!-- <img src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1" /> -->
+                      <img src="images/vitamin2.jpg"/>					  
+					  <div class="image-overlay-content">
+						<h2>Natures Bounty</h2>
+						<p class="price">$9.99</p>
+						<!-- <a href="images/vitamin2.jpg" class="button">Get it</a> -->
+					  </div>                      					  
+					</div>
+                    </a>				
+				  </div> 
+				  
+				 <div class="large-3 small-6 columns">
+				    <a href="product detail_1.html">
+					<div class="image-wrapper overlay-fade-in">					  
+					  <!-- <img src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1" /> -->
+                      <img src="images/vitamin3.jpg"/>					  
+					  <div class="image-overlay-content">
+						<h2>Gummies</h2>
+						<p class="price">$14.99</p>
+						<!-- <a href="images/vitamin3.jpg" class="button">Get it</a> -->
+					  </div>                      					  
+					</div>
+                    </a>		
+				  </div>
+				 <div class="large-3 small-6 columns">
+				    <a href="product detail_2.html">
+					<div class="image-wrapper overlay-fade-in">					  
+					  <!-- <img src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1" /> -->
+                      <img src="images/vitamin5.jpg"/>					  
+					  <div class="image-overlay-content">
+						<h2>Nova Homeopathic</h2>
+						<p class="price">$16.29</p>
+						<!-- <a href="images/vitamin4.jpg" class="button">Get it</a> -->
+					  </div>                      					  
+					</div>
+                    </a>				
+				  </div>
+		    </div>
+<!--     <div class="row">
+      <div class="large-3 small-6 columns">
+	    <a href="product detail_1.html"><img src="images/vitamin1.jpg"></a>
         <div class="row"> </br>
         </div>
         <div class="panel">
@@ -238,25 +338,25 @@
           <h6 class="subheader">$14.99</h6>
         </div>
       </div>
-    </div>
-    <footer class="row">
-      <div class="large-12 columns">
-        <hr/>
-        <div class="row">
-          <div class="large-6 columns">
-            <p>© Copyright no one at all. Go to town.</p>
-          </div>
-          <div class="large-6 columns">
-            <ul class="inline-list right">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-              <li><a href="#">Link 4</a></li>
-            </ul>
+    </div> -->
+	
+        <footer class="row">
+        <div class="large-12 columns">
+          <hr>
+          <div class="row">
+            <div class="large-6 columns">
+              <p>© Copyright Super Eight.</p>
+            </div>
+            <div class="large-6 columns">
+              <ul class="inline-list right">
+                <li><a href="under_construction.html">Terms of Use</a></li>
+                <li><a href="under_construction.html">Accessibility</a></li>
+                <li><a href="under_construction.html">Privacy Policy</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+        </footer>
   </div>
 </div>
 </body>
