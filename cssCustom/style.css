@@ -367,7 +367,7 @@ form.go-right input:focus + label.same{
 #accordian #reviewed .shipping .address_reviewed,
 #accordian #reviewed .payment .payment_reviewed{
   color:#aaa;
-  font-size:1.5em;
+  font-size:1.2em;
   height:80px;
   width:50%;
   float:left;
