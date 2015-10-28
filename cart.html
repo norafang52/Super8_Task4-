@@ -17,6 +17,48 @@ function goBack() {
     window.history.back();
 }
 </script>
+<script>
+function multiply() {
+	
+	var objtxtNumber1 = document.getElementById("quantiBox1");
+	
+	var objtxtNumber2 = document.getElementById("quantiBox2");
+	var a = objtxtNumber2.value;
+	if(a == '') {
+		a = 1;
+	}
+	var b = objtxtNumber1.value;
+	if (b == '') {
+		b = 1;
+	}
+	var priceObj1 = document.getElementById("price1");
+	var priceNum1 = b * 12.5;
+	var priceNum2 = a * 35;
+	
+	priceObj1.innerHTML = "$ "+priceNum1;
+	var priceObj2 = document.getElementById("price2");
+	priceObj2.innerHTML = "$ "+priceNum2;
+	var tot1 = b * 12.5 + a * 35;
+	
+	var add = tot1 * 0.07;
+	var tot2 = tot1 + add;
+	
+	var subtotalObj = document.getElementById("subtotal");	
+	subtotalObj.innerHTML = "$ "+tot1;
+	
+	var taxObj = document.getElementById("tax");
+	var add2 = add.toFixed(2);
+	taxObj.innerHTML = "$ "+add2;
+	
+	var totalObj = document.getElementById("total");
+	totalObj.style.color = 'black';
+	var tot22 = tot2.toFixed(2);
+	totalObj.innerHTML = "$ "+tot22;
+	
+	
+	totalObj.style.display = 'block';
+}
+</script>
 </head>
 
 <body>
@@ -178,16 +220,16 @@ function goBack() {
       <td class="thumbnail"><img src="images/vitamin1.jpg"/></td>
       <td class="product-name">Natures Bounty</td>
       <td class="unit-price">&#36; 12.50</td>
-      <td class="quantity"><input type="text" value="1" onfocus="if(this.value=='1'){this.value=''};" onblur="if(this.value==''){this.value='1'};" class="input-text cart-field"></td>
-      <td class="price">&#36; 25</td>
+      <td class="quantity"><input id="quantiBox1"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="price" id="price1">&#36; 12.5</td>
     </tr>
     <tr class="last">
       <td class="remove"><a href="#"><img src="images/delete_icon.png" border="0"/></a></td>
       <td class="thumbnail"><img src="images/vitamin3.jpg"/></td>
       <td class="product-name">Prevagen</td>
       <td class="unit-price">&#36; 35</td>
-      <td class="quantity"><input type="text" value="1" onfocus="if(this.value=='1'){this.value=''};" onblur="if(this.value==''){this.value='1'};" class="input-text cart-field"></td>
-      <td class="price">&#36; 35</td>
+      <td class="quantity"><input id="quantiBox2"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="price" id="price2">&#36; 35</td>
     </tr>
     <tr class="promo">
       <td colspan="4" class="unit-price"><span class="grey">Enter promo code</span></td>
@@ -197,17 +239,17 @@ function goBack() {
     <tr>
       <td colspan="4" class="unit-price"></td>
       <td class="quantity"><span class="summary">Subtotal</span></td>
-      <td class="price"><span class="summary">&#36; 60</span></td>
+      <td class="price" id="subtotal">&#36; 60</td>
     </tr>
     <tr>
       <td colspan="4" class="unit-price"></td>
       <td class="quantity"><span class="summary">Collected Tax</span></td>
-      <td class="price"><span class="summary">&#36; 4.2</span></td>
+      <td class="price" id="tax">&#36; 4.2</td>
     </tr>
     <tr>
       <td colspan="4" class="unit-price"></td>
       <td class="quantity"><span class="summary">Total</span></td>
-      <td class="price"><span class="summary">&#36; 64.2</span></td>
+      <td class="price" id="total">&#36; 64.2</td>
     </tr>
   </table>
   <div class="row">
