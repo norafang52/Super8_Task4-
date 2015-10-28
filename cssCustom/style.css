@@ -6,7 +6,7 @@
 body{
   padding:0;
   margin:0;
-  background: url(http://subtlepatterns.com/patterns/scribble_light.png) #FFF;
+  background: url() #FFF;
   font-size:62.5%;
   font-family: 'Open Sans', sans-serif;
 }
@@ -205,6 +205,10 @@ form.go-right input:focus + label.same{
   width:50%;
   float:left;
 }
+#accordian .right1{
+  width:88%;
+  float:right;
+}
 #accordian #payment label{
   display:inline-block;
 }
@@ -367,7 +371,7 @@ form.go-right input:focus + label.same{
 #accordian #reviewed .shipping .address_reviewed,
 #accordian #reviewed .payment .payment_reviewed{
   color:#aaa;
-  font-size:1.2em;
+  font-size:1.5em;
   height:80px;
   width:50%;
   float:left;
