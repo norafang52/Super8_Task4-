@@ -4,6 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>UPMC Pharmacy</title>
+<link rel="stylesheet" href="css/script.css"/>
+<link rel="stylesheet" href="css/registration.css" />
 <link rel="stylesheet" href="css/registration.css" />
 <link rel="stylesheet" href="css/foundation.css" />
 <script type="text/javascript" src="../Super8_Task4-/script/objectVisibility.js"></script>
@@ -11,25 +13,52 @@
 <script type="text/javascript" src="../Super8_Task4-/script/formValidation.js"></script>
 <script type="text/javascript" src="../Super8_Task4-/script/grayOut.js"></script>
 <script>
-function multiply(quantiBox1,quantiBox2,total) {
+function goBack() {
+    window.history.back();
+}
+</script>
+<script>
+function multiply() {
 	
-	var objtxtNumber1 = document.getElementById(quantiBox1);
+	var objtxtNumber1 = document.getElementById("quantiBox1");
 	
-	var objtxtNumber2 = document.getElementById(quantiBox2);
+	var objtxtNumber2 = document.getElementById("quantiBox2");
 	var a = objtxtNumber2.value;
-	if(a.length==0) {
+	if(a == '') {
 		a = 1;
 	}
-	var tot = objtxtNumber1.value * 13.99; 
-	var tot1 = a * 13.99;
-	var tot2 = tot + tot1;
-	var totalObj = document.getElementById(total);
+	var b = objtxtNumber1.value;
+	if (b == '') {
+		b = 1;
+	}
+	var priceObj1 = document.getElementById("price1");
+	var priceNum1 = b * 12.5;
+	var priceNum2 = a * 35;
+	
+	priceObj1.innerHTML = "$ "+priceNum1;
+	var priceObj2 = document.getElementById("price2");
+	priceObj2.innerHTML = "$ "+priceNum2;
+	var tot1 = b * 12.5 + a * 35;
+	
+	var add = tot1 * 0.07;
+	var tot2 = tot1 + add;
+	
+	var subtotalObj = document.getElementById("subtotal");	
+	subtotalObj.innerHTML = "$ "+tot1;
+	
+	var taxObj = document.getElementById("tax");
+	var add2 = add.toFixed(2);
+	taxObj.innerHTML = "$ "+add2;
+	
+	var totalObj = document.getElementById("total");
 	totalObj.style.color = 'black';
-	totalObj.innerHTML = "Total: $"+tot2;
+	var tot22 = tot2.toFixed(2);
+	totalObj.innerHTML = "$ "+tot22;
+	
+	
 	totalObj.style.display = 'block';
 }
 </script>
-<script type="text/javascript" src ="../Super8_Task4-/js/test.js"></script>
 </head>
 
 <body>
@@ -48,10 +77,7 @@ function multiply(quantiBox1,quantiBox2,total) {
                                data-options="{'limit':3}"
 							   data-touch-text="What are you looking for?" maxlength="100"/>
       </div>
-      <div class="large-2 columns">
-      	<a href="searchResultPage.html">
-        <input id="goButton" type="submit" value="go"/> </a>
-      </div>
+      <div> <a href="searchResultPage.html"> <img src="images/searhimages.png" width="30" height="30"/> </a> </div>
     </nav>
   </div>
 </div>
@@ -77,103 +103,98 @@ function multiply(quantiBox1,quantiBox2,total) {
         </ul>
         <ul class="right">
           <li class="divider"></li>
-          <li >
-  <div id="loginContainer" style="color:white">Hello Mike!<a href = "javascript:void(0)" title="Account Registration" target="_blank" id="map_canvas" 	onclick = "document.getElementById('loginContainerSub').style.display='block'" style="color:white" >Login ▼</a> </div>
-              <div id="loginContainerSub" class="white_contentLogin">                   
-								<div id="loginStepContainer">
-									<div>
-										<strong>Email</strong><br />
-										<input name="txtUsername" type="text" class="initValStyle" id="txtUsername" placeholder="Type your email here" onfocus="onFocus(this, 'type your email here')" onblur="onBlur(this)" value="type your email here" size="35" />
-									</div>
-									<br />
-									<div>
-										<strong>Password</strong><br />
-										<input name="txtPassword" type="password" id="txtPassword" placeholder="password"  size="35" >
-									</div>
-									<div>
-										<input type="checkbox" style="color:white"/> Remember me
-									</div>
-									<form method="post" action="index.html">
-										<div>
-											<input name="btnLogin" type="submit" id="btnLogin" value="Login" /><br />
-										</div>
-									</form>
-									<div id="assistMessage">
-										<a href="under_construction.html" style="color:white">Forgot your password?</a> OR <br />
-										<a href="#" onclick="showObj('registerHolder'); grayOut(true)" style="color:white">Register</a> It’s free
-									</div>
-								</div>
-              </div>
-              </li>
+         <li > <a id="anchorLogin" href="#" onclick="changeText('anchorLogin');">Hello Mike (Logout)</a>
+                  <div id="loginContainer" class="white_contentLogin"> 
+                    <script type="text/javascript">fadeOutObj('loginContainer', 1);</script>
+                    <div id="loginStepContainer">
+                      <div> <strong>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="img/btn_close.png" onclick = "document.getElementById('loginContainer').style.display='none'" width="30" height="30"/></strong><br />
+                        <input name="txtUsername" type="text" class="initValStyle" id="txtUsername" onfocus="onFocus(this, 'type your email here')" onblur="onBlur(this)" value="type your email here" size="35" />
+                      </div>
+                      <br />
+                      <div> <strong>Password</strong><br />
+                        <input name="txtPassword" type="password" id="txtPassword" placeholder="Password"  size="35" >
+                      </div>
+                      <div>
+                        <input type="checkbox" style="color:white"/>
+                        Remember me </div>
+                      <div>
+                        <input name="btnLogin" type="submit" id="btnLogin" value="Login" onClick="changeText('btnLogin');"/>
+                        <br />
+                      </div>
+                      <div id="assistMessage"> <a href="under_construction.html" style="color:blue; background-color:white">Forgot your password?</a> OR <br />
+                        <a href="#" style="color: black ; background-color:white" >Register using:</a>  </div>
+                      <div> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/facebookicon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/pinteresticon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/twittericon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/googleicon.jpg" width ="25" > </a> </div>
+                    </div>
+                  </div>
+                </li>
           <li class="divider"></li>
           <li class="divider"></li>
-           <li>
-              <div id="registerContainer"> <a href = "javascript:void(0)" title="Account Registration" target="_blank" onclick = "document.getElementById('registerContainerSub').style.display='block'"  style="color:white">Register</a> </div>
-              <div id="registerContainerSub" class="white_content">
-                <table width="625" border="0" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td id="tdEmailErrorScope" colspan="2"><strong>Email</strong><br />
-                      <input name="txtEmail" type="text" id="txtEmail" size="35"  placeholder="username@domain.com"
+          <li>
+                  <div id="registerContainer"> <a href = "javascript:void(0)" title="Account Registration" target="_blank" onclick = "document.getElementById('registerContainerSub').style.display='block'"  style="color:white">Register</a> </div>
+                  <div id="registerContainerSub" class="white_content">
+                    <table width="625" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td id="tdEmailErrorScope" colspan="2"><strong>Email<sup style="color:red; font-size:14px" >&nbsp;*</sup></strong><br />
+                          <input name="txtEmail" type="text" id="txtEmail" size="35"  placeholder="username@domain.com"
                           onblur="validateEmail(this,'tdEmailErrorScope','divEmailErrorMsg')" />
-                      <div id="divEmailErrorMsg" class="errorMsg"> <br />
-                        please ensure the email address you enter is correct e.g. youruser@domain.com </div></td>
-                    <td></td>
-                    <td></td>
-                    <td align="right" valign="top"><img src="img/btn_close.png" onclick = "document.getElementById('registerContainerSub').style.display='none'" width="30" height="30"/></td>
-                  </tr>
-                  <tr>
-                  <tr>
-                    <td id="tdPasswordErrorScope"><strong>Password</strong>
-                      <input name="txtFirstPassword" type="password"   id="txtFirstPassword" placeholder="Password" size="15" maxlength=	"20" value="" /></td>
-                    <td id="tdPasswordErrorScope"><strong>Confirm Password</strong>
-                      <input name="txtRePassword" type="password" id="txtRePassword" size="15" maxlength="20" placeholder="Confirm Password"
+                          <div id="divEmailErrorMsg" class="errorMsg"> <br />
+                            please ensure the email address you enter is correct e.g. youruser@domain.com </div></td>
+                        <td></td>
+                        <td></td>
+                        <td align="right" valign="top"><img src="img/btn_close.png" onclick = "document.getElementById('registerContainerSub').style.display='none'" width="30" height="30"/></td>
+                      </tr>
+                      <tr>
+                      <tr>
+                        <td id="tdPasswordErrorScope"><strong>Password <sup style="color:red; font-size:14px" >&nbsp;*</sup></strong>
+                          <input name="txtFirstPassword" type="password"   id="txtFirstPassword" size="15" maxlength= "20" value="" /></td>
+                        <td id="tdPasswordErrorScope"><strong>Confirm Password <sup style="color:red; font-size:14px" >&nbsp;*</sup></strong>
+                          <input name="txtRePassword" type="password" id="txtRePassword" size="15" maxlength="20" placeholder="Confirm Password"
                        onblur= "validatePassword('txtFirstPassword' ,'txtRePassword', 'tdPasswordErrorScope', 'spnPasswordErrorMsg')" /></td>
-                  </tr>
-                  <tr>
-                    <td colspan="2"><div id="spnPasswordErrorMsg" class="errorMsg"> Entered passwords are not matched </div></td>
-                  </tr>
-                    </tr>
-                  
-                  <tr>
-                    <td><strong>First Name</strong>
-                      <input name="txtFN" type="text" id="txtFN" size="30" placeholder="First Name" /></td>
-                    <td><strong>Last Name</strong>
-                      <input name="txtLN" type="text" id="txtLN" size="30" placeholder="Last Name" /></td>
-                  </tr>
-                  <tr>
-                    <td colspan="2"><strong>Address </strong><br />
-                      <input name="txtStreet" type="text" id="txtStreet" size="25" placeholder="Street"/>
-                      <input name="txtNumber" type="text" id="txtNumber" size="25"  placeholder="Apartment Number"/>
-                      <input name="txtCity" type="text" id="txtCity" size="25" placeholder="City"/>
-                      <input name="txtPostal" type="text" id="txtPostal" size="25"  placeholder="Postal"/>
-                      <select name="ddlCountry" id="ddlCountry" style="width:200px">
-                        <option>United States</option>
-                        <option>Others</option>
-                      </select></td>
-                  </tr>
-                  <tr>
-                    <td style="padding-top:10px" colspan="2"><input name="chkAccept" type="checkbox" id="chkAccept" />
-                      I agree to abide by UPMC. <a href="under_construction.html" style="color:white">Terms & Conditions</a></td>
-                  </tr>
-                  <tr>
-                    <td><input name="btnRegister" type="button" id="btnRegister" value="Register" style="width:100px" onclick=							"fakeAjaxReg('registerContainerSub', 'regCompMsg')" /></td>
-                  </tr>
-                </table>
-              </div>
-              <div id="regCompMsg" style="display:none; height:540px"; class="white_content">
-              	<br />
-                <br />
-                <br />
-                <br />
-                <strong style="font-size:16px">Registration complete, </strong><br />
-                <br />
-                Thank you very much for registering with UPMC.<br />
-                Please click the "Done" button below to close this registration page. <br />
-                To start login, please use "Login" button at top right corner. <br />
-                <br />
-                <input type="button" value="Done" style="width:100px" onclick="document.location.reload()" />
-              </div>
-            </li>
+                      </tr>
+                      <tr>
+                        <td colspan="2"><div id="spnPasswordErrorMsg" class="errorMsg"> Entered passwords are not matched </div></td>
+                      </tr>
+                        </tr>
+                      
+                      <tr>
+                        <td><strong>First Name <sup style="color:red; font-size:14px" >&nbsp;*</sup></strong>
+                          <input name="txtFN" type="text" id="txtFN" size="30" placeholder="First Name" /></td>
+                        <td><strong>Last Name <sup style="color:red; font-size:14px" >&nbsp;*</sup></strong>
+                          <input name="txtLN" type="text" id="txtLN" size="30" placeholder="Last Name" /></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"><strong>Address </strong><br />
+                          <input name="txtStreet" type="text" id="txtStreet" size="25" placeholder="Address Line 1 (Optional)"/>
+                          <input name="txtNumber" type="text" id="txtNumber" size="25"  placeholder="Address Line 2 (Optional)"/>
+                          <input name="txtCity" type="text" id="txtCity" size="25" placeholder="City (Optional)"/>
+                          <input name="txtPostal" type="text" id="txtPostal" size="25"  placeholder="Postal (Optional)"/>
+                          <select name="ddlCountry" id="ddlCountry" style="width:200px">
+                            <option>United States</option>
+                            <option>Others</option>
+                          </select></td>
+                      </tr>
+                      <tr>
+                        <td style="padding-top:10px" colspan="2"><input name="chkAccept" type="checkbox" id="chkAccept" />
+                          I agree to abide by UPMC. <a href="under_construction.html" style="color:white">Terms & Conditions</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="btnRegister" type="button" id="btnRegister" value="Register" style="width:100px" onclick="fakeAjaxReg('registerContainerSub', 'regCompMsg')" /></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="regCompMsg" style="display:none; height:540px"; class="white_content"> <br />
+                    <br />
+                    <br />
+                    <br />
+                    <strong style="font-size:16px">Registration complete, </strong><br />
+                    <br />
+                    Thank you very much for registering with UPMC.<br />
+                    Please click the "Done" button below to close this registration page. <br />
+                    To start login, please use "Login" button at top right corner. <br />
+                    <br />
+                    <input type="button" value="Done" style="width:100px" onclick="document.location.reload()" />
+                  </div>
+                </li>
           <li class="divider"></li>
           <li class="divider"></li>
           <li><a href="cart.html">Cart</a></li>
@@ -183,93 +204,140 @@ function multiply(quantiBox1,quantiBox2,total) {
     </nav>
   </div>
 </div>
-
-<div class="row">
-    <div class="large-4 small-12 columns">
-      <div class="hide-for-small panel">
-        <h3>My Cart</h3>
+<div class="columns">
+<div width="970" align="center">
+  <table width="970" cellpadding="0" cellspacing="0">
+    <tr>
+      <td class="remove"><span class="heading">Remove</span></td>
+      <td class="thumbnail"></td>
+      <td class="product-name"><span class="heading">Products</span></td>
+      <td class="unit-price"><span class="heading">Unit Price</span></td>
+      <td class="quantity"><span class="heading">Quantity</span></td>
+      <td class="price"><span class="heading">Price</span></td>
+    </tr>
+    <tr>
+      <td class="remove"><a href="#"><img src="images/delete_icon.png" border="0"/></a></td>
+      <td class="thumbnail"><img src="images/vitamin1.jpg"/></td>
+      <td class="product-name">Natures Bounty</td>
+      <td class="unit-price">&#36; 12.50</td>
+      <td class="quantity"><input id="quantiBox1"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="price" id="price1">&#36; 12.5</td>
+    </tr>
+    <tr class="last">
+      <td class="remove"><a href="#"><img src="images/delete_icon.png" border="0"/></a></td>
+      <td class="thumbnail"><img src="images/vitamin3.jpg"/></td>
+      <td class="product-name">Prevagen</td>
+      <td class="unit-price">&#36; 35</td>
+      <td class="quantity"><input id="quantiBox2"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="price" id="price2">&#36; 35</td>
+    </tr>
+    <tr class="promo">
+      <td colspan="4" class="unit-price"><span class="grey">Enter promo code</span></td>
+      <td class="quantity"><input type="text" value="" class="input-text-grey cart-field"></td>
+      <td class="price"><a href="#" class="general-button-big cart-button"><span class="button-big">Apply</span></a></td>
+    </tr>
+    <tr>
+      <td colspan="4" class="unit-price"></td>
+      <td class="quantity"><span class="summary">Subtotal</span></td>
+      <td class="price" id="subtotal">&#36; 60</td>
+    </tr>
+    <tr>
+      <td colspan="4" class="unit-price"></td>
+      <td class="quantity"><span class="summary">Collected Tax</span></td>
+      <td class="price" id="tax">&#36; 4.2</td>
+    </tr>
+    <tr>
+      <td colspan="4" class="unit-price"></td>
+      <td class="quantity"><span class="summary">Total</span></td>
+      <td class="price" id="total">&#36; 64.2</td>
+    </tr>
+  </table>
+  <div class="row">
+  <div class="large-12 columns" align="right">
+  <a href="index.html" class="button tiny" onclick="goBack()">Back</a>
+  <a href="checkout - Address1.html" class="button tiny">Proceed</a>
+  </div>
+  	  
+  </div>
+  <div class="row">
+      <div class="large-12 columns">
+        <div class="radius panel">
+          <h5><b>You may also like</b></h5>
+        </div>
+       </div>
+   </div>
+  <div class="row">
+    <div class="large-3 small-6 columns"> <a href="product detail_1.html">
+      <div class="image-wrapper overlay-fade-in"> 
+        <!-- <img
+src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
+/> --> 
+        <img src="images/vitamin1.jpg"/>
+        <div class="image-overlay-content">
+          <h2>Prevagen</h2>
+          <p class="price">$39.99</p>
+          <!-- <a href="images/vitamin1.jpg" class="button">Get it</a> --> 
+        </div>
       </div>
-      
-      <div class="panel callout radius">
-        <h6>2 items in your cart</h6>
+      </a> </div>
+    <div class="large-3 small-6 columns"> <a href="product detail_2.html">
+      <div class="image-wrapper overlay-fade-in"> 
+        <!-- <img
+src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
+/> --> 
+        <img src="images/vitamin2.jpg"/>
+        <div class="image-overlay-content">
+          <h2>Natures Bounty</h2>
+          <p class="price">$9.99</p>
+          <!-- <a href="images/vitamin2.jpg" class="button">Get it</a> --> 
+        </div>
       </div>
-      <div class="panel callout radius">
-        <h6>You may also like</h6>
+      </a> </div>
+    <div class="large-3 small-6 columns"> <a href="product detail_1.html">
+      <div class="image-wrapper overlay-fade-in"> 
+        <!-- <img
+src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
+/> --> 
+        <img src="images/vitamin3.jpg"/>
+        <div class="image-overlay-content">
+          <h2>Gummies</h2>
+          <p class="price">$14.99</p>
+          <!-- <a href="images/vitamin3.jpg" class="button">Get it</a> --> 
+        </div>
       </div>
-      <a href="product detail_1.html">
-      <img src="images/vitamin1_related1.jpg" width = "200" > <img src="images/vitamin1_related2.jpg" width =" 200" > <img src="images/vitamin1_related3.jpg" width = "200" > <img src="images/vitamin1_related4.jpg" width = "200" > </a> </div>
-    <div class="large-8 columns">
-<!--      <div class="row" style="margin-right:auto">
-        <div class="large-2 columns small-3"> <img/> </div>
-        <div class="large-2 columns small-3 text-left" style="align-self:left">
-          <p>Product Name</p>
+      </a> </div>
+    <div class="large-3 small-6 columns"> <a href="product detail_2.html">
+      <div class="image-wrapper overlay-fade-in"> 
+        <!-- <img
+src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
+/> --> 
+        <img src="images/vitamin5.jpg"/>
+        <div class="image-overlay-content">
+          <h2>Nova Homeopathic</h2>
+          <p class="price">$16.29</p>
+          <!-- <a href="images/vitamin4.jpg" class="button">Get it</a> --> 
         </div>
-        <div class="large-3 columns text-left" style="text-align:left">
-          <p>Price</p>
-        </div>
-        <div class="small-2 columns text-left" style="align-self:flex-start">
-          <p>Qty</p>
-        </div>
-      </div>-->
-      <div class="row">
-        <hr/>
-        <div class="row" style="margin-right:auto">
-          <div class="large-2 columns small-3"> <a href="product detail_1.html"><img src="images/vitamin1.jpg"/></a> </div>
-          <div class="large-3 columns" style="text-align:left">
-            <p><a href="product detail_1.html"><strong>Prevagen </strong></a></p>
-          </div>
-          <div class="large-3 columns" style="text-align:left">
-            <p>$13.99</p>
-          </div>
-          <div class="small-2 columns" style="align-self:flex-start">
-           <!-- <input id="quantityBox"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="alert("hi");" />-->
-           <input id="quantiBox1"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply('quantiBox1','quantiBox2','total')" />
-          </div>
-          <div class="small-2 columns" style="align-self:flex-start">
-          	<a href="#0" class="button tiny button alert">Remove</a>
-          </div>
-        </div>
-        <hr/>
-        <div class="row" style="margin-right:auto">
-          <div class="large-2 columns small-3"><a href="product detail_2.html"><img src="images/vitamin3.jpg"/></a></div>
-          <div class="large-3 columns" style="text-align:left">
-            <p><a href="product detail_2.html"><strong>Natures Bounty</strong></a></p>
-          </div>
-          <div class="large-3 columns" style="text-align:left">
-            <p>$13.99</p>
-          </div>
-          <div class="small-2 columns" style="align-self:flex-start">
-            <input id="quantiBox2" type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply('quantiBox1', 'quantiBox2','total')"/>
-          </div>
-          <div class="small-2 columns" style="align-self:flex-start">
-          	<a href="#0" class="button tiny button alert">Remove</a>
-          </div>
-        </div>
-        <hr/>
-        <h5 class="content"> <div id="total" style="display:block; color:black;" >Total: $27.98</div></h5>
-        <hr/>
-        <a href="checkout - Address1.html" class="button">Check Out</a> </div>
-    </div>
+      </div>
+      </a> </div>
   </div>
 </div>
-
-<footer class="row">
-        <div class="large-12 columns">
-          <hr>
-          <div class="row">
-            <div class="large-6 columns">
-              <p>© Copyright Super Eight.</p>
-            </div>
-            <div class="large-6 columns">
-              <ul class="inline-list right">
-                <li><a href="under_construction.html">Terms of Use</a></li>
-                <li><a href="under_construction.html">Accessibility</a></li>
-                <li><a href="under_construction.html">Privacy Policy</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        </footer>
 </div>
+<footer class="row">
+  <div class="large-12 columns">
+    <hr>
+    <div class="row">
+      <div class="large-6 columns">
+        <p>© Copyright Super Eight.</p>
+      </div>
+      <div class="large-6 columns">
+        <ul class="inline-list right">
+          <li><a href="under_construction.html">Terms of Use</a></li>
+          <li><a href="under_construction.html">Accessibility</a></li>
+          <li><a href="under_construction.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
