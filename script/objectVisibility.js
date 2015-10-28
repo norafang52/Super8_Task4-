@@ -70,20 +70,16 @@ function toggleObjFading(id, grayOutIsOn) {
 		grayOut(grayOutVis)
 	}
 }
-/*
-function toggleObjVisibility(id, grayOutIsOn) {
-	var obj = document.getElementById(id);
-	var grayOutVis = false;
-	
-	if (obj.style.visibility == "hidden") {
-		obj.style.visibility = "visible";
-		grayOutVis = true;
-	} else {
-		obj.style.visibility = "hidden";
-		grayOutVis = false;
-	}
-	
-	if (grayOutIsOn) {
-		grayOut(grayOutVis)
-	}
-}*/
+function changeText(Id){
+		if(Id == "anchorLogin" ) {
+			var value = document.getElementById('anchorLogin').innerHTML;
+			if(value == "Login") {
+				toggleObjFading('loginContainer', false);
+			} else {
+			 document.getElementById('anchorLogin').innerHTML ='Login';
+		 }
+		} else if (Id == "btnLogin"){
+			 document.getElementById('anchorLogin').innerHTML ='Hello Mike  (Logout)';
+			document.getElementById('loginContainer').style.display="none";	
+		}		 	
+ }
