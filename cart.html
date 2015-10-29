@@ -66,7 +66,7 @@ function multiply() {
 <div class="row">
   <div class="large-12 columns">
     <nav class="top-bar" data-topbar>
-      <div class="large-2 columns"> <img src="images/upmc_logo.jpg"> </div>
+      <div class="large-2 columns"> <a href="index.html"><img src="images/upmc_logo.jpg"></a> </div>
       <div class="large-8 columns">
         <input type="search"   
                                name="searchTerm" 
@@ -213,6 +213,7 @@ function multiply() {
       <td class="product-name"><span class="heading">Products</span></td>
       <td class="unit-price"><span class="heading">Unit Price</span></td>
       <td class="quantity"><span class="heading">Quantity</span></td>
+      <td class="frequency">Frequency</td>
       <td class="price"><span class="heading">Price</span></td>
     </tr>
     <tr>
@@ -220,7 +221,22 @@ function multiply() {
       <td class="thumbnail"><img src="images/vitamin1.jpg"/></td>
       <td class="product-name">Natures Bounty</td>
       <td class="unit-price">&#36; 12.50</td>
-      <td class="quantity"><input id="quantiBox1"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="quantity"><input id="quantiBox1"  type="number" style="width: 50px;" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="frequency"> <div class = "row">
+                 
+                   <div style="text-align: left">  
+                     <select name="ar_frequency" class="visible-for-large" id="ar_frequency" title="Frequency" onclick="makeSelection('shipandSave')">
+                       <option value="1,3">One time purchase</option>
+                       <option value="2,3">1 Month</option>
+                       <option value="3,3">2 Months</option>
+                       <option value="4,3">3 Months</option>
+                       <option value="5,3">4 Months</option>
+                       <option value="6,3">5 Months</option>
+                       <option value="7,3">6 Months</option>
+                     </select>
+                     <input type="hidden" name="arOption22" id="arOption22" value="true">
+                     </div>
+			</div></td>
       <td class="price" id="price1">&#36; 12.5</td>
     </tr>
     <tr class="last">
@@ -228,26 +244,43 @@ function multiply() {
       <td class="thumbnail"><img src="images/vitamin3.jpg"/></td>
       <td class="product-name">Prevagen</td>
       <td class="unit-price">&#36; 35</td>
-      <td class="quantity"><input id="quantiBox2"  type="number" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="quantity"><input id="quantiBox2"  type="number" style="width: 50px;" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="frequency"> <div class = "row">
+                 
+                 
+                   <div style="text-align: left">  
+                     <select name="ar_frequency" class="visible-for-large" id="ar_frequency2" title="Frequency" onclick="makeSelection('shipandSave')">
+                       <option value="1,3">One time purchase</option>
+                       <option value="2,3">1 Month</option>
+                       <option value="3,3">2 Months</option>
+                       <option value="4,3">3 Months</option>
+                       <option value="5,3">4 Months</option>
+                       <option value="6,3">5 Months</option>
+                       <option value="7,3">6 Months</option>
+                     </select>
+                     <input type="hidden" name="arOption22" id="arOption222" value="true">
+                     </div>
+                 
+			</div></td>
       <td class="price" id="price2">&#36; 35</td>
     </tr>
     <tr class="promo">
-      <td colspan="4" class="unit-price"><span class="grey">Enter promo code</span></td>
-      <td class="quantity"><input type="text" value="" class="input-text-grey cart-field"></td>
-      <td class="price"><a href="#" class="general-button-big cart-button"><span class="button-big">Apply</span></a></td>
+      <td colspan="5" class="unit-price"><span class="grey">Enter promo code</span></td>
+      <td class="frequency"><input type="text" value="" class="input-text-grey cart-field"></td>
+      <td class="price"><a href="#" class="button tiny">Apply</a></td>
     </tr>
     <tr>
-      <td colspan="4" class="unit-price"></td>
-      <td class="quantity"><span class="summary">Subtotal</span></td>
+      <td colspan="5" class="unit-price"></td>
+      <td class="frequency"><span class="summary">Subtotal</span></td>
       <td class="price" id="subtotal">&#36; 60</td>
     </tr>
     <tr>
-      <td colspan="4" class="unit-price"></td>
-      <td class="quantity"><span class="summary">Collected Tax</span></td>
+      <td colspan="5" class="unit-price"></td>
+      <td class="frequency"><span class="summary">Collected Tax</span></td>
       <td class="price" id="tax">&#36; 4.2</td>
     </tr>
     <tr>
-      <td colspan="4" class="unit-price"></td>
+      <td colspan="5" class="unit-price"></td>
       <td class="quantity"><span class="summary">Total</span></td>
       <td class="price" id="total">&#36; 64.2</td>
     </tr>
