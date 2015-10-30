@@ -14,14 +14,14 @@
 
 <script>
 function copy() {
-  
+  alert(document.getElementById('shipBillCheck').checked);
+  if(e.value == "checkbox"){
   var objtxtNumber1 = document.getElementById(first_name);
   var objtxtNumber2 = document.getElementById(first_name1);
   objtxtNumber2.value = objtxtNumber1.value;
-  var totalObj = document.getElementById(total);
-  totalObj.style.color = 'black';
-  totalObj.innerHTML = "Total: $"+tot2;
-  totalObj.style.display = 'block';
+
+
+}
 }
 </script>
 </head>
@@ -201,7 +201,7 @@ function copy() {
 		<div class="content" id="address">
 			<form class="go-right">
 				<div>
-				<input type="name" name="first_name" value="" id="first_name" placeholder="John" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name" onblur="copy()"/><label for="first_name">First Name</label>
+				<input type="name" name="first_name" value="" id="first_name" placeholder="Mike" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name" onblur="copy()"/><label for="first_name">First Name</label>
         </div>
 				<div>
 				<label for="last_name">Last Name</label>
@@ -264,10 +264,10 @@ function copy() {
       <form class="go-right">
         <div>
         <input type="checkbox"/>
-        <label class="same" for="same_as_shipping">Same As Shipping Address</label><span></span>
+        <label class="same" for="same_as_shipping" name = "checkbox" id = "shipBillCheck" onclick = "copy()">Same As Shipping Address</label><span></span>
         </div>
         <div>
-        <input type="name" name="first_name" value="" id="first_name1" placeholder="John" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/><label for="first_name">First Name</label>
+        <input type="name" name="first_name" value="" id="first_name1" placeholder="Mike" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/><label for="first_name">First Name</label>
         </div>
         <div>
         <label for="last_name">Last Name</label>

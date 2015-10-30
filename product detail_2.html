@@ -30,14 +30,22 @@ function showHide1() {
           document.getElementById("panel2-2").style.display = "none";
           document.getElementById("panel2-3").style.display = "none";
           document.getElementById("panel2-4").style.display = "none";
-		
+		  document.getElementById("tabtitle1").style.backgroundColor= "#FFFFFF";
+		  document.getElementById("tabtitle2").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle3").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle4").style.backgroundColor= "#EFEFEF";
         }
 
         function showHide2() {
       document.getElementById("panel2-2").style.display = "block";
+	  
           document.getElementById("panel2-1").style.display = "none";
           document.getElementById("panel2-3").style.display = "none";
           document.getElementById("panel2-4").style.display = "none";
+		  document.getElementById("tabtitle2").style.backgroundColor= "#FFFFFF";
+		  document.getElementById("tabtitle1").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle3").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle4").style.backgroundColor= "#EFEFEF";
 		  
         }
         function showHide3() {
@@ -45,14 +53,20 @@ function showHide1() {
           document.getElementById("panel2-2").style.display = "none";
           document.getElementById("panel2-1").style.display = "none";
           document.getElementById("panel2-4").style.display = "none";
-		  
+		  document.getElementById("tabtitle3").style.backgroundColor= "#FFFFFF";
+		  document.getElementById("tabtitle1").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle2").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle4").style.backgroundColor= "#EFEFEF";
         }
         function showHide4() {
       document.getElementById("panel2-4").style.display = "block";
           document.getElementById("panel2-2").style.display = "none";
           document.getElementById("panel2-3").style.display = "none";
           document.getElementById("panel2-1").style.display = "none";
-		
+		  document.getElementById("tabtitle4").style.backgroundColor= "#FFFFFF";
+		  document.getElementById("tabtitle1").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle3").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle2").style.backgroundColor= "#EFEFEF";
         }
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
@@ -103,7 +117,7 @@ function MM_swapImage() { //v3.0
                                data-options="{'limit':3}"
 							   data-touch-text="What are you looking for?" maxlength="100"/>
       </div>
-                  <div> <a href="searchResultPage.html"> <img src="images/searhimages.png" width="30" height="30"/> </a> </div>
+          <div> <a href="searchResultPage-View.html"> <img src="images/searhimages.png" width="30" height="30"/> </a> </div>
     </nav>
   </div>
 </div>
@@ -128,6 +142,7 @@ function MM_swapImage() { //v3.0
           <li class="divider"></li>
         </ul>
         <ul class="right">
+        	<li><a href="about-us.html">About Us</a></li>
           <li class="divider"></li>
           <li > <a id="anchorLogin" href="#" onclick="changeText('anchorLogin');">Hello Mike (Logout)</a>
                   <div id="loginContainer" class="white_contentLogin"> 
@@ -406,10 +421,10 @@ function MM_swapImage() { //v3.0
         <div class="large-12 columns">	
       
         	<ul class="tabs" data-tab role="tablist" >
-              <li class="tab-title active" id="tab1" role="presentation"><a href="#panel2-1" onclick="showHide1()" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1" >Details</a></li>
-              <li class="tab-title" id="tab2" role="presentation"><a href="#panel2-2" onclick="showHide2()" role="tab" tabindex="1" aria-selected="false" aria-controls="panel2-2">Ingredients</a></li>
-              <li class="tab-title" id="tab3" role="presentation"><a href="#panel2-3" onclick="showHide3()" role="tab" tabindex="2" aria-selected="false" aria-controls="panel2-3">Reviews</a></li>
-              <li class="tab-title" id="tab4" role="presentation"><a href="#panel2-4" onclick="showHide4()" role="tab" tabindex="3" aria-selected="false" aria-controls="panel2-4">Directions</a></li>
+              <li class="tab-title active" id="tab1" role="presentation"><a id="tabtitle1" href="#panel2-1" onclick="showHide1()" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1" >Details</a></li>
+              <li class="tab-title" id="tab2" role="presentation"><a id="tabtitle2" href="#panel2-2" onclick="showHide2()" role="tab" tabindex="1" aria-selected="false" aria-controls="panel2-2">Ingredients</a></li>
+              <li class="tab-title" id="tab3" role="presentation"><a id="tabtitle3" href="#panel2-3" onclick="showHide3()" role="tab" tabindex="2" aria-selected="false" aria-controls="panel2-3">Reviews</a></li>
+              <li class="tab-title" id="tab4" role="presentation"><a id="tabtitle4" href="#panel2-4" onclick="showHide4()" role="tab" tabindex="3" aria-selected="false" aria-controls="panel2-4">Directions</a></li>
             </ul><div class="tabs-content">
               <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1" >
    				<style>.nutrition-facts {float:left; width:609px; font:normal 16px/17px Arial, Helvetica, sans-serif; color:#585858;}
