@@ -76,7 +76,15 @@ function MM_swapImage() { //v3.0
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
     </script>
-   
+ <script src="http://cdn.chitu.cn/share/lib/jquery-1.11.3.js"></script>
+		<script>
+		$(function(){
+			var $bigImg = $('#big-img__img')
+			$('#small-img__container').on('click','.small-img__li',function(){
+				$bigImg.attr('src',$(this).find('img').attr('src'))
+			})
+		})
+</script>   
 </head>
 
 <body onLoad="MM_preloadImages('images/vitamin2_1.jpg')">
@@ -255,16 +263,23 @@ function MM_swapImage() { //v3.0
          
 
     <div class="row">
-    <hr>
-    <div class="large-2 columns">
-      <img src="images/vitamin2_3.jpg">
-      <br>
-      <br>
-      <img src="images/vitamin2_1.jpg">
-    </div>
-    <div class="large-5 columns">
-      <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','images/vitamin2_1.jpg',1)"><img id="Image2" src="images/vitamin2_3.jpg" alt=""></a> 
-      </div>
+        <hr>
+        <div class="large-2 columns">
+            <ul class="small-img__container" id="small-img__container" style="list-style:none">
+            <li class="small-img__li" style="cursor:pointer">
+                <img src="images/vitamin2_3.jpg" alt="" class="small-img__img">
+            </li>
+          
+            <li class="small-img__li" style="cursor:pointer">
+                <img src="images/vitamin2_1.jpg" alt="" class="small-img__img">
+            </li>
+        	</ul>
+        </div>
+    	<div class="large-5 columns">
+    		<div class="big-img__container" style="padding:0px;">
+			<img src="images/vitamin2_3.jpg" alt="" class="big-img__img" id="big-img__img">
+			</div>
+    	</div>
     
     <div class="large-5 columns">
       <h5>

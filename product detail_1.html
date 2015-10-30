@@ -65,7 +65,15 @@ function MM_swapImage() { //v3.0
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
     </script>
-     
+ <script src="http://cdn.chitu.cn/share/lib/jquery-1.11.3.js"></script>
+		<script>
+		$(function(){
+			var $bigImg = $('#big-img__img')
+			$('#small-img__container').on('click','.small-img__li',function(){
+				$bigImg.attr('src',$(this).find('img').attr('src'))
+			})
+		})
+</script>     
 
 </head>
 
@@ -246,25 +254,26 @@ function MM_swapImage() { //v3.0
         </div>
   </div>   
        
-         
         
-      
-
-
-
          
 
         <div class="row">
         <hr>
         <div class="large-2 columns">
-          <img src="images/vitamin1_1.jpg">
-          <br>
-          <img src="images/vitamin1_2.jpg">
+            <ul class="small-img__container" id="small-img__container" style="list-style:none">
+            <li class="small-img__li" style="cursor:pointer">
+                <img src="images/vitamin1_1.jpg" alt="" class="small-img__img">
+            </li>
+            <li class="small-img__li" style="cursor:pointer">
+                <img src="images/vitamin1_2.jpg" alt="" class="small-img__img">
+            </li>
+        	</ul>
         </div>
-    <div class="large-5 columns">
-    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','images/vitamin1_2.jpg',1)"><img id="Image1" src="images/vitamin1_1.jpg" alt=""></a>
-    </div>
-    
+    	<div class="large-5 columns">
+    		<div class="big-img__container" style="padding:0px;">
+			<img src="images/vitamin1_1.jpg" alt="" class="big-img__img" id="big-img__img">
+			</div>
+    	</div>
     
         
         <div class="large-5 columns">
@@ -586,14 +595,13 @@ function MM_swapImage() { //v3.0
         <div class="row">
         <hr>
         <div class="large-12 columns">
-          <h4>You might also like:</h4>
+          <h4 style="color:black">You might also like:</h4>
           <a href="product detail_1.html"><img src="images/vitamin1_related1.jpg" width = 200 ></a>
           <a href="product detail_1.html"><img src="images/vitamin1_related2.jpg" width = 200 ></a>
           <a href="product detail_1.html"><img src="images/vitamin1_related3.jpg" width = 200 ></a>
           <a href="product detail_1.html"><img src="images/vitamin1_related4.jpg" width = 200 ></a>
         </div>
         </div>
-
 
 <footer class="row">
         <div class="large-12 columns">
