@@ -14,14 +14,43 @@
 
 <script>
 function copy() {
-  alert(document.getElementById('shipBillCheck').checked);
-  if(e.value == "checkbox"){
-  var objtxtNumber1 = document.getElementById(first_name);
-  var objtxtNumber2 = document.getElementById(first_name1);
-  objtxtNumber2.value = objtxtNumber1.value;
+  var tempFirstName1 = document.getElementById("first_name");
+  var tempFirstName2 = document.getElementById("first_name1");
+  tempFirstName2.value = tempFirstName1.value;
+
+  var tempLastName1 = document.getElementById("last_name");
+  var tempLastName2 = document.getElementById("last_name1");
+  tempLastName2.value = tempLastName1.value;
+
+  var tempTel1 = document.getElementById("telephone");
+  var tempTel2 = document.getElementById("telephone1");
+  tempTel2.value = tempTel1.value;
+
+  var tempCompany1 = document.getElementById("company");
+  var tempCompany2 = document.getElementById("company1");
+  tempCompany2.value = tempCompany1.value;
+
+  var tempAddress1 = document.getElementById("address");
+  var tempAddress2 = document.getElementById("address1");
+  tempAddress2.value = tempAddress1.value;
+
+  var tempCity1 = document.getElementById("city");
+  var tempCity2 = document.getElementById("city1");
+  tempCity2.value = tempCity1.value;
+
+  var tempState1 = document.getElementById("state");
+  var tempState2 = document.getElementById("state1");
+  tempState2.value = tempState1.value;
+
+  var tempZip1 = document.getElementById("zip");
+  var tempZip2 = document.getElementById("zip1");
+  tempZip2.value = tempZip1.value;
+
+  var tempCountry1 = document.getElementById("country");
+  var tempCountry2 = document.getElementById("country1");
+  tempCountry2.value = tempCountry1.value;
 
 
-}
 }
 </script>
 </head>
@@ -201,7 +230,7 @@ function copy() {
 		<div class="content" id="address">
 			<form class="go-right">
 				<div>
-				<input type="name" name="first_name" value="" id="first_name" placeholder="Mike" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name" onblur="copy()"/><label for="first_name">First Name</label>
+				<input type="name" name="first_name" value="" id="first_name" placeholder="Mike" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/><label for="first_name">First Name</label>
         </div>
 				<div>
 				<label for="last_name">Last Name</label>
@@ -263,8 +292,8 @@ function copy() {
     <div class="content" id="address">
       <form class="go-right">
         <div>
-        <input type="checkbox"/>
-        <label class="same" for="same_as_shipping" name = "checkbox" id = "shipBillCheck" onclick = "copy()">Same As Shipping Address</label><span></span>
+        <input type="checkbox"  onclick = "copy()"/>
+        <label class="same" for="same_as_shipping" name = "checkbox" id = "shipBillCheck">Same As Shipping Address</label><span></span>
         </div>
         <div>
         <input type="name" name="first_name" value="" id="first_name1" placeholder="Mike" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/><label for="first_name">First Name</label>
@@ -298,13 +327,13 @@ function copy() {
               </div>
         </div>
         <div>
-        <input type="name" name="zip" value="" id="zip" placeholder="12345" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Zip Code"/><label for="zip">Zip Code</label>
+        <input type="name" name="zip" value="" id="zip1" placeholder="12345" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Zip Code"/><label for="zip">Zip Code</label>
         </div>
         <div>
         <div class="country_options">
           <label class="country" for="country">Country</label>
               <div class="select">
-                    <select id="country">
+                    <select id="country1">
                         <option value = "1">United States</option>
                         <option value = "2">United Kingdom</option>
                         <option value = "3">Uganda</option>
