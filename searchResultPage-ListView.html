@@ -24,12 +24,12 @@
       <div class="large-8 columns">
         <input type="search"   
                                name="searchTerm" 
-                               placeholder="What are you looking for?" 
+                               placeholder="Search" 
                                autocomplete="off" 
                                autocapitalize="off" 
                                autocorrect="off" 
                                data-options="{'limit':3}"
-							   data-touch-text="What are you looking for?" maxlength="100"/>
+							   data-touch-text="Search" maxlength="100"/>
       </div>
                   <div> <a href="searchResultPage-View.html"> <img src="images/searhimages.png" width="30" height="30"/> </a> </div>
     </nav>
@@ -40,8 +40,10 @@
     <nav class="top-bar" data-topbar>
       <section class="top-bar-section">
         <ul class="left">
+		  <li class="divider"></li>
+		  <li><a href="index.html">Home</a></li>
           <li class="divider"></li>
-          <li class="has-dropdown"> <a href="#">Menu</a>
+          <li class="has-dropdown"> <a href="#">Category</a>
             <ul class="dropdown">
               <li><a href="searchResultPage.html">Allergy Asthma</a></li>
               <li><a href="searchResultPage.html">Braces & Support</a></li>
@@ -249,9 +251,13 @@
 				<div class="small-4 columns">
 			        <p class="price">
 					    <select name="select" onchange="javascript:location.href = this.value;">
-							<option value="searchResultPage-ListView.html" selected>Relevance</option>
+						    <option value="searchResultPage.html" selected>Sort By</option>
+							<option value="searchResultPage-ListView.html">Relevance</option>
 							<option value="searchResultPage-ListView-Price-LowtoHigh.html">Price (low to high)</option>
 							<option value="searchResultPage-ListView-Price-HightoLow.html">Price (high to low)</option>
+							<option value="#">Name (A-Z)</option>
+							<option value="#">Name (Z-A)</option>
+							<option value="#">Reviews</option>
 						</select>
 					</p>
 				</div>
@@ -276,7 +282,7 @@
 					  </br></br>
                       <h4 class="subheader"><b>Prevagen</b></h4>
 					  <img src="images/ratestar.jpg" width="94" height="16">                      
-					  <h6 class="subheader">Size:150</h6>
+					  <h6 class="subheader">Tablets:150</h6>
 					  <h6 class="subheader">EAWeight:0.6 LBS</h6>
                     </div>
 					</div>
@@ -311,7 +317,7 @@
 					  </br></br>
                       <h4 class="subheader"><b>Natures Bounty</b></h4>
 					  <img src="images/ratestar.jpg" width="94" height="16">                      
-					  <h6 class="subheader">Size:100</h6>
+					  <h6 class="subheader">Tablets:100</h6>
 					  <h6 class="subheader">EAWeight:0.8 LBS</h6>
                     </div>
 					</div>
@@ -347,7 +353,7 @@
 					  </br></br>
                       <h4 class="subheader"><b>Gummies</b></h4>
 					  <img src="images/ratestar.jpg" width="94" height="16">                      
-					  <h6 class="subheader">Size:90</h6>
+					  <h6 class="subheader">Tablets:90</h6>
 					  <h6 class="subheader">EAWeight:0.2 LBS</h6>
                     </div>
 					</div>
@@ -383,7 +389,7 @@
 					  </br></br>
                       <h4 class="subheader"><b>Nova Homeopathic</b></h4>
 					  <img src="images/ratestar.jpg" width="94" height="16">                      
-					  <h6 class="subheader">Size:90</h6>
+					  <h6 class="subheader">Tablets:90</h6>
 					  <h6 class="subheader">EAWeight:1.0 LBS</h6>
                     </div>
 					</div>
@@ -419,7 +425,7 @@
 					  </br></br>
                       <h4 class="subheader"><b>Melatonin</b></h4>
 					  <img src="images/ratestar.jpg" width="94" height="16">                      
-					  <h6 class="subheader">Size:100</h6>
+					  <h6 class="subheader">Tablets:100</h6>
 					  <h6 class="subheader">EAWeight:0.6 LBS</h6>
                     </div>
 					</div>
