@@ -1,0 +1,270 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>UPMC Pharmacy</title>
+<link rel="stylesheet" href="css/script.css"/>
+<link rel="stylesheet" href="css/registration.css" />
+<link rel="stylesheet" href="css/registration.css" />
+<link rel="stylesheet" href="css/foundation.css" />
+<script type="text/javascript" src="../Super8_Task4-/script/objectVisibility.js"></script>
+<script type="text/javascript" src="../Super8_Task4-/script/textboxBehavior.js"></script>
+<script type="text/javascript" src="../Super8_Task4-/script/formValidation.js"></script>
+<script type="text/javascript" src="../Super8_Task4-/script/grayOut.js"></script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<title>My subscribe</title>
+</head>
+
+<body>
+<div class="row">
+  <div class="large-12 columns">
+    <nav class="top-bar" data-topbar>
+      <div class="large-2 columns"> <a href="index.html"><img src="images/upmc_logo.jpg"></a> </div>
+      <div class="large-8 columns">
+        <input type="search" name="searchTerm" placeholder="What are you looking for?" autocomplete="off" autocapitalize="off" autocorrect="off" data-options="{'limit':3}"
+                                data-touch-text="What are you looking for?" maxlength="100"/>
+      </div>
+      <div> <a href="searchResultPage-View.html"> <img src="images/searhimages.png" width="30" height="30"/> </a> </div>
+    </nav>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <nav class="top-bar" data-topbar>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="divider"></li>
+          <li class="has-dropdown"><a href="#">Menu</a>
+            <ul class="dropdown">
+              <li><a href="searchResultPage.html">Allergy & Asthma</a></li>
+              <li><a href="searchResultPage.html">Braces & Support</a></li>
+              <li><a href="searchResultPage.html">Cough, Cold & Flu</a></li>
+              <li><a href="searchResultPage.html">Digestive Health</a></li>
+              <li><a href="searchResultPage.html">First Aid</a></li>
+              <li><a href="searchResultPage.html">Pain & Fever</a></li>
+              <li><a href="searchResultPage.html">Sleep & Snoring Aids</a></li>
+              <li><a href="searchResultPage.html">Stop Smoking</a></li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li class="divider"></li>
+          <li class="has-dropdown"><a href="#">Contact Us</a>
+            <ul class="dropdown">
+              <li><a href="#"><strong>UPMC</strong>, 200 Lothrop St, Pittsburgh, PA 15213<br>
+                </a></li>
+              <li><a href="#"><strong>Phone</strong>: (412) 647-8762<br>
+                </a></li>
+              <li><a href="#"><strong>E-mail</strong>: info@UPMCpharmarcy.com</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="right">
+          <li class="divider"></li>
+          <li > <a id="anchorLogin" href="#" onclick="changeText('anchorLogin');">Login</a>
+            <div id="loginContainer" class="white_contentLogin"> 
+              <script type="text/javascript">fadeOutObj('loginContainer', 1);</script>
+              <div id="loginStepContainer">
+                <div> <strong>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="img/btn_close.png" onclick = "document.getElementById('loginContainer').style.display='none'" width="30" height="30"/></strong><br />
+                  <input name="txtUsername" type="text" class="initValStyle" id="txtUsername" onfocus="onFocus(this, 'type your email here')" onblur="onBlur(this)" value="type your email here" size="35" />
+                </div>
+                <br />
+                <div> <strong>Password</strong><br />
+                  <input name="txtPassword" type="password" id="txtPassword" placeholder="password"  size="35" >
+                </div>
+                <div>
+                  <input type="checkbox" style="color:white"/>
+                  Remember me </div>
+                <div>
+                  <input name="btnLogin" type="submit" id="btnLogin" value="Login" onClick="changeText('btnLogin');"/>
+                  <br />
+                </div>
+                <div id="assistMessage"> <a href="under_construction.html" style="color:blue; background-color:white">Forgot your password?</a> OR <br />
+                  <a href="#" style="color: black ; background-color:white" >Register using:</a> </div>
+                <div> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/facebookicon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/pinteresticon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/twittericon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/googleicon.jpg" width ="25" > </a> </div>
+              </div>
+            </div>
+          </li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li>
+            <div id="registerContainer"> <a href = "javascript:void(0)" title="Account Registration" target="_blank" onclick = "document.getElementById('registerContainerSub').style.display='block'"  style="color:white">Register</a> </div>
+            <div id="registerContainerSub" class="white_content">
+              <table width="625" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td id="tdEmailErrorScope" colspan="2"><strong>Email<sup style="color:red; font-size:14px" >&nbsp;*</sup></strong><br />
+                    <input name="txtEmail" type="text" id="txtEmail" size="35"  placeholder="username@domain.com"
+                          onblur="validateEmail(this,'tdEmailErrorScope','divEmailErrorMsg')" />
+                    <div id="divEmailErrorMsg" class="errorMsg"> <br />
+                      please ensure the email address you enter is correct e.g. youruser@domain.com </div></td>
+                  <td></td>
+                  <td></td>
+                  <td align="right" valign="top"><img src="img/btn_close.png" onclick = "document.getElementById('registerContainerSub').style.display='none'" width="30" height="30"/></td>
+                </tr>
+                <tr>
+                <tr>
+                  <td id="tdPasswordErrorScope"><strong>Password <sup style="color:red; font-size:14px" >&nbsp;*</sup></strong>
+                    <input name="txtFirstPassword" type="password"   id="txtFirstPassword" size="15" maxlength= "20" placeholder="Password" value="" /></td>
+                  <td id="tdPasswordErrorScope"><strong>Confirm Password <sup style="color:red; font-size:14px" >&nbsp;*</sup></strong>
+                    <input name="txtRePassword" type="password" id="txtRePassword" size="15" maxlength="20" placeholder="Confirm Password"
+                       onblur= "validatePassword('txtFirstPassword' ,'txtRePassword', 'tdPasswordErrorScope', 'spnPasswordErrorMsg')" /></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><div id="spnPasswordErrorMsg" class="errorMsg"> Entered passwords are not matched </div></td>
+                </tr>
+                  </tr>
+                
+                <tr>
+                  <td><strong>First Name <sup style="color:red; font-size:14px" >&nbsp;*</sup></strong>
+                    <input name="txtFN" type="text" id="txtFN" size="30" placeholder="First Name" /></td>
+                  <td><strong>Last Name <sup style="color:red; font-size:14px" >&nbsp;*</sup></strong>
+                    <input name="txtLN" type="text" id="txtLN" size="30" placeholder="Last Name" /></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><strong>Address </strong><br />
+                    <input name="txtStreet" type="text" id="txtStreet" size="25" placeholder="Address Line 1 (Optional)"/>
+                    <input name="txtNumber" type="text" id="txtNumber" size="25"  placeholder="Address Line 2 (Optional)"/>
+                    <input name="txtCity" type="text" id="txtCity" size="25" placeholder="City (Optional)"/>
+                    <input name="txtPostal" type="text" id="txtPostal" size="25"  placeholder="Postal (Optional)"/>
+                    <select name="ddlCountry" id="ddlCountry" style="width:200px">
+                      <option>United States</option>
+                      <option>Others</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td style="padding-top:10px" colspan="2"><input name="chkAccept" type="checkbox" id="chkAccept" />
+                    I agree to abide by UPMC. <a href="under_construction.html" style="color:white">Terms & Conditions</a></td>
+                </tr>
+                <tr>
+                  <td><input name="btnRegister" type="button" id="btnRegister" value="Register" style="width:100px" onclick="fakeAjaxReg('registerContainerSub', 'regCompMsg')" /></td>
+                </tr>
+              </table>
+            </div>
+            <div id="regCompMsg" style="display:none; height:540px"; class="white_content"> <br />
+              <br />
+              <br />
+              <br />
+              <strong style="font-size:16px">Registration complete, </strong><br />
+              <br />
+              Thank you very much for registering with UPMC.<br />
+              Please click the "Done" button below to close this registration page. <br />
+              To start login, please use "Login" button at top right corner. <br />
+              <br />
+              <input type="button" value="Done" style="width:100px" onclick="document.location.reload()" />
+            </div>
+          </li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li class="divider"></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+</div>
+<div class="columns">
+  <div width="970" align="center">
+  <div class="row"><div class="large-12 columns" style="width:1000px"><div class="large-2 columns" style="width:1000px"><h3 style="color:black; font-style:inherit;text-align:left">My Subscribe</h3></div></div></div>
+    <table width="970" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="remove"><span class="heading">Remove</span></td>
+        <td class="thumbnail"></td>
+        <td class="product-name"><span class="heading">Products</span></td>
+        <td class="unit-price"><span class="heading">Unit Price</span></td>
+        <td class="quantity"><span class="heading">Quantity</span></td>
+        <td class="frequency">Frequency</td>
+        <td class="price"><span class="heading">Save</span></td>
+      </tr>
+      <tr>
+      <td class="remove"><a href="#"><img src="images/delete_icon.png" border="0"/></a></td>
+      <td class="thumbnail"><img src="images/vitamin1.jpg"/></td>
+      <td class="product-name">Natures Bounty</td>
+      <td class="unit-price">&#36; 10</td>
+      <td class="quantity"><input id="quantiBox1"  type="number" style="width: 50px;" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="frequency"> <div class = "row">
+                 
+                   <div style="text-align: left">  
+                     <select name="ship_frequency" class="visible-for-large" id="ar_frequency" title="Frequency" onchange="subscribe()">
+                       <option >1 Month</option>
+                       <option >2 Months</option>
+                       <option >3 Months</option>
+                       <option >4 Months</option>
+                       <option >5 Months</option>
+                       <option >6 Months</option>
+                     </select>
+                     </div>
+			</div></td>
+      <td class="price" id="price1">&#36; 2.5</td>
+    </tr>
+      <tr class="last">
+      <td class="remove"><a href="#"><img src="images/delete_icon.png" border="0"/></a></td>
+      <td class="thumbnail"><img src="images/vitamin3.jpg"/></td>
+      <td class="product-name">Prevagen</td>
+      <td class="unit-price">&#36; 32.5</td>
+      <td class="quantity"><input id="quantiBox2"  type="number" style="width: 50px;" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="frequency"> <div class = "row">
+                 
+                 
+                   <div style="text-align: left">  
+                     <select name="ship_frequency" class="visible-for-large" id="ar_frequency2" title="Frequency" onchange="subscribe()">
+                       <option >1 Month</option>
+                       <option >2 Months</option>
+                       <option >3 Months</option>
+                       <option >4 Months</option>
+                       <option >5 Months</option>
+                       <option >6 Months</option>
+                     </select>
+                     </div>
+                 
+			</div></td>
+      <td class="price" id="price2">&#36; 3.5</td>
+    </tr>
+    <tr>
+      <td colspan="5" class="unit-price"></td>
+      <td class="frequency"><span class="summary">Subtotal</span></td>
+      <td class="price" id="subtotal">&#36; 60</td>
+    </tr>
+    <tr>
+      <td colspan="5" class="unit-price"></td>
+      <td class="frequency"><span class="summary">Collected Tax</span></td>
+      <td class="price" id="tax">&#36; 4.2</td>
+    </tr>
+    <tr>
+      <td colspan="5" class="unit-price"></td>
+      <td class="quantity"><span class="summary">Total</span></td>
+      <td class="price" id="total">&#36; 64.2</td>
+    </tr>
+    </table>
+    <div class="row">
+  <div class="large-12 columns" align="right">
+  <a href="index.html" class="button tiny" onclick="goBack()">Back</a>
+  <a href="checkout - Address1.html" class="button tiny">Proceed</a>
+  </div>
+  	  
+  </div>
+  </div>
+</div>
+<footer class="row">
+  <div class="large-12 columns">
+    <hr>
+    <div class="row">
+      <div class="large-6 columns">
+        <p>© Copyright Super Eight.</p>
+      </div>
+      <div class="large-6 columns">
+        <ul class="inline-list right">
+          <li><a href="under_construction.html">Terms of Use</a></li>
+          <li><a href="under_construction.html">Accessibility</a></li>
+          <li><a href="under_construction.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
