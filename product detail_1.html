@@ -23,25 +23,43 @@ function showHide1() {
           document.getElementById("panel2-2").style.display = "none";
           document.getElementById("panel2-3").style.display = "none";
           document.getElementById("panel2-4").style.display = "none";
+		  document.getElementById("tabtitle1").style.backgroundColor= "#FFFFFF";
+		  document.getElementById("tabtitle2").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle3").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle4").style.backgroundColor= "#EFEFEF";
         }
 
         function showHide2() {
       document.getElementById("panel2-2").style.display = "block";
+	  
           document.getElementById("panel2-1").style.display = "none";
           document.getElementById("panel2-3").style.display = "none";
           document.getElementById("panel2-4").style.display = "none";
+		  document.getElementById("tabtitle2").style.backgroundColor= "#FFFFFF";
+		  document.getElementById("tabtitle1").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle3").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle4").style.backgroundColor= "#EFEFEF";
+		  
         }
         function showHide3() {
       document.getElementById("panel2-3").style.display = "block";
           document.getElementById("panel2-2").style.display = "none";
           document.getElementById("panel2-1").style.display = "none";
           document.getElementById("panel2-4").style.display = "none";
+		  document.getElementById("tabtitle3").style.backgroundColor= "#FFFFFF";
+		  document.getElementById("tabtitle1").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle2").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle4").style.backgroundColor= "#EFEFEF";
         }
         function showHide4() {
       document.getElementById("panel2-4").style.display = "block";
           document.getElementById("panel2-2").style.display = "none";
           document.getElementById("panel2-3").style.display = "none";
           document.getElementById("panel2-1").style.display = "none";
+		  document.getElementById("tabtitle4").style.backgroundColor= "#FFFFFF";
+		  document.getElementById("tabtitle1").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle3").style.backgroundColor= "#EFEFEF";
+		  document.getElementById("tabtitle2").style.backgroundColor= "#EFEFEF";
         }
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
@@ -65,7 +83,15 @@ function MM_swapImage() { //v3.0
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
     </script>
-     
+ <script src="http://cdn.chitu.cn/share/lib/jquery-1.11.3.js"></script>
+		<script>
+		$(function(){
+			var $bigImg = $('#big-img__img')
+			$('#small-img__container').on('click','.small-img__li',function(){
+				$bigImg.attr('src',$(this).find('img').attr('src'))
+			})
+		})
+</script>     
 
 </head>
 
@@ -246,25 +272,26 @@ function MM_swapImage() { //v3.0
         </div>
   </div>   
        
-         
         
-      
-
-
-
          
 
         <div class="row">
         <hr>
         <div class="large-2 columns">
-          <img src="images/vitamin1_1.jpg">
-          <br>
-          <img src="images/vitamin1_2.jpg">
+            <ul class="small-img__container" id="small-img__container" style="list-style:none">
+            <li class="small-img__li" style="cursor:pointer">
+                <img src="images/vitamin1_1.jpg" alt="" class="small-img__img">
+            </li>
+            <li class="small-img__li" style="cursor:pointer">
+                <img src="images/vitamin1_2.jpg" alt="" class="small-img__img">
+            </li>
+        	</ul>
         </div>
-    <div class="large-5 columns">
-    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','images/vitamin1_2.jpg',1)"><img id="Image1" src="images/vitamin1_1.jpg" alt=""></a>
-    </div>
-    
+    	<div class="large-5 columns">
+    		<div class="big-img__container" style="padding:0px;">
+			<img src="images/vitamin1_1.jpg" alt="" class="big-img__img" id="big-img__img">
+			</div>
+    	</div>
     
         
         <div class="large-5 columns">
@@ -391,10 +418,10 @@ function MM_swapImage() { //v3.0
         <hr/>
         <div class="large-12 columns">	
         	<ul class="tabs" data-tab role="tablist">
-              <li class="tab-title active" role="presentation"><a href="#panel2-1" onclick="showHide1()" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1" >Details</a></li>
-              <li class="tab-title" role="presentation"><a href="#panel2-2" onclick="showHide2()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-2">Ingredients</a></li>
-              <li class="tab-title" role="presentation"><a href="#panel2-3" onclick="showHide3()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-3">Reviews</a></li>
-              <li class="tab-title" role="presentation"><a href="#panel2-4" onclick="showHide4()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-4">Directions</a></li>
+              <li class="tab-title active" role="presentation"><a id="tabtitle1" href="#panel2-1" onclick="showHide1()" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1" >Details</a></li>
+              <li class="tab-title" role="presentation"><a id="tabtitle2" href="#panel2-2" onclick="showHide2()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-2">Ingredients</a></li>
+              <li class="tab-title" role="presentation"><a id="tabtitle3" href="#panel2-3" onclick="showHide3()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-3">Reviews</a></li>
+              <li class="tab-title" role="presentation"><a id="tabtitle4" href="#panel2-4" onclick="showHide4()" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-4">Directions</a></li>
             </ul>
             <div class="tabs-content">
               <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
@@ -484,45 +511,7 @@ function MM_swapImage() { //v3.0
                              <span class="date" style="display:block; font-size:12px; font-weight:bold; color: #6DC4E0">January 12, 2012, Wednesday, at 10:23 a.m.</span>
                              <p style="margin-top: 18px; margin-bottom:18px; margin-right:0px; margin-left:0px">These pills are on the big side but are nice and
 								soft so they go down easy.</p>
-                             <!--<div class="BVRRReviewDisplayStyle5Footer">
-                             	<div class="BVRRReviewSocialLinksContainer">
-                                	<div class="BVRRLabel BVRRReviewBookmarkingLabel">Share:</div>
-										<a onfocus="this.href=bvReplaceTokensInSocialURL(this.href);" onclick="this.href=bvReplaceTokensInSocialURL(this.href);window.open(this.href,'','left=0,top=0,width=626,height=436,toolbar=1,location=0,resizable=1,scrollbars=1'); return false;" rel="nofollow" name="BV_TrackingTag_Review_Display_SocialBookmarkFacebook_90866484" href="http://reviews.cvs.com/3006-en_us/share.htm?site=Facebook&amp;url=http%3A%2F%2Freviews.cvs.com%2F3006-en_us%2F888292%2Fprevagen-prevagen-clearer-thinking-dietary-supplement-reviews%2Freviews.htm%3FreviewID%3D90866484&amp;title=__TITLE__&amp;robot=__ROBOT__&amp;image=http%3A%2F%2Fwww.cvs.com%2Fbizcontent%2Fmerchandising%2Fproductimages%2Flarge%2F89404700103.jpg" onmouseover="this.href=bvReplaceTokensInSocialURL(this.href);" class="BVRRSocialBookmarkingSharingLink BVRRSocialBookmarkingSharingLinkFacebook" target="_blank">
-                                        	<img width="16" height="16" class="BVRRSocialBookmarkLinkImage" src="http://cvspharmacy.ugc.bazaarvoice.com/static/3006-en_us/link-facebook.gif" alt="Facebook" title="Add to Facebook"></a>
-
-                                        <a onfocus="this.href=bvReplaceTokensInSocialURL(this.href);" onclick="this.href=bvReplaceTokensInSocialURL(this.href);window.open(this.href,'','left=0,top=0,width=795,height=700,toolbar=1,location=0,resizable=1,scrollbars=1'); return false;" rel="nofollow" name="BV_TrackingTag_Review_Display_SocialBookmarkTwitter_90866484" href="http://reviews.cvs.com/3006-en_us/share.htm?site=Twitter&amp;url=http%3A%2F%2Freviews.cvs.com%2F3006-en_us%2F888292%2Fprevagen-prevagen-clearer-thinking-dietary-supplement-reviews%2Freviews.htm%3FreviewID%3D90866484&amp;title=__TITLE__&amp;robot=__ROBOT__&amp;image=http%3A%2F%2Fwww.cvs.com%2Fbizcontent%2Fmerchandising%2Fproductimages%2Flarge%2F89404700103.jpg" onmouseover="this.href=bvReplaceTokensInSocialURL(this.href);" class="BVRRSocialBookmarkingSharingLink BVRRSocialBookmarkingSharingLinkTwitter" target="_blank">
-                                        	<img width="16" height="16" class="BVRRSocialBookmarkLinkImage" src="http://cvspharmacy.ugc.bazaarvoice.com/static/3006-en_us/link-twitter.gif" alt="Twitter" title="Tweet this"></a>
-									</div>
-								<div class="BVDI_FV">
-                                	<div class="BVDI_FVVoting BVDI_FVVotingHelpfulness" style="display: block;">
-                                    	<div class="BVDI_FVSum BVDI_FVSumHelpfulness">
-                                        	<span class="BVDI_FVPositive  BVDI_FVLevel2">
-                                            	<span class="BVDIPrefix">+</span>
-                                                <span class="BVDIValue BVDINumber">2</span>
-                                                <span class="BVDISuffix">points</span></span></div>
-                                   		<div class="BVDI_FVCounts BVDI_FVCountsHelpfulness">
-                                    		<span class="BVDI_FVPositive BVDI_FVLevel2">
-                                            	<span class="BVDIValue BVDINumber">2</span>
-                                                <span class="BVDISuffix">of</span></span> 
-                                            <span class="BVDI_FVTotal BVDI_FVLevel2">
-                                            	<span class="BVDIValue BVDINumber">2</span>
-                                            <span class="BVDISuffix">voted this as helpful.</span></span></div>
-                                        <div class="BVDI_FVVotes BVDI_FVVotesHelpfulness">
-                                        	<span class="BVDIPrefix">Was this helpful?</span>
-                                            <span class="BVDI_FVVote BVDI_FVPositive BVDI_FVPositiveUndo BVDI_FVLevel2">
-                                            	<a data-bvcfg="329866788" name="BV_TrackingTag_Review_Display_AddPositiveFeedback_90866484" title="helpful" class="BVDILink BVDIValue" data-bvjsref="http://cvspharmacy.ugc.bazaarvoice.com/3006-en_us/888292/review/90866484/undohelpfulness.djs?format=embeddedhtml&amp;sessionparams=__BVSESSIONPARAMS__&amp;return=http%3A%2F%2Fwww.cvs.com%2Fshop%2Fvitamins%2Fhealth-goals%2Fmemory-support%2Fprevagen-clearer-thinking-dietary-supplement-skuid-888292&amp;innerreturn=http%3A%2F%2Fcvspharmacy.ugc.bazaarvoice.com%2F3006-en_us%2F888292%2Freviews.djs%3Fformat%3Dembeddedhtml&amp;user=__USERID__&amp;authsourcetype=__AUTHTYPE__&amp;submissionparams=__BVSUBMISSIONPARAMETERS__&amp;submissionurl=http%3A%2F%2Fwww.cvs.com%2Fshop%2Freview%2FsubmitReview.jsp" href="javascript://">
-                                                	<span class="BVDILinkSpan">
-                                                    	<span class="BVDILabel">helpful</span>
-                                                        <span class="BVDINumber">2</span></span></a></span>
-                                        	<span class="BVDI_FVVote BVDI_FVNegative BVDI_FVLevel0">
-                                            	<a data-bvcfg="329866788" name="BV_TrackingTag_Review_Display_AddNegativeFeedback_90866484" title="unhelpful" class="BVDILink BVDIValue">
-                                                	<span class="BVDILinkSpan">
-                                                    	<span class="BVDILabel">unhelpful</span>
-                                                        	<span class="BVDINumber">0</span></span></a></span>
-                                           	<span class="BVDI_FVUndo" style="display: none;">http://cvspharmacy.ugc.bazaarvoice.com/3006-en_us/888292/review/90866484/undohelpfulness.djs?format=embeddedhtml&amp;sessionparams=__BVSESSIONPARAMS__&amp;return=http%3A%2F%2Fwww.cvs.com%2Fshop%2Fvitamins%2Fhealth-goals%2Fmemory-support%2Fprevagen-clearer-thinking-dietary-supplement-skuid-888292&amp;innerreturn=http%3A%2F%2Fcvspharmacy.ugc.bazaarvoice.com%2F3006-en_us%2F888292%2Freviews.djs%3Fformat%3Dembeddedhtml&amp;user=__USERID__&amp;authsourcetype=__AUTHTYPE__&amp;submissionparams=__BVSUBMISSIONPARAMETERS__&amp;submissionurl=http%3A%2F%2Fwww.cvs.com%2Fshop%2Freview%2FsubmitReview.jsp</span></div></div>
-                                <div class="BVDI_FVReportLink BVDI_FVReportLinkInappropriate">
-                                	<a data-bvjsref="http://cvspharmacy.ugc.bazaarvoice.com/3006-en_us/888292/review/90866484/inappropriate.djs?format=embeddedhtml&amp;sessionparams=__BVSESSIONPARAMS__&amp;return=http%3A%2F%2Fwww.cvs.com%2Fshop%2Fvitamins%2Fhealth-goals%2Fmemory-support%2Fprevagen-clearer-thinking-dietary-supplement-skuid-888292&amp;innerreturn=http%3A%2F%2Fcvspharmacy.ugc.bazaarvoice.com%2F3006-en_us%2F888292%2Freviews.djs%3Fformat%3Dembeddedhtml&amp;user=__USERID__&amp;authsourcetype=__AUTHTYPE__&amp;submissionparams=__BVSUBMISSIONPARAMETERS__&amp;submissionurl=http%3A%2F%2Fwww.cvs.com%2Fshop%2Freview%2FsubmitReview.jsp" data-bvcfg="329866788" name="BV_TrackingTag_Review_Display_Inappropriate_90866484" href="javascript://" title="Report" class="BVDILink ">
-                                    <span class="BVDILinkSpan">Report inappropriate content</span></a></div></div></div>-->
+                          
                           </div>
                           <div class="form-name float-right" style="float:right">
                              <img src="images/ratestar4.jpg" style="width: 95px">
@@ -586,14 +575,13 @@ function MM_swapImage() { //v3.0
         <div class="row">
         <hr>
         <div class="large-12 columns">
-          <h4>You might also like:</h4>
+          <h4 style="color:black">You might also like:</h4>
           <a href="product detail_1.html"><img src="images/vitamin1_related1.jpg" width = 200 ></a>
           <a href="product detail_1.html"><img src="images/vitamin1_related2.jpg" width = 200 ></a>
           <a href="product detail_1.html"><img src="images/vitamin1_related3.jpg" width = 200 ></a>
           <a href="product detail_1.html"><img src="images/vitamin1_related4.jpg" width = 200 ></a>
         </div>
         </div>
-
 
 <footer class="row">
         <div class="large-12 columns">
