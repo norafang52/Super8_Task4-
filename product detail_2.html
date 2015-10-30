@@ -103,48 +103,51 @@ function MM_swapImage() { //v3.0
 
 <body onLoad="MM_preloadImages('images/vitamin2_1.jpg')">
 <div class="large-12 columns">
-<div class="row">
-  <div class="large-12 columns">
-    <nav class="top-bar" data-topbar>
-      <div class="large-2 columns"> <a href="index.html"><img src="images/upmc_logo.jpg"></a> </div>
-      <div class="large-8 columns">
-        <input type="search"   
-                               name="searchTerm" 
-                               placeholder="What are you looking for?" 
-                               autocomplete="off" 
-                               autocapitalize="off" 
-                               autocorrect="off" 
-                               data-options="{'limit':3}"
-							   data-touch-text="What are you looking for?" maxlength="100"/>
+    <div class="row">
+      <div class="large-12 columns">
+        <nav class="top-bar" data-topbar>
+          <div class="large-2 columns"> <a href="index.html"><img src="images/upmc_logo.jpg"></a> </div>
+          <div class="large-8 columns">
+            <input type="search" name="searchTerm" placeholder="What are you looking for?" autocomplete="off" autocapitalize="off" autocorrect="off" data-options="{'limit':3}"
+						data-touch-text="What are you looking for?" maxlength="100"/>
+          </div>
+                <div> <a href="searchResultPage-View.html"> <img src="images/searhimages.png" width="30" height="30"/> </a> </div>
+        </nav>
       </div>
-          <div> <a href="searchResultPage-View.html"> <img src="images/searhimages.png" width="30" height="30"/> </a> </div>
-    </nav>
-  </div>
-</div>
-<div class="row">
-  <div class="large-12 columns">
-    <nav class="top-bar" data-topbar>
-      <section class="top-bar-section">
-        <ul class="left">
-          <li class="divider"></li>
-          <li class="has-dropdown"> <a href="#">Menu</a>
-            <ul class="dropdown">
-              <li><a href="searchResultPage.html">Allergy & Asthma</a></li>
-              <li><a href="searchResultPage.html">Braces & Support</a></li>
-              <li><a href="searchResultPage.html">Cough, Cold & Flu</a></li>
-              <li><a href="searchResultPage.html">Digestive Health</a></li>
-              <li><a href="searchResultPage.html">First Aid</a></li>
-              <li><a href="searchResultPage.html">Pain & Fever</a></li>
-              <li><a href="searchResultPage.html">Sleep & Snoring Aids</a></li>
-              <li><a href="searchResultPage.html">Stop Smoking</a></li>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <nav class="top-bar" data-topbar>
+          <section class="top-bar-section">
+            <ul class="left">
+              <li class="divider"></li>
+              <li class="has-dropdown"><a href="#">Menu</a>
+                <ul class="dropdown">
+                  <li><a href="searchResultPage.html">Allergy & Asthma</a></li>
+                  <li><a href="searchResultPage.html">Braces & Support</a></li>
+                  <li><a href="searchResultPage.html">Cough, Cold & Flu</a></li>
+                  <li><a href="searchResultPage.html">Digestive Health</a></li>
+                  <li><a href="searchResultPage.html">First Aid</a></li>
+                  <li><a href="searchResultPage.html">Pain & Fever</a></li>
+                  <li><a href="searchResultPage.html">Sleep & Snoring Aids</a></li>
+                  <li><a href="searchResultPage.html">Stop Smoking</a></li>
+                </ul>
+              </li>
+			  <li class="divider"></li>
+			  <li><a href="about-us.html">About Us</a></li>
+			  <li class="divider"></li>
+			  <li class="has-dropdown"><a href="#">Contact Us</a>
+                <ul class="dropdown">
+                    <li><a href="#"><strong>UPMC</strong>, 200 Lothrop St, Pittsburgh, PA 15213<br></a></li>
+					<li><a href="#"><strong>Phone</strong>: (412) 647-8762<br></a></li>
+					<li><a href="#"><strong>E-mail</strong>: info@UPMCpharmarcy.com</a></li>
+                </ul>
+              </li>
+              
             </ul>
-          </li>
-          <li class="divider"></li>
-        </ul>
-        <ul class="right">
-        	<li><a href="about-us.html">About Us</a></li>
-          <li class="divider"></li>
-          <li > <a id="anchorLogin" href="#" onclick="changeText('anchorLogin');">Hello Mike (Logout)</a>
+            <ul class="right">
+              <li class="divider"></li>
+               <li > <a id="anchorLogin" href="#" onclick="changeText('anchorLogin');">Login</a>
                   <div id="loginContainer" class="white_contentLogin"> 
                     <script type="text/javascript">fadeOutObj('loginContainer', 1);</script>
                     <div id="loginStepContainer">
@@ -168,9 +171,9 @@ function MM_swapImage() { //v3.0
                     </div>
                   </div>
                 </li>
-          <li class="divider"></li>
-          <li class="divider"></li>
-           <li>
+              <li class="divider"></li>
+              <li class="divider"></li>
+              <li>
                   <div id="registerContainer"> <a href = "javascript:void(0)" title="Account Registration" target="_blank" onclick = "document.getElementById('registerContainerSub').style.display='block'"  style="color:white">Register</a> </div>
                   <div id="registerContainerSub" class="white_content">
                     <table width="625" border="0" cellpadding="0" cellspacing="0">
@@ -236,16 +239,15 @@ function MM_swapImage() { //v3.0
                     <input type="button" value="Done" style="width:100px" onclick="document.location.reload()" />
                   </div>
                 </li>
-          <li class="divider"></li>
-          <li class="divider"></li>
-          <li><a href="cart.html">Cart</a></li>
-          <li class="divider"></li>
-        </ul>
-      </section>
-    </nav>
-  </div>
-</div>
-
+              <li class="divider"></li>
+              <li class="divider"></li>
+              <li><a href="cart.html">Cart</a></li>
+              <li class="divider"></li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </div>
 <div class="row"></br></div>   
     <div class="row">
         <div class="large-12 columns">
