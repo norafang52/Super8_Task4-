@@ -351,7 +351,7 @@ function MM_swapImage() { //v3.0
             <div class = "row">
                  <div class="large-2 columns">
                   <div class = "price" style="text-align: left">
-                    <label>Price:&nbsp;</label>
+                    <label style="cursor:default">Price:&nbsp;</label>
                    </div>
               </div>
                   <div class="large-10 columns">
@@ -369,7 +369,7 @@ function MM_swapImage() { //v3.0
           <div class="large-12 columns">
             <div class = "row">
                  <div class="large-2 columns">
-        			<label>quantity:&nbsp;</label>
+        			<label style="cursor:default">quantity:&nbsp;</label>
 		  		</div>
                 <div class="large-2 columns">
         			<input type="text" value="1" size="1" maxlength="2">   
@@ -384,7 +384,7 @@ function MM_swapImage() { //v3.0
               <div class="large-8 columns">
                   <div "ship1" style="text-align: left">  
                   <input id="onetimeOnly" type="radio" name="arOption" value="false" checked="checked" onclick="will();">
-                  <label for="onetimeOnly">Deliver one time only</label>
+                  <label for="onetimeOnly" style="cursor:default">Deliver one time only</label>
                   </div>
            	  </div>
                 <div class="large-4 columns">
@@ -395,7 +395,7 @@ function MM_swapImage() { //v3.0
                  <div class="large-6 columns" style="margin-left:15px; padding:0; text-align:left; box-sizing:border-box; display:block; width: 43%">
                    <div style="text-align: left">  
                     <input id="shipandSave" type="radio"  name="arOption" value="true" onclick="will();">
-                      <label for="shipandSave">Ship this item every</label>
+                      <label for="shipandSave" style="cursor:default">Ship this item every</label>
                     </div>
 			  		</div>
                  <div class="large-2 columns" style="text-align: left">
@@ -507,7 +507,22 @@ function MM_swapImage() { //v3.0
 				</div>
               </section>
               <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3" style="display:none">
-            	<div class="tab-content" style="display: block;">
+            	  <div class="large-12 column" style="display: block; float:left">
+                	 <div class="small-4 columns" style="float:left; margin-left:0pxS">
+                        <p class="price">
+                            <select name="select" onchange="javascript:location.href = this.value;">
+                                <option value="#panel2-3" selected="">Sort By</option>
+                                <option value="#panel2-3">Highest rating</option>
+                                <option value="#panel2-3">Lowest rating</option>
+                                <option value="#panel2-3">Newest</option>
+                                <option value="#panel2-3">Staff reviews</option>
+                                <option value="#panel2-3">The same age range</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" style="display: block;">
                     <div class="single-comment blog-page" style="border:1px solid #C7EEFB; overflow:hidden; padding:20px 15px 5px 15px">
                       <div class="avatar float-left" style="float:left">
                           <img src="images/avatar.png">
@@ -515,7 +530,7 @@ function MM_swapImage() { //v3.0
                       <div class="comment-text blog-single-entry" style="margin:0px 0px 0px 65px">
                       	<span>
                       	  <div class="form-name float-left" style="float:left">
-                             <span class="name" style="display:block; font-size:16px; font-weight:bold; color: #2ba6cb">John Smith</span>
+                             <span class="name" style="display:block; font-size:16px; font-weight:bold; color: #2ba6cb">tina55</span>
                              <span class="date" style="display:block; font-size:12px; font-weight:bold; color: #6DC4E0">January 12, 2012, Wednesday, at 10:23 a.m.</span>
                              <p style="margin-top: 18px; margin-bottom:18px; margin-right:0px; margin-left:0px">These pills are on the big side but are nice and
 								soft so they go down easy.</p>
@@ -540,7 +555,7 @@ function MM_swapImage() { //v3.0
                       <div class="comment-text blog-single-entry" style="margin:0px 0px 0px 65px">
                       	<span>
                       	  <div class="form-name float-left" style="float:left">
-                             <span class="name" style="display:block; font-size:16px; font-weight:bold; color: #2ba6cb">John Smith</span>
+                             <span class="name" style="display:block; font-size:16px; font-weight:bold; color: #2ba6cb">smith0202</span>
                              <span class="date" style="display:block; font-size:12px; font-weight:bold; color: #6DC4E0">January 12, 2012, Wednesday, at 10:23 a.m.</span>
                              <p style="margin-top: 18px; margin-bottom:18px; margin-right:0px; margin-left:0px">These pills are on the big side but are nice and
 								soft so they go down easy.</p>
@@ -554,13 +569,25 @@ function MM_swapImage() { //v3.0
                   </div>			
 				  <div class="comment-form-container" style="padding:0px 10px 0px 0px">
                           <span class="new-comment-heading" style="display: block; color:#2ba6cb; font-size:16px; font-weight: bold; margin:35px 0px 25px 0px">Post Your Comment</span>
-                          <div class="form-name float-left" style="margin:0px 0px 15px 0px; width: 47%; float:left; padding:0; font-size:100%; vertical-align: baseline">
-                              <span style="display: block; color: #6DC4E0; font-size: 12px; font-style: italic">Your Name</span>
-                              <input type="text" value="" class="form-name input-text" style="background-color: #ECECEC; border-radius: 4px; padding:0px 5px; height: 32px; line-height: 32px">
+                          <div class="form-name float-left" style="margin:0px 0px 15px 0px; width: 10%; float:left; padding:0; font-size:100%; vertical-align: baseline">
+                              <span style="display: block; color: #6DC4E0; font-size: 12px; font-style: italic; width: 100px">Choose your Age</span>
+                             
                           </div>
-                          <div class="form-name float-right" style="margin:0px 0px 15px 0px; width: 47%; float:right; padding:0; font-size:100%; vertical-align: baseline">
-                              <span style="display:block; color: #6DC4E0; font-size:12px; font-style:italic">Your E-mail</span>
-                              <input type="text" value="" class="form-name input-text" style="background-color: #ECECEC; border-radius: 4px; padding:0px 5px; height: 32px; line-height: 32px">
+                          <div class="form-name float-left" style="margin:0px 0px 15px 0px; width: 84%; float:left; padding:0; font-size:100%; vertical-align: baseline">
+                             
+                              <div class="small-3 columns" style="float:left; margin-left:0pxS">
+                                  <p class="price">
+                                      <select name="select" >
+                                          <option selected="">age range</option>
+                                          <option >Below 20</option>
+                                          <option >20-30 years old</option>
+                                          <option >30-40 years old</option>
+                                          <option >40-50 years old</option>
+                                          <option >50-60 years old</option>
+                                          <option >Up to 60</option>
+                                      </select>
+                                  </p>
+                              </div>
                           </div>
                           <br class="clear" style="clear:both">
                           <div class="form-comment" style="margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline">
