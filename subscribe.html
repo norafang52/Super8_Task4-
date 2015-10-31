@@ -16,6 +16,62 @@
 function goBack() {
     window.history.back();
 }
+
+function calculate() {
+	
+	var objtxtNumber1 = document.getElementById("quantiBox1");
+	
+	var objtxtNumber2 = document.getElementById("quantiBox2");
+	var a = objtxtNumber1.value;
+	if(a == '') {
+		a = 1;
+	}
+	if(parseInt(a)!=a) {
+		alert("Please enter a valid number a");
+		objtxtNumber1.value = 1;
+		return;
+	}
+	
+	var b = objtxtNumber2.value;
+	if (b == '') {
+		b = 1;
+	}
+	if(parseInt(b)!=b) {
+		alert("Please enter a valid number b");
+		objtxtNumber2.value = 1;
+		return;
+	}
+	
+	var priceObj1 = document.getElementById("price1");
+	var priceNum1 = a * 10;
+	var priceNum2 = b * 30;
+	
+	priceObj1.innerHTML = "$ "+priceNum1;
+	var priceObj2 = document.getElementById("price2");
+	priceObj2.innerHTML = "$ "+priceNum2;
+	var tot1 = a * 10 + b * 30;
+	
+	var add = tot1 * 0.07;
+	var tot2 = tot1 + add;
+	
+	var subtotalObj = document.getElementById("subtotal");	
+	subtotalObj.innerHTML = "$ "+tot1;
+	
+	var saveTot = a * 2.5 + b * 5;
+	var saveObj = document.getElementById("save");
+	saveObj.innerHTML = "$ "+saveTot;
+	
+	var taxObj = document.getElementById("tax");
+	var add2 = add.toFixed(2);
+	taxObj.innerHTML = "$ "+add2;
+	
+	var totalObj = document.getElementById("total");
+	totalObj.style.color = 'black';
+	var tot22 = tot2.toFixed(2);
+	totalObj.innerHTML = "$ "+tot22;
+		
+	totalObj.style.display = 'block';
+}
 </script>
 <title>My subscribe</title>
 </head>
@@ -178,14 +234,18 @@ function goBack() {
         <td class="unit-price"><span class="heading">Unit Price</span></td>
         <td class="quantity"><span class="heading">Quantity</span></td>
         <td class="frequency">Frequency</td>
-        <td class="price"><span class="heading">Save</span></td>
+        <td class="price"><span class="heading">Price</span></td>
       </tr>
       <tr>
       <td class="remove"><a href="#"><img src="images/delete_icon.png" border="0"/></a></td>
       <td class="thumbnail"><img src="images/vitamin1.jpg"/></td>
       <td class="product-name">Natures Bounty</td>
-      <td class="unit-price">&#36; 10</td>
-      <td class="quantity"><input id="quantiBox1"  type="number" style="width: 50px;" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="unit-price"><div class = "price" style="text-align: left">
+                      <span itemprop="price">
+                      	  <s style="text-decoration: line-through">$12.5</s>
+                          $10</span>
+                    </div></td>
+      <td class="quantity"><input id="quantiBox1"  type="number" style="width: 50px;" placeholder="1" min="1" max="99" contenteditable="false" onBlur="calculate()" /></td>
       <td class="frequency"> <div class = "row">
                  
                    <div style="text-align: left">  
@@ -199,14 +259,18 @@ function goBack() {
                      </select>
                      </div>
 			</div></td>
-      <td class="price" id="price1">&#36; 2.5</td>
+      <td class="price" id="price1">&#36; 10</td>
     </tr>
       <tr class="last">
       <td class="remove"><a href="#"><img src="images/delete_icon.png" border="0"/></a></td>
       <td class="thumbnail"><img src="images/vitamin3.jpg"/></td>
       <td class="product-name">Prevagen</td>
-      <td class="unit-price">&#36; 32.5</td>
-      <td class="quantity"><input id="quantiBox2"  type="number" style="width: 50px;" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
+      <td class="unit-price"><div class = "price" style="text-align: left">
+                      <span itemprop="price">
+                      	  <s style="text-decoration: line-through">$35</s>
+                          $30</span>
+                    </div></td>
+      <td class="quantity"><input id="quantiBox2"  type="number" style="width: 50px;" placeholder="1" min="1" max="99" contenteditable="false" onBlur="calculate()" /></td>
       <td class="frequency"> <div class = "row">
                  
                  
@@ -222,12 +286,17 @@ function goBack() {
                      </div>
                  
 			</div></td>
-      <td class="price" id="price2">&#36; 3.5</td>
+      <td class="price" id="price2">&#36; 30</td>
     </tr>
     <tr>
       <td colspan="5" class="unit-price"></td>
       <td class="frequency"><span class="summary">Subtotal</span></td>
       <td class="price" id="subtotal">&#36; 60</td>
+    </tr>
+    <tr>
+      <td colspan="5" class="unit-price"></td>
+      <td class="frequency"><span class="summary">You save</span></td>
+      <td class="price" id="save">&#36; 7.5</td>
     </tr>
     <tr>
       <td colspan="5" class="unit-price"></td>
