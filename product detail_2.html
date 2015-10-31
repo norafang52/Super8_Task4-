@@ -4,12 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>UPMC Pharmacy</title>
+<link rel="stylesheet" href="css/script.css"/>
 <link rel="stylesheet" href="css/registration.css" />
 <link rel="stylesheet" href="css/foundation.css" />
-<script type="text/javascript" src="../Super8_Task4-/script/objectVisibility.js"></script>
-<script type="text/javascript" src="../Super8_Task4-/script/textboxBehavior.js"></script>
-<script type="text/javascript" src="../Super8_Task4-/script/formValidation.js"></script>
-<script type="text/javascript" src="../Super8_Task4-/script/grayOut.js"></script>
+<script type="text/javascript" src="script/objectVisibility.js"></script>
+<script type="text/javascript" src="script/textboxBehavior.js"></script>
+<script type="text/javascript" src="script/formValidation.js"></script>
+<script type="text/javascript" src="script/grayOut.js"></script>
  <script>
   $(document).foundation({
     tab: {
@@ -103,48 +104,53 @@ function MM_swapImage() { //v3.0
 
 <body onLoad="MM_preloadImages('images/vitamin2_1.jpg')">
 <div class="large-12 columns">
-<div class="row">
-  <div class="large-12 columns">
-    <nav class="top-bar" data-topbar>
-      <div class="large-2 columns"> <a href="index.html"><img src="images/upmc_logo.jpg"></a> </div>
-      <div class="large-8 columns">
-        <input type="search"   
-                               name="searchTerm" 
-                               placeholder="What are you looking for?" 
-                               autocomplete="off" 
-                               autocapitalize="off" 
-                               autocorrect="off" 
-                               data-options="{'limit':3}"
-							   data-touch-text="What are you looking for?" maxlength="100"/>
+ <div class="row">
+      <div class="large-12 columns">
+        <nav class="top-bar" data-topbar>
+          <div class="large-2 columns"> <a href="index.html"><img src="images/upmc_logo.jpg"></a> </div>
+          <div class="large-8 columns">
+            <input type="search" name="searchTerm" placeholder="Search" autocomplete="off" autocapitalize="off" autocorrect="off" data-options="{'limit':3}"
+						data-touch-text="Search" maxlength="100"/>
+          </div>
+                <div> <a href="searchResultPage-View.html"> <img src="images/searhimages.png" width="30" height="30"/> </a> </div>
+        </nav>
       </div>
-          <div> <a href="searchResultPage-View.html"> <img src="images/searhimages.png" width="30" height="30"/> </a> </div>
-    </nav>
-  </div>
-</div>
-<div class="row">
-  <div class="large-12 columns">
-    <nav class="top-bar" data-topbar>
-      <section class="top-bar-section">
-        <ul class="left">
-          <li class="divider"></li>
-          <li class="has-dropdown"> <a href="#">Menu</a>
-            <ul class="dropdown">
-              <li><a href="searchResultPage.html">Allergy & Asthma</a></li>
-              <li><a href="searchResultPage.html">Braces & Support</a></li>
-              <li><a href="searchResultPage.html">Cough, Cold & Flu</a></li>
-              <li><a href="searchResultPage.html">Digestive Health</a></li>
-              <li><a href="searchResultPage.html">First Aid</a></li>
-              <li><a href="searchResultPage.html">Pain & Fever</a></li>
-              <li><a href="searchResultPage.html">Sleep & Snoring Aids</a></li>
-              <li><a href="searchResultPage.html">Stop Smoking</a></li>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <nav class="top-bar" data-topbar>
+          <section class="top-bar-section">
+            <ul class="left">
+			  <li class="divider"></li>
+			  <li><a href="index.html">Home</a></li>
+              <li class="divider"></li>
+              <li class="has-dropdown"><a href="#">Category</a>
+                <ul class="dropdown">
+                  <li><a href="searchResultPage.html">Allergy & Asthma</a></li>
+                  <li><a href="searchResultPage.html">Braces & Support</a></li>
+                  <li><a href="searchResultPage.html">Cough, Cold & Flu</a></li>
+                  <li><a href="searchResultPage.html">Digestive Health</a></li>
+                  <li><a href="searchResultPage.html">First Aid</a></li>
+                  <li><a href="searchResultPage.html">Pain & Fever</a></li>
+                  <li><a href="searchResultPage.html">Sleep & Snoring Aids</a></li>
+                  <li><a href="searchResultPage.html">Stop Smoking</a></li>
+                </ul>
+              </li>
+			  <li class="divider"></li>
+			  <li><a href="about-us.html">About Us</a></li>
+			  <li class="divider"></li>
+			  <li class="has-dropdown"><a href="#">Contact Us</a>
+                <ul class="dropdown">
+                    <li><a href="#"><strong>UPMC</strong>, 200 Lothrop St, Pittsburgh, PA 15213<br></a></li>
+					<li><a href="#"><strong>Phone</strong>: (412) 647-8762<br></a></li>
+					<li><a href="#"><strong>E-mail</strong>: info@UPMCpharmarcy.com</a></li>
+                </ul>
+              </li>
+              
             </ul>
-          </li>
-          <li class="divider"></li>
-        </ul>
-        <ul class="right">
-        	<li><a href="about-us.html">About Us</a></li>
-          <li class="divider"></li>
-          <li > <a id="anchorLogin" href="#" onclick="changeText('anchorLogin');">Hello Mike (Logout)</a>
+            <ul class="right">
+              <li class="divider"></li>
+               <li > <a id="anchorLogin" href="#" onclick="changeText('anchorLogin');">Login</a>
                   <div id="loginContainer" class="white_contentLogin"> 
                     <script type="text/javascript">fadeOutObj('loginContainer', 1);</script>
                     <div id="loginStepContainer">
@@ -168,9 +174,9 @@ function MM_swapImage() { //v3.0
                     </div>
                   </div>
                 </li>
-          <li class="divider"></li>
-          <li class="divider"></li>
-           <li>
+              <li class="divider"></li>
+              <li class="divider"></li>
+              <li>
                   <div id="registerContainer"> <a href = "javascript:void(0)" title="Account Registration" target="_blank" onclick = "document.getElementById('registerContainerSub').style.display='block'"  style="color:white">Register</a> </div>
                   <div id="registerContainerSub" class="white_content">
                     <table width="625" border="0" cellpadding="0" cellspacing="0">
@@ -179,7 +185,7 @@ function MM_swapImage() { //v3.0
                           <input name="txtEmail" type="text" id="txtEmail" size="35"  placeholder="username@domain.com"
                           onblur="validateEmail(this,'tdEmailErrorScope','divEmailErrorMsg')" />
                           <div id="divEmailErrorMsg" class="errorMsg"> <br />
-                            please ensure the email address you enter is correct e.g. youruser@domain.com </div></td>
+                            please ensure the email address you enter is correct e.g. info@upmc.com </div></td>
                         <td></td>
                         <td></td>
                         <td align="right" valign="top"><img src="img/btn_close.png" onclick = "document.getElementById('registerContainerSub').style.display='none'" width="30" height="30"/></td>
@@ -236,15 +242,18 @@ function MM_swapImage() { //v3.0
                     <input type="button" value="Done" style="width:100px" onclick="document.location.reload()" />
                   </div>
                 </li>
-          <li class="divider"></li>
-          <li class="divider"></li>
-          <li><a href="cart.html">Cart</a></li>
-          <li class="divider"></li>
-        </ul>
-      </section>
-    </nav>
-  </div>
-</div>
+              <li class="divider"></li>
+              <li class="divider"></li>
+              <li><a href="cart.html">Cart</a></li>
+              <li class="divider"></li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </div>
+
+
+
 
 <div class="row"></br></div>   
     <div class="row">
@@ -531,48 +540,10 @@ function MM_swapImage() { //v3.0
                              <span class="date" style="display:block; font-size:12px; font-weight:bold; color: #6DC4E0">January 12, 2012, Wednesday, at 10:23 a.m.</span>
                              <p style="margin-top: 18px; margin-bottom:18px; margin-right:0px; margin-left:0px">These pills are on the big side but are nice and
 								soft so they go down easy.</p>
-                             <!--<div class="BVRRReviewDisplayStyle5Footer">
-                             	<div class="BVRRReviewSocialLinksContainer">
-                                	<div class="BVRRLabel BVRRReviewBookmarkingLabel">Share:</div>
-										<a onfocus="this.href=bvReplaceTokensInSocialURL(this.href);" onclick="this.href=bvReplaceTokensInSocialURL(this.href);window.open(this.href,'','left=0,top=0,width=626,height=436,toolbar=1,location=0,resizable=1,scrollbars=1'); return false;" rel="nofollow" name="BV_TrackingTag_Review_Display_SocialBookmarkFacebook_90866484" href="http://reviews.cvs.com/3006-en_us/share.htm?site=Facebook&amp;url=http%3A%2F%2Freviews.cvs.com%2F3006-en_us%2F888292%2Fprevagen-prevagen-clearer-thinking-dietary-supplement-reviews%2Freviews.htm%3FreviewID%3D90866484&amp;title=__TITLE__&amp;robot=__ROBOT__&amp;image=http%3A%2F%2Fwww.cvs.com%2Fbizcontent%2Fmerchandising%2Fproductimages%2Flarge%2F89404700103.jpg" onmouseover="this.href=bvReplaceTokensInSocialURL(this.href);" class="BVRRSocialBookmarkingSharingLink BVRRSocialBookmarkingSharingLinkFacebook" target="_blank">
-                                        	<img width="16" height="16" class="BVRRSocialBookmarkLinkImage" src="http://cvspharmacy.ugc.bazaarvoice.com/static/3006-en_us/link-facebook.gif" alt="Facebook" title="Add to Facebook"></a>
-
-                                        <a onfocus="this.href=bvReplaceTokensInSocialURL(this.href);" onclick="this.href=bvReplaceTokensInSocialURL(this.href);window.open(this.href,'','left=0,top=0,width=795,height=700,toolbar=1,location=0,resizable=1,scrollbars=1'); return false;" rel="nofollow" name="BV_TrackingTag_Review_Display_SocialBookmarkTwitter_90866484" href="http://reviews.cvs.com/3006-en_us/share.htm?site=Twitter&amp;url=http%3A%2F%2Freviews.cvs.com%2F3006-en_us%2F888292%2Fprevagen-prevagen-clearer-thinking-dietary-supplement-reviews%2Freviews.htm%3FreviewID%3D90866484&amp;title=__TITLE__&amp;robot=__ROBOT__&amp;image=http%3A%2F%2Fwww.cvs.com%2Fbizcontent%2Fmerchandising%2Fproductimages%2Flarge%2F89404700103.jpg" onmouseover="this.href=bvReplaceTokensInSocialURL(this.href);" class="BVRRSocialBookmarkingSharingLink BVRRSocialBookmarkingSharingLinkTwitter" target="_blank">
-                                        	<img width="16" height="16" class="BVRRSocialBookmarkLinkImage" src="http://cvspharmacy.ugc.bazaarvoice.com/static/3006-en_us/link-twitter.gif" alt="Twitter" title="Tweet this"></a>
-									</div>
-								<div class="BVDI_FV">
-                                	<div class="BVDI_FVVoting BVDI_FVVotingHelpfulness" style="display: block;">
-                                    	<div class="BVDI_FVSum BVDI_FVSumHelpfulness">
-                                        	<span class="BVDI_FVPositive  BVDI_FVLevel2">
-                                            	<span class="BVDIPrefix">+</span>
-                                                <span class="BVDIValue BVDINumber">2</span>
-                                                <span class="BVDISuffix">points</span></span></div>
-                                   		<div class="BVDI_FVCounts BVDI_FVCountsHelpfulness">
-                                    		<span class="BVDI_FVPositive BVDI_FVLevel2">
-                                            	<span class="BVDIValue BVDINumber">2</span>
-                                                <span class="BVDISuffix">of</span></span> 
-                                            <span class="BVDI_FVTotal BVDI_FVLevel2">
-                                            	<span class="BVDIValue BVDINumber">2</span>
-                                            <span class="BVDISuffix">voted this as helpful.</span></span></div>
-                                        <div class="BVDI_FVVotes BVDI_FVVotesHelpfulness">
-                                        	<span class="BVDIPrefix">Was this helpful?</span>
-                                            <span class="BVDI_FVVote BVDI_FVPositive BVDI_FVPositiveUndo BVDI_FVLevel2">
-                                            	<a data-bvcfg="329866788" name="BV_TrackingTag_Review_Display_AddPositiveFeedback_90866484" title="helpful" class="BVDILink BVDIValue" data-bvjsref="http://cvspharmacy.ugc.bazaarvoice.com/3006-en_us/888292/review/90866484/undohelpfulness.djs?format=embeddedhtml&amp;sessionparams=__BVSESSIONPARAMS__&amp;return=http%3A%2F%2Fwww.cvs.com%2Fshop%2Fvitamins%2Fhealth-goals%2Fmemory-support%2Fprevagen-clearer-thinking-dietary-supplement-skuid-888292&amp;innerreturn=http%3A%2F%2Fcvspharmacy.ugc.bazaarvoice.com%2F3006-en_us%2F888292%2Freviews.djs%3Fformat%3Dembeddedhtml&amp;user=__USERID__&amp;authsourcetype=__AUTHTYPE__&amp;submissionparams=__BVSUBMISSIONPARAMETERS__&amp;submissionurl=http%3A%2F%2Fwww.cvs.com%2Fshop%2Freview%2FsubmitReview.jsp" href="javascript://">
-                                                	<span class="BVDILinkSpan">
-                                                    	<span class="BVDILabel">helpful</span>
-                                                        <span class="BVDINumber">2</span></span></a></span>
-                                        	<span class="BVDI_FVVote BVDI_FVNegative BVDI_FVLevel0">
-                                            	<a data-bvcfg="329866788" name="BV_TrackingTag_Review_Display_AddNegativeFeedback_90866484" title="unhelpful" class="BVDILink BVDIValue">
-                                                	<span class="BVDILinkSpan">
-                                                    	<span class="BVDILabel">unhelpful</span>
-                                                        	<span class="BVDINumber">0</span></span></a></span>
-                                           	<span class="BVDI_FVUndo" style="display: none;">http://cvspharmacy.ugc.bazaarvoice.com/3006-en_us/888292/review/90866484/undohelpfulness.djs?format=embeddedhtml&amp;sessionparams=__BVSESSIONPARAMS__&amp;return=http%3A%2F%2Fwww.cvs.com%2Fshop%2Fvitamins%2Fhealth-goals%2Fmemory-support%2Fprevagen-clearer-thinking-dietary-supplement-skuid-888292&amp;innerreturn=http%3A%2F%2Fcvspharmacy.ugc.bazaarvoice.com%2F3006-en_us%2F888292%2Freviews.djs%3Fformat%3Dembeddedhtml&amp;user=__USERID__&amp;authsourcetype=__AUTHTYPE__&amp;submissionparams=__BVSUBMISSIONPARAMETERS__&amp;submissionurl=http%3A%2F%2Fwww.cvs.com%2Fshop%2Freview%2FsubmitReview.jsp</span></div></div>
-                                <div class="BVDI_FVReportLink BVDI_FVReportLinkInappropriate">
-                                	<a data-bvjsref="http://cvspharmacy.ugc.bazaarvoice.com/3006-en_us/888292/review/90866484/inappropriate.djs?format=embeddedhtml&amp;sessionparams=__BVSESSIONPARAMS__&amp;return=http%3A%2F%2Fwww.cvs.com%2Fshop%2Fvitamins%2Fhealth-goals%2Fmemory-support%2Fprevagen-clearer-thinking-dietary-supplement-skuid-888292&amp;innerreturn=http%3A%2F%2Fcvspharmacy.ugc.bazaarvoice.com%2F3006-en_us%2F888292%2Freviews.djs%3Fformat%3Dembeddedhtml&amp;user=__USERID__&amp;authsourcetype=__AUTHTYPE__&amp;submissionparams=__BVSUBMISSIONPARAMETERS__&amp;submissionurl=http%3A%2F%2Fwww.cvs.com%2Fshop%2Freview%2FsubmitReview.jsp" data-bvcfg="329866788" name="BV_TrackingTag_Review_Display_Inappropriate_90866484" href="javascript://" title="Report" class="BVDILink ">
-                                    <span class="BVDILinkSpan">Report inappropriate content</span></a></div></div></div>-->
+                            
                           </div>
                           <div class="form-name float-right" style="float:right">
-                             <img src="images/ratestar4.jpg" style="width: 95px">
+                             <img src="images/ratestaronly.jpg" style="width: 95px">
                           </div>
                         </span> 
                      
@@ -597,7 +568,7 @@ function MM_swapImage() { //v3.0
                      
                           </div>
                           <div class="form-name float-right" style="float:right">
-                             <img src="images/ratestar4.jpg" style="width: 95px">
+                             <img src="images/ratestaronly.jpg" style="width: 95px">
                           </div>
                         </span> 
                         </div>  	                     
@@ -634,12 +605,65 @@ function MM_swapImage() { //v3.0
         <hr>
         <div class="large-12 columns">
           <h4 style="color:black">You might also like:</h4>
-          <a href="product detail_1.html"><img src="images/vitamin1_related1.jpg" width = 200 ></a>
-          <a href="product detail_1.html"><img src="images/vitamin1_related2.jpg" width = 200 ></a>
-          <a href="product detail_1.html"><img src="images/vitamin1_related3.jpg" width = 200 ></a>
-          <a href="product detail_1.html"><img src="images/vitamin1_related4.jpg" width = 200 ></a>
+         
         </div>
         </div>
+        
+      <div class="row">
+    <div class="large-3 small-6 columns"> <a href="product detail_1.html">
+      <div class="image-wrapper overlay-fade-in"> 
+        <!-- <img
+src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
+/> --> 
+        <img src="images/vitamin1.jpg"/>
+        <div class="image-overlay-content">
+          <h2>Prevagen</h2>
+          <p class="price">$39.99</p>
+          <!-- <a href="images/vitamin1.jpg" class="button">Get it</a> --> 
+        </div>
+      </div>
+      </a> </div>
+    <div class="large-3 small-6 columns"> <a href="product detail_2.html">
+      <div class="image-wrapper overlay-fade-in"> 
+        <!-- <img
+src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
+/> --> 
+        <img src="images/vitamin2.jpg"/>
+        <div class="image-overlay-content">
+          <h2>Natures Bounty</h2>
+          <p class="price">$9.99</p>
+          <!-- <a href="images/vitamin2.jpg" class="button">Get it</a> --> 
+        </div>
+      </div>
+      </a> </div>
+    <div class="large-3 small-6 columns"> <a href="product detail_1.html">
+      <div class="image-wrapper overlay-fade-in"> 
+        <!-- <img
+src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
+/> --> 
+        <img src="images/vitamin3.jpg"/>
+        <div class="image-overlay-content">
+          <h2>Gummies</h2>
+          <p class="price">$14.99</p>
+          <!-- <a href="images/vitamin3.jpg" class="button">Get it</a> --> 
+        </div>
+      </div>
+      </a> </div>
+    <div class="large-3 small-6 columns"> <a href="product detail_2.html">
+      <div class="image-wrapper overlay-fade-in"> 
+        <!-- <img
+src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
+/> --> 
+        <img src="images/vitamin5.jpg"/>
+        <div class="image-overlay-content">
+          <h2>Nova Homeopathic</h2>
+          <p class="price">$16.29</p>
+          <!-- <a href="images/vitamin4.jpg" class="button">Get it</a> --> 
+        </div>
+      </div>
+      </a> </div>
+  </div>
+  
 
 
 <footer class="row">
