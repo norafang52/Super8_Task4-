@@ -23,24 +23,25 @@ function multiply() {
 	
 	var objtxtNumber2 = document.getElementById("quantiBox2");
 	var a = objtxtNumber1.value;
-	
-	if(parseInt(a)!=a) {
-		alert("Please enter a valid number");
-		objtxtNumber1.value = 1;
-		return;
-	}
 	if(a == '') {
 		a = 1;
 	}
-	var b = objtxtNumber2.value;
-	if(parseInt(b)!=b) {
-		alert("Please enter a valid number");
-		objtxtNumber2.value = 1;
+	if(parseInt(a)!=a) {
+		alert("Please enter a valid number a");
+		objtxtNumber1.value = 1;
 		return;
 	}
+	
+	var b = objtxtNumber2.value;
 	if (b == '') {
 		b = 1;
 	}
+	if(parseInt(b)!=b) {
+		alert("Please enter a valid number b");
+		objtxtNumber2.value = 1;
+		return;
+	}
+	
 	var priceObj1 = document.getElementById("price1");
 	var priceNum1 = a * 12.5;
 	var priceNum2 = b * 35;
@@ -258,7 +259,7 @@ function subscribe() {
       <td class="remove"><a href="#"><img src="images/delete_icon.png" border="0"/></a></td>
       <td class="thumbnail"><img src="images/vitamin1.jpg"/></td>
       <td class="product-name">Natures Bounty</td>
-      <td class="unit-price">&#36; 12.50</td>
+      <td class="unit-price">&#36; 12.5</td>
       <td class="quantity"><input id="quantiBox1"  type="number" style="width: 50px;" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
       <td class="frequency"> <div class = "row">
                  
@@ -292,14 +293,14 @@ function subscribe() {
                      <select name="ship_frequency" class="visible-for-large" id="ar_frequency2" title="Frequency" onchange="subscribe()">
                        <option >One time purchase</option>
                        <option >1 Month</option>
-                       <option >2 Months</option>
+                       <option selected="selected">2 Months</option>
                        <option >3 Months</option>
                        <option >4 Months</option>
                        <option >5 Months</option>
                        <option >6 Months</option>
                      </select>
                      </div>
-                     <div hidden id = "subscribe_btn2">
+                     <div id = "subscribe_btn2">
                      	<a href="subscribe.html" class="button tiny">Subscribe now</a>
                      </div>
                  
@@ -308,7 +309,7 @@ function subscribe() {
     </tr>
     <tr class="promo">
       <td colspan="5" class="unit-price"><span class="grey">Enter promo code</span></td>
-      <td class="frequency"><input type="text" value="" class="input-text-grey cart-field"></td>
+      <td class="frequency"><input type="text" value="" class="input-text-grey cart-field" placeholder="POMOCODE"></td>
       <td class="price"><a href="#" class="button tiny">Apply</a></td>
     </tr>
     <tr>
