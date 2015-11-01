@@ -71,15 +71,39 @@ function toggleObjFading(id, grayOutIsOn) {
 	}
 }
 function changeText(Id){
+					
+		
 		if(Id == "anchorLogin" ) {
+					
 			var value = document.getElementById('anchorLogin').innerHTML;
+				
 			if(value == "Login") {
-				toggleObjFading('loginContainer', false);
+				toggleObjFading('loginContainer', false);	
+
+				//document.getElementById('fade').style.display='block';	
+				
 			} else {
 			 document.getElementById('anchorLogin').innerHTML ='Login';
+			 document.getElementById('registerorProfleLink').innerHTML ='Register'
+			 //document.getElementById('fade').style.display='none';
 		 }
+		 
 		} else if (Id == "btnLogin"){
-			 document.getElementById('anchorLogin').innerHTML ='Hello Mike  (Logout)';
-			document.getElementById('loginContainer').style.display="none";	
+			document.getElementById('anchorLogin').innerHTML ='Hello Mike (Logout)';
+			document.getElementById('loginContainer').style.display="none";
+			document.getElementById('registerorProfleLink').innerHTML ='My Account';
+			//document.getElementById('fade').style.display='none';
+
 		}		 	
+ }
+ function callDivRegisterOrProfile(Id) {
+    var value =	document.getElementById(Id).innerHTML;
+	if(value == "Register") {
+ 		 document.getElementById('registerContainerSub').style.display='block';
+		 document.getElementById('fade').style.display='block';
+	} else if (value == "My Account") {
+		toggleObjFading('myaccountContainer', false);
+		//document.getElementById('myaccountContainer').style.display='block';
+	}
+	 
  }
