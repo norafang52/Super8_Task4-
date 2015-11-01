@@ -143,11 +143,11 @@ function MM_swapImage() { //v3.0
             </ul>
             <ul class="right">
               <li class="divider"></li>
-               <li > <a id="anchorLogin" href="#" onclick="changeText('anchorLogin');">Login</a>
+              <li > <a id="anchorLogin" href="#" onclick="changeText('anchorLogin');">Hello Mike (Logout)</a>
                   <div id="loginContainer" class="white_contentLogin"> 
-                    <script type="text/javascript">fadeOutObj('loginContainer', 1);</script>
+                   <!--<script type="text/javascript">fadeOutObj('loginContainer', 1);</script>-->
                     <div id="loginStepContainer">
-                      <div> <strong>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="img/btn_close.png" onclick = "document.getElementById('loginContainer').style.display='none'" width="30" height="30"/></strong><br />
+                      <div> <strong>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="img/btn_close.png" onclick = "document.getElementById('loginContainer').style.display='none';		document.getElementById('fade').style.display='none'" width="30" height="30"/></strong><br />
                         <input name="txtUsername" type="text" class="initValStyle" id="txtUsername" onfocus="onFocus(this, 'type your email here')" onblur="onBlur(this)" value="type your email here" size="35" />
                       </div>
                       <br />
@@ -157,12 +157,15 @@ function MM_swapImage() { //v3.0
                       <div>
                         <input type="checkbox" style="color:white"/>
                         Remember me </div>
-                      <div>
-                        <input name="btnLogin" type="submit" id="btnLogin" value="Login" onClick="changeText('btnLogin');"/>
-                        <br />
+                      <div >
+                        <input name="btnLogin" type="submit" id="btnLogin" value="Login"  class="small button"  onClick="changeText('btnLogin');"/>
+                        <a href="under_construction.html" style="color:blue; background-color:white; font-size:14px">Forgot your password?</a>
                       </div>
-                      <div id="assistMessage"> <a href="under_construction.html" style="color:blue; background-color:white">Forgot your password?</a> OR <br />
-                        <a href="#" style="color: black ; background-color:white" >Register using:</a>  </div>
+                      <div> 
+
+                      <br />
+                      
+                        <div style="color: black ; background-color:white ;  font-size:14px" >Register using:</div> </div>
                       <div> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/facebookicon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/pinteresticon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/twittericon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/googleicon.jpg" width ="25" > </a> </div>
                     </div>
                   </div>
@@ -170,18 +173,18 @@ function MM_swapImage() { //v3.0
               <li class="divider"></li>
               <li class="divider"></li>
               <li>
-                  <div id="registerContainer"> <a href = "javascript:void(0)" title="Account Registration" target="_blank" onclick = "document.getElementById('registerContainerSub').style.display='block'"  style="color:white">Register</a> </div>
-                  <div id="registerContainerSub" class="white_content">
+                  <div id="registerContainer"> <a id ="registerorProfleLink" href = "javascript:void(0)" title="Account Registration" target="_blank" onclick = "callDivRegisterOrProfile('registerorProfleLink');"  style="color:white; align-content:center; font-size:14px">My Account</a> </div>
+                  <div id="registerContainerSub" class="white_contentRegistration">
                     <table width="625" border="0" cellpadding="0" cellspacing="0">
                       <tr>
                         <td id="tdEmailErrorScope" colspan="2"><strong>Email<sup style="color:red; font-size:14px" >&nbsp;*</sup></strong><br />
                           <input name="txtEmail" type="text" id="txtEmail" size="35"  placeholder="username@domain.com"
                           onblur="validateEmail(this,'tdEmailErrorScope','divEmailErrorMsg')" />
                           <div id="divEmailErrorMsg" class="errorMsg"> <br />
-                            please ensure the email address you enter is correct e.g. info@upmc.com </div></td>
+                            please ensure the email address you enter is correct e.g. youruser@domain.com </div></td>
                         <td></td>
                         <td></td>
-                        <td align="right" valign="top"><img src="img/btn_close.png" onclick = "document.getElementById('registerContainerSub').style.display='none'" width="30" height="30"/></td>
+                        <td align="right" valign="top"><img src="img/btn_close.png" onclick = "document.getElementById('registerContainerSub').style.display='none';document.getElementById('fade').style.display='none'" width="30" height="30"/></td>
                       </tr>
                       <tr>
                       <tr>
@@ -207,22 +210,22 @@ function MM_swapImage() { //v3.0
                           <input name="txtStreet" type="text" id="txtStreet" size="25" placeholder="Address Line 1 (Optional)"/>
                           <input name="txtNumber" type="text" id="txtNumber" size="25"  placeholder="Address Line 2 (Optional)"/>
                           <input name="txtCity" type="text" id="txtCity" size="25" placeholder="City (Optional)"/>
-                          <input name="txtPostal" type="text" id="txtPostal" size="25"  placeholder="Postal (Optional)"/>
+                          <input name="txtPostal" type="text" id="txtPostal" size="25"  placeholder="Postal Code (Optional)"/>
                           <select name="ddlCountry" id="ddlCountry" style="width:200px">
                             <option>United States</option>
                             <option>Others</option>
                           </select></td>
                       </tr>
                       <tr>
-                        <td style="padding-top:10px" colspan="2"><input name="chkAccept" type="checkbox" id="chkAccept" />
+                        <td style="padding-top:5px" colspan="2"><input name="chkAccept" type="checkbox" id="chkAccept" />
                           I agree to abide by UPMC. <a href="under_construction.html" style="color:white">Terms & Conditions</a></td>
                       </tr>
                       <tr>
-                        <td><input name="btnRegister" type="button" id="btnRegister" value="Register" style="width:100px" onclick="fakeAjaxReg('registerContainerSub', 'regCompMsg')" /></td>
+                        <td><input name="btnRegister" type="button" id="btnRegister" class="small button" value="Register" style="width:100px" onclick="fakeAjaxReg('registerContainerSub', 'regCompMsg');	" /></td>
                       </tr>
                     </table>
                   </div>
-                  <div id="regCompMsg" style="display:none; height:540px"; class="white_content"> <br />
+                  <div id="regCompMsg" style="display:none;" class="white_contentRegistration"> <br />
                     <br />
                     <br />
                     <br />
@@ -232,9 +235,15 @@ function MM_swapImage() { //v3.0
                     Please click the "Done" button below to close this registration page. <br />
                     To start login, please use "Login" button at top right corner. <br />
                     <br />
-                    <input type="button" value="Done" style="width:100px" onclick="document.location.reload()" />
+                    <input type="button" value="Done"  class="small button" style="width:100px" onclick="document.location.reload();" />
                   </div>
-                </li>
+                  <div id = "myaccountContainer" style="display:none" class="white_contentMyAccount">
+                  <ul>
+                  <li ><a href="under_construction.html" style="background:#FFFFFF;color:blue;font-size:12px; line-height:1.5rem; padding:1px " >Profile</a></li><br />
+                  <li ><a href="under_construction.html" style="background:#FFFFFF;color:blue;font-size:12px;line-height:1.5rem; padding:1px ">Track Order</a></li><br />
+                  <li ><a href="under_construction.html" style="background:#FFFFFF;color:blue;font-size:12px;line-height:1.5rem; padding:1px " >My Subscriptions</a></li></ul>
+                  </div>
+    </li>
               <li class="divider"></li>
               <li class="divider"></li>
               <li><a href="cart.html">Cart</a></li>
@@ -351,7 +360,7 @@ function MM_swapImage() { //v3.0
             <div class = "row">
                  <div class="large-2 columns">
                   <div class = "price" style="text-align: left">
-                    <label>Price:&nbsp;</label>
+                    <label style="cursor:default">Price:&nbsp;</label>
                    </div>
               </div>
                   <div class="large-10 columns">
@@ -369,7 +378,7 @@ function MM_swapImage() { //v3.0
           <div class="large-12 columns">
             <div class = "row">
                  <div class="large-2 columns">
-        			<label>quantity:&nbsp;</label>
+        			<label style="cursor:default">quantity:&nbsp;</label>
 		  		</div>
                 <div class="large-2 columns">
         			<input type="text" value="1" size="1" maxlength="2">   
@@ -384,7 +393,7 @@ function MM_swapImage() { //v3.0
               <div class="large-8 columns">
                   <div "ship1" style="text-align: left">  
                   <input id="onetimeOnly" type="radio" name="arOption" value="false" checked="checked" onclick="will();">
-                  <label for="onetimeOnly">Deliver one time only</label>
+                  <label for="onetimeOnly" style="cursor:default">Deliver one time only</label>
                   </div>
            	  </div>
                 <div class="large-4 columns">
@@ -395,7 +404,7 @@ function MM_swapImage() { //v3.0
                  <div class="large-6 columns" style="margin-left:15px; padding:0; text-align:left; box-sizing:border-box; display:block; width: 43%">
                    <div style="text-align: left">  
                     <input id="shipandSave" type="radio"  name="arOption" value="true" onclick="will();">
-                      <label for="shipandSave">Ship this item every</label>
+                      <label for="shipandSave" style="cursor:default">Ship this item every</label>
                     </div>
 			  		</div>
                  <div class="large-2 columns" style="text-align: left">
@@ -507,7 +516,22 @@ function MM_swapImage() { //v3.0
 				</div>
               </section>
               <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3" style="display:none">
-            	<div class="tab-content" style="display: block;">
+            	  <div class="large-12 column" style="display: block; float:left">
+                	 <div class="small-4 columns" style="float:left; margin-left:0pxS">
+                        <p class="price">
+                            <select name="select" onchange="javascript:location.href = this.value;">
+                                <option value="#panel2-3" selected="">Sort By</option>
+                                <option value="#panel2-3">Highest rating</option>
+                                <option value="#panel2-3">Lowest rating</option>
+                                <option value="#panel2-3">Newest</option>
+                                <option value="#panel2-3">Staff reviews</option>
+                                <option value="#panel2-3">The same age range</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" style="display: block;">
                     <div class="single-comment blog-page" style="border:1px solid #C7EEFB; overflow:hidden; padding:20px 15px 5px 15px">
                       <div class="avatar float-left" style="float:left">
                           <img src="images/avatar.png">
@@ -515,7 +539,7 @@ function MM_swapImage() { //v3.0
                       <div class="comment-text blog-single-entry" style="margin:0px 0px 0px 65px">
                       	<span>
                       	  <div class="form-name float-left" style="float:left">
-                             <span class="name" style="display:block; font-size:16px; font-weight:bold; color: #2ba6cb">John Smith</span>
+                             <span class="name" style="display:block; font-size:16px; font-weight:bold; color: #2ba6cb">tina55</span>
                              <span class="date" style="display:block; font-size:12px; font-weight:bold; color: #6DC4E0">January 12, 2012, Wednesday, at 10:23 a.m.</span>
                              <p style="margin-top: 18px; margin-bottom:18px; margin-right:0px; margin-left:0px">These pills are on the big side but are nice and
 								soft so they go down easy.</p>
@@ -540,7 +564,7 @@ function MM_swapImage() { //v3.0
                       <div class="comment-text blog-single-entry" style="margin:0px 0px 0px 65px">
                       	<span>
                       	  <div class="form-name float-left" style="float:left">
-                             <span class="name" style="display:block; font-size:16px; font-weight:bold; color: #2ba6cb">John Smith</span>
+                             <span class="name" style="display:block; font-size:16px; font-weight:bold; color: #2ba6cb">smith0202</span>
                              <span class="date" style="display:block; font-size:12px; font-weight:bold; color: #6DC4E0">January 12, 2012, Wednesday, at 10:23 a.m.</span>
                              <p style="margin-top: 18px; margin-bottom:18px; margin-right:0px; margin-left:0px">These pills are on the big side but are nice and
 								soft so they go down easy.</p>
@@ -554,13 +578,25 @@ function MM_swapImage() { //v3.0
                   </div>			
 				  <div class="comment-form-container" style="padding:0px 10px 0px 0px">
                           <span class="new-comment-heading" style="display: block; color:#2ba6cb; font-size:16px; font-weight: bold; margin:35px 0px 25px 0px">Post Your Comment</span>
-                          <div class="form-name float-left" style="margin:0px 0px 15px 0px; width: 47%; float:left; padding:0; font-size:100%; vertical-align: baseline">
-                              <span style="display: block; color: #6DC4E0; font-size: 12px; font-style: italic">Your Name</span>
-                              <input type="text" value="" class="form-name input-text" style="background-color: #ECECEC; border-radius: 4px; padding:0px 5px; height: 32px; line-height: 32px">
+                          <div class="form-name float-left" style="margin:0px 0px 15px 0px; width: 10%; float:left; padding:0; font-size:100%; vertical-align: baseline">
+                              <span style="display: block; color: #6DC4E0; font-size: 12px; font-style: italic; width: 100px">Choose your Age</span>
+                             
                           </div>
-                          <div class="form-name float-right" style="margin:0px 0px 15px 0px; width: 47%; float:right; padding:0; font-size:100%; vertical-align: baseline">
-                              <span style="display:block; color: #6DC4E0; font-size:12px; font-style:italic">Your E-mail</span>
-                              <input type="text" value="" class="form-name input-text" style="background-color: #ECECEC; border-radius: 4px; padding:0px 5px; height: 32px; line-height: 32px">
+                          <div class="form-name float-left" style="margin:0px 0px 15px 0px; width: 84%; float:left; padding:0; font-size:100%; vertical-align: baseline">
+                             
+                              <div class="small-3 columns" style="float:left; margin-left:0pxS">
+                                  <p class="price">
+                                      <select name="select" >
+                                          <option selected="">age range</option>
+                                          <option >Below 20</option>
+                                          <option >20-30 years old</option>
+                                          <option >30-40 years old</option>
+                                          <option >40-50 years old</option>
+                                          <option >50-60 years old</option>
+                                          <option >Up to 60</option>
+                                      </select>
+                                  </p>
+                              </div>
                           </div>
                           <br class="clear" style="clear:both">
                           <div class="form-comment" style="margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline">
@@ -661,5 +697,6 @@ src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fm
         </div>
         </footer>
 </div>
+<div id="fade" class="black_overlayRegistrationLogin"></div>
 </body>
 </html>
