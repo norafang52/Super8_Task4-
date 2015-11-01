@@ -70,5 +70,5 @@ function fakeAjaxReg(regContainer, regCompMsg) {
 function showRegCompMsg() {
 	regContainerObj.style.display = 'none'; 
 	regCompMsgObj.style.display = 'block';
-	regCompMsgObj.className = "white_content";
+	regCompMsgObj.className = "white_contentRegistration";
 }
