@@ -143,11 +143,11 @@ function MM_swapImage() { //v3.0
             </ul>
             <ul class="right">
               <li class="divider"></li>
-               <li > <a id="anchorLogin" href="#" onclick="changeText('anchorLogin');">Login</a>
+              <li > <a id="anchorLogin" href="#" onclick="changeText('anchorLogin');">Hello Mike (Logout)</a>
                   <div id="loginContainer" class="white_contentLogin"> 
-                    <script type="text/javascript">fadeOutObj('loginContainer', 1);</script>
+                   <!--<script type="text/javascript">fadeOutObj('loginContainer', 1);</script>-->
                     <div id="loginStepContainer">
-                      <div> <strong>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="img/btn_close.png" onclick = "document.getElementById('loginContainer').style.display='none'" width="30" height="30"/></strong><br />
+                      <div> <strong>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="img/btn_close.png" onclick = "document.getElementById('loginContainer').style.display='none';		document.getElementById('fade').style.display='none'" width="30" height="30"/></strong><br />
                         <input name="txtUsername" type="text" class="initValStyle" id="txtUsername" onfocus="onFocus(this, 'type your email here')" onblur="onBlur(this)" value="type your email here" size="35" />
                       </div>
                       <br />
@@ -157,12 +157,15 @@ function MM_swapImage() { //v3.0
                       <div>
                         <input type="checkbox" style="color:white"/>
                         Remember me </div>
-                      <div>
-                        <input name="btnLogin" type="submit" id="btnLogin" value="Login" onClick="changeText('btnLogin');"/>
-                        <br />
+                      <div >
+                        <input name="btnLogin" type="submit" id="btnLogin" value="Login"  class="small button"  onClick="changeText('btnLogin');"/>
+                        <a href="under_construction.html" style="color:blue; background-color:white; font-size:14px">Forgot your password?</a>
                       </div>
-                      <div id="assistMessage"> <a href="under_construction.html" style="color:blue; background-color:white">Forgot your password?</a> OR <br />
-                        <a href="#" style="color: black ; background-color:white" >Register using:</a>  </div>
+                      <div> 
+
+                      <br />
+                      
+                        <div style="color: black ; background-color:white ;  font-size:14px" >Register using:</div> </div>
                       <div> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/facebookicon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/pinteresticon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/twittericon.jpg" width ="25" > </a> <a href="#" onClick="changeText('btnLogin');" style="background-color:white"> <img src="images/googleicon.jpg" width ="25" > </a> </div>
                     </div>
                   </div>
@@ -170,18 +173,18 @@ function MM_swapImage() { //v3.0
               <li class="divider"></li>
               <li class="divider"></li>
               <li>
-                  <div id="registerContainer"> <a href = "javascript:void(0)" title="Account Registration" target="_blank" onclick = "document.getElementById('registerContainerSub').style.display='block'"  style="color:white">Register</a> </div>
-                  <div id="registerContainerSub" class="white_content">
+                  <div id="registerContainer"> <a id ="registerorProfleLink" href = "javascript:void(0)" title="Account Registration" target="_blank" onclick = "callDivRegisterOrProfile('registerorProfleLink');"  style="color:white; align-content:center; font-size:14px">My Account</a> </div>
+                  <div id="registerContainerSub" class="white_contentRegistration">
                     <table width="625" border="0" cellpadding="0" cellspacing="0">
                       <tr>
                         <td id="tdEmailErrorScope" colspan="2"><strong>Email<sup style="color:red; font-size:14px" >&nbsp;*</sup></strong><br />
                           <input name="txtEmail" type="text" id="txtEmail" size="35"  placeholder="username@domain.com"
                           onblur="validateEmail(this,'tdEmailErrorScope','divEmailErrorMsg')" />
                           <div id="divEmailErrorMsg" class="errorMsg"> <br />
-                            please ensure the email address you enter is correct e.g. info@upmc.com </div></td>
+                            please ensure the email address you enter is correct e.g. youruser@domain.com </div></td>
                         <td></td>
                         <td></td>
-                        <td align="right" valign="top"><img src="img/btn_close.png" onclick = "document.getElementById('registerContainerSub').style.display='none'" width="30" height="30"/></td>
+                        <td align="right" valign="top"><img src="img/btn_close.png" onclick = "document.getElementById('registerContainerSub').style.display='none';document.getElementById('fade').style.display='none'" width="30" height="30"/></td>
                       </tr>
                       <tr>
                       <tr>
@@ -207,22 +210,22 @@ function MM_swapImage() { //v3.0
                           <input name="txtStreet" type="text" id="txtStreet" size="25" placeholder="Address Line 1 (Optional)"/>
                           <input name="txtNumber" type="text" id="txtNumber" size="25"  placeholder="Address Line 2 (Optional)"/>
                           <input name="txtCity" type="text" id="txtCity" size="25" placeholder="City (Optional)"/>
-                          <input name="txtPostal" type="text" id="txtPostal" size="25"  placeholder="Postal (Optional)"/>
+                          <input name="txtPostal" type="text" id="txtPostal" size="25"  placeholder="Postal Code (Optional)"/>
                           <select name="ddlCountry" id="ddlCountry" style="width:200px">
                             <option>United States</option>
                             <option>Others</option>
                           </select></td>
                       </tr>
                       <tr>
-                        <td style="padding-top:10px" colspan="2"><input name="chkAccept" type="checkbox" id="chkAccept" />
+                        <td style="padding-top:5px" colspan="2"><input name="chkAccept" type="checkbox" id="chkAccept" />
                           I agree to abide by UPMC. <a href="under_construction.html" style="color:white">Terms & Conditions</a></td>
                       </tr>
                       <tr>
-                        <td><input name="btnRegister" type="button" id="btnRegister" value="Register" style="width:100px" onclick="fakeAjaxReg('registerContainerSub', 'regCompMsg')" /></td>
+                        <td><input name="btnRegister" type="button" id="btnRegister" class="small button" value="Register" style="width:100px" onclick="fakeAjaxReg('registerContainerSub', 'regCompMsg');	" /></td>
                       </tr>
                     </table>
                   </div>
-                  <div id="regCompMsg" style="display:none; height:540px"; class="white_content"> <br />
+                  <div id="regCompMsg" style="display:none;" class="white_contentRegistration"> <br />
                     <br />
                     <br />
                     <br />
@@ -232,9 +235,15 @@ function MM_swapImage() { //v3.0
                     Please click the "Done" button below to close this registration page. <br />
                     To start login, please use "Login" button at top right corner. <br />
                     <br />
-                    <input type="button" value="Done" style="width:100px" onclick="document.location.reload()" />
+                    <input type="button" value="Done"  class="small button" style="width:100px" onclick="document.location.reload();" />
                   </div>
-                </li>
+                  <div id = "myaccountContainer" style="display:none" class="white_contentMyAccount">
+                  <ul>
+                  <li ><a href="under_construction.html" style="background:#FFFFFF;color:blue;font-size:12px; line-height:1.5rem; padding:1px " >Profile</a></li><br />
+                  <li ><a href="under_construction.html" style="background:#FFFFFF;color:blue;font-size:12px;line-height:1.5rem; padding:1px ">Track Order</a></li><br />
+                  <li ><a href="under_construction.html" style="background:#FFFFFF;color:blue;font-size:12px;line-height:1.5rem; padding:1px " >My Subscriptions</a></li></ul>
+                  </div>
+    </li>
               <li class="divider"></li>
               <li class="divider"></li>
               <li><a href="cart.html">Cart</a></li>
@@ -688,5 +697,6 @@ src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fm
         </div>
         </footer>
 </div>
+<div id="fade" class="black_overlayRegistrationLogin"></div>
 </body>
 </html>
