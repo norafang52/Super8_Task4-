@@ -93,36 +93,6 @@ function subscribe() {
 		document.getElementById("subscribe_btn2").style.display = "none";
 	}
 }
-</script>
-<style>
-.black_overlay {
-	display: none;
-	position: fixed;
-	top: 0%;
-	left: 0%;
-	width: 100%;
-	height: 100%;
-	background-color: black;
-	z-index: 1001;
-	-moz-opacity: 0.8;
-	opacity: .80;
-	filter: alpha(opacity=80);
-}
-.white_content {
-	display: none;
-	position: fixed;
-	top: 5%;
-	left: 5%;
-	width: 90%;
-	height: 80%;
-	padding: 16px;
-	border: 16px solid gray;
-	background-color: white;
-	z-index: 1002;
-	overflow: auto;
-}
-</style>
-<script>
 function copy() {
   var tempFirstName1 = document.getElementById("first_name");
   var tempFirstName2 = document.getElementById("first_name1");
@@ -167,13 +137,13 @@ function copy() {
 
 <body>
 <div class="large-12 columns">
-    <div class="row">
+<div class="row">
       <div class="large-12 columns">
         <nav class="top-bar" data-topbar>
           <div class="large-2 columns"> <a href="index.html"><img src="images/upmc_logo.jpg"></a> </div>
           <div class="large-8 columns">
             <input type="search" name="searchTerm" placeholder="Search" autocomplete="off" autocapitalize="off" autocorrect="off" data-options="{'limit':3}"
-						data-touch-text="Search" maxlength="100"/>
+            data-touch-text="Search" maxlength="100"/>
           </div>
                 <div> <a href="searchResultPage-View.html"> <img src="images/searhimages.png" width="30" height="30"/> </a> </div>
         </nav>
@@ -184,8 +154,8 @@ function copy() {
         <nav class="top-bar" data-topbar>
           <section class="top-bar-section">
             <ul class="left">
-			  <li class="divider"></li>
-			  <li><a href="index.html">Home</a></li>
+        <li class="divider"></li>
+        <li><a href="index.html">Home</a></li>
               <li class="divider"></li>
               <li class="has-dropdown"><a href="#">Category</a>
                 <ul class="dropdown">
@@ -199,14 +169,14 @@ function copy() {
                   <li><a href="searchResultPage.html">Stop Smoking</a></li>
                 </ul>
               </li>
-			  <li class="divider"></li>
-			  <li><a href="about-us.html">About Us</a></li>
-			  <li class="divider"></li>
-			  <li class="has-dropdown"><a href="#">Contact Us</a>
+        <li class="divider"></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li class="divider"></li>
+        <li class="has-dropdown"><a href="#">Contact Us</a>
                 <ul class="dropdown">
                     <li><a href="#"><strong>UPMC</strong>, 200 Lothrop St, Pittsburgh, PA 15213<br></a></li>
-					<li><a href="#"><strong>Phone</strong>: (412) 647-8762<br></a></li>
-					<li><a href="#"><strong>E-mail</strong>: info@UPMCpharmarcy.com</a></li>
+          <li><a href="#"><strong>Phone</strong>: (412) 647-8762<br></a></li>
+          <li><a href="#"><strong>E-mail</strong>: info@UPMCpharmarcy.com</a></li>
                 </ul>
               </li>
               
@@ -217,7 +187,7 @@ function copy() {
                   <div id="loginContainer" class="white_contentLogin"> 
                    <!--<script type="text/javascript">fadeOutObj('loginContainer', 1);</script>-->
                     <div id="loginStepContainer">
-                      <div> <strong>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="img/btn_close.png" onclick = "document.getElementById('loginContainer').style.display='none';		document.getElementById('fade').style.display='none'" width="30" height="30"/></strong><br />
+                      <div> <strong>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="img/btn_close.png" onclick = "document.getElementById('loginContainer').style.display='none';    document.getElementById('fade').style.display='none'" width="30" height="30"/></strong><br />
                         <input name="txtUsername" type="text" class="initValStyle" id="txtUsername" onfocus="onFocus(this, 'type your email here')" onblur="onBlur(this)" value="type your email here" size="35" />
                       </div>
                       <br />
@@ -291,7 +261,7 @@ function copy() {
                           I agree to abide by UPMC. <a href="under_construction.html" style="color:white">Terms & Conditions</a></td>
                       </tr>
                       <tr>
-                        <td><input name="btnRegister" type="button" id="btnRegister" class="small button" value="Register" style="width:100px" onclick="fakeAjaxReg('registerContainerSub', 'regCompMsg');	" /></td>
+                        <td><input name="btnRegister" type="button" id="btnRegister" class="small button" value="Register" style="width:100px" onclick="fakeAjaxReg('registerContainerSub', 'regCompMsg');  " /></td>
                       </tr>
                     </table>
                   </div>
@@ -324,7 +294,13 @@ function copy() {
   </div>
 <div class="columns">
 <div width="970" align="center">
-	<div class="row"><div class="large-12 columns" style="width:150px"><div class="large-2 columns" style="width:150px"><h3 style="color:black; font-style:inherit;text-align:start">My Cart</h3></div></div></div>
+  <div class="row">
+    <div class="large-12 columns" style="width:150px">
+      <div class="large-2 columns" style="width:150px">
+        <h3 style="color:black; font-style:inherit;text-align:start">My Cart</h3>
+      </div>
+    </div>
+  </div>
   <table width="970" cellpadding="0" cellspacing="0">
     <tr>
       <td class="remove"><span class="heading">Remove</span></td>
@@ -341,23 +317,20 @@ function copy() {
       <td class="product-name">Natures Bounty</td>
       <td class="unit-price">&#36; 12.5</td>
       <td class="quantity"><input id="quantiBox1"  type="number" style="width: 50px;" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
-      <td class="frequency"> <div class = "row">
-                 
-                   <div style="text-align: left">  
-                     <select name="ship_frequency" class="visible-for-large" id="ar_frequency" title="Frequency" onchange="subscribe()">
-                       <option >One time purchase</option>
-                       <option >1 Month</option>
-                       <option >2 Months</option>
-                       <option >3 Months</option>
-                       <option >4 Months</option>
-                       <option >5 Months</option>
-                       <option >6 Months</option>
-                     </select>
-                     </div>
-                     <div style="display: none;visibility: hidden" id = "subscribe_btn1">
-                     	<a href="subscribe.html" class="button tiny">Subscribe now</a>
-                     </div>
-			</div></td>
+      <td class="frequency"><div class = "row">
+          <div style="text-align: left">
+            <select name="ship_frequency" class="visible-for-large" id="ar_frequency" title="Frequency" onchange="subscribe()">
+              <option >One time purchase</option>
+              <option >1 Month</option>
+              <option >2 Months</option>
+              <option >3 Months</option>
+              <option >4 Months</option>
+              <option >5 Months</option>
+              <option >6 Months</option>
+            </select>
+          </div>
+          <div style="display: none;visibility: hidden" id = "subscribe_btn1"> <a href="subscribe.html" class="button tiny">Subscribe now</a> </div>
+        </div></td>
       <td class="price" id="price1">&#36; 12.5</td>
     </tr>
     <tr class="last">
@@ -366,29 +339,24 @@ function copy() {
       <td class="product-name">Prevagen</td>
       <td class="unit-price">&#36; 35</td>
       <td class="quantity"><input id="quantiBox2"  type="number" style="width: 50px;" placeholder="1" min="1" max="99" contenteditable="false" onBlur="multiply()" /></td>
-      <td class="frequency"> <div class = "row">
-                 
-                 
-                   <div style="text-align: left">  
-                     <select name="ship_frequency" class="visible-for-large" id="ar_frequency2" title="Frequency" onchange="subscribe()">
-                       <option >One time purchase</option>
-                       <option >1 Month</option>
-                       <option selected="selected">2 Months</option>
-                       <option >3 Months</option>
-                       <option >4 Months</option>
-                       <option >5 Months</option>
-                       <option >6 Months</option>
-                     </select>
-                     </div>
-                     <div id = "subscribe_btn2">
-                     	<a href="subscribe.html" class="button tiny">Subscribe now</a>
-                     </div>
-                 
-			</div></td>
+      <td class="frequency"><div class = "row">
+          <div style="text-align: left">
+            <select name="ship_frequency" class="visible-for-large" id="ar_frequency2" title="Frequency" onchange="subscribe()">
+              <option >One time purchase</option>
+              <option >1 Month</option>
+              <option selected="selected">2 Months</option>
+              <option >3 Months</option>
+              <option >4 Months</option>
+              <option >5 Months</option>
+              <option >6 Months</option>
+            </select>
+          </div>
+          <div id = "subscribe_btn2"> <a href="subscribe.html" class="button tiny">Subscribe now</a> </div>
+        </div></td>
       <td class="price" id="price2">&#36; 35</td>
     </tr>
-    <tr class="promo">
-      <td colspan="5" class="unit-price"><span class="grey">Enter promo code</span></td>
+    <tr class="promo" >
+      <td colspan="5" class="unit-price" ><span class="grey"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enter promo code</span></td>
       <td class="frequency"><input type="text" value="" class="input-text-grey cart-field" placeholder="POMOCODE"></td>
       <td class="price"><a href="#" class="button tiny">Apply</a></td>
     </tr>
@@ -409,452 +377,401 @@ function copy() {
     </tr>
   </table>
   <div class="row">
-      <div class="large-12 columns" align="right"> <a href="index.html" class="button tiny" onclick="goBack()">Back</a> <a href="javascript:void(0)" onclick = "document.getElementById('checkout1').style.display='block';document.getElementById('fade').style.display='block'" class="button tiny">Proceed</a>
-        <div id="checkout1" class="white_content"> 
-<div>
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css' class="small-offset-5">
-
-
-
-
-<div id="wrap" align = "left">
-  <div id="accordian">
-
-
-    <div class="step" id="step2">
-      <div class="number">
-        <span>1</span>
-      </div>
-      <div class="title">
-        <h5>Shipping Address</h5>
-      </div>
-
-    </div>
-    <div class="content" id="address">
-      <form class="go-right">
-        <div>
-        <input type="name" name="first_name" value="" id="first_name" placeholder="Mike" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/><label for="first_name">First Name</label>
-        </div>
-        <div>
-        <label for="last_name">Last Name</label>
-        <input type="name" name="last_name" value="" id="last_name" placeholder="Smith" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Last Name"/><label for="last_name">Last Name</label>
-        </div>
-        <div>
-        <input type="phone" name="telephone" value="" id="telephone" placeholder="(555)-867-5309" data-trigger="change" data-validation-minlength="1" data-type="number" data-required="true" data-error-message="Enter Your Telephone Number"/><label for="telephone">Telephone</label>
-        </div>
-        <div>
-        <input type="name" name="company" value="" id="company" placeholder="Company" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="false"/><label for="Company">Company</label>
-        </div>
-        <div>
-        <input type="name" name="address" value="" id="addressShipping" placeholder="123 Main Street" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Address"/><label for="Address">Address</label>
-        </div>
-        <div>
-        <input type="name" name="city" value="" id="city" placeholder="City" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing City"/><label for="city">City</label>
-        </div>
-        <div>
-        <div class="state_options">
-              <div class="select">
-                    <select id="state">
-                        <option value = "1">Alabama</option>
-                        <option value = "2">Alaska</option>
-                        <option value = "3">Arkansas</option>
-                    </select>
-                  </div>
-                  <label class="state" for="state">State</label>
-              </div>
-        </div>
-        <div>
-        <input type="text" name="zip" value="" id="zip" placeholder="12345" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Zip Code"/><label for="zip">Zip Code</label>
-        </div>
-        <div>
-        <div class="country_options">
-          <label class="country" for="country">Country</label>
-              <div class="select">
-                    <select id="country">
-                        <option value = "1">United States</option>
-                        <option value = "2">United Kingdom</option>
-                        <option value = "3">Uganda</option>
-                    </select>
-                  </div>
-              </div>
-        </div>
-
-      </form>
-    </div>
-
-
-    <div class="step" id="step2">
-      <div class="number">
-        <span>2</span>
-      </div>
-      <div class="title">
-        <h5>Billing Address</h5>
-      </div>
-
-    </div>
-    <div class="content" id="address">
-      <form class="go-right">
-        <div>
-        <input type="checkbox"  onclick = "copy()"/>
-        <label class="same" for="same_as_shipping" name = "checkbox" id = "shipBillCheck">Same As Shipping Address</label><span></span>
-        </div>
-        <div>
-        <input type="name" name="first_name" value="" id="first_name1" placeholder="Mike" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/><label for="first_name">First Name</label>
-        </div>
-        <div>
-        <label for="last_name">Last Name</label>
-        <input type="name" name="last_name" value="" id="last_name1" placeholder="Smith" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Last Name"/><label for="last_name">Last Name</label>
-        </div>
-        <div>
-        <input type="phone" name="telephone" value="" id="telephone1" placeholder="(555)-867-5309" data-trigger="change" data-validation-minlength="1" data-type="number" data-required="true" data-error-message="Enter Your Telephone Number"/><label for="telephone">Telephone</label>
-        </div>
-        <div>
-        <input type="name" name="company" value="" id="company1" placeholder="Company" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="false"/><label for="Company">Company</label>
-        </div>
-        <div>
-        <input type="name" name="address" value="" id="addressBilling" placeholder="123 Main Street" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Address"/><label for="Address">Address</label>
-        </div>
-        <div>
-        <input type="name" name="city" value="" id="city1" placeholder="City" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing City"/><label for="city">City</label>
-        </div>
-        <div>
-        <div class="state_options">
-              <div class="select">
-                    <select id="state1">
-                        <option value = "1">Alabama</option>
-                        <option value = "2">Alaska</option>
-                        <option value = "3">Arkansas</option>
-                    </select>
-                  </div>
-                  <label class="state" for="state">State</label>
-              </div>
-        </div>
-        <div>
-        <input type="name" name="zip" value="" id="zip1" placeholder="12345" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Zip Code"/><label for="zip">Zip Code</label>
-        </div>
-        <div>
-        <div class="country_options">
-          <label class="country" for="country">Country</label>
-              <div class="select">
-                    <select id="country1">
-                        <option value = "1">United States</option>
-                        <option value = "2">United Kingdom</option>
-                        <option value = "3">Uganda</option>
-                    </select>
-                  </div>
-              </div>
-        </div>
-
-      </form>
-      <a class="continue" href = "javascript:void(0)" onclick = "document.getElementById('checkout1').style.display='none';document.getElementById('checkout2').style.display='block'">continue</a>
-    </div>
-    </div>
-  </div>
-</div>
-    </div>  	  
-  </div>
-  <!-- new add checkout page 2-->
-    <div id="checkout2" class="white_content">
-<!-- add checkout page 2 content -->
-<div>
-      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css' class="small-offset-5">
-<div class = "large-12 columns" align = "left">
-  <div class="row">
-<div id="wrap">
-  <div id="accordian">
-    <div class="step" id="step3">
-      <div class="number">
-        <span>3</span>
-      </div>
-      <div class="title">
-        <h5>Shipping Method</h5>
-      </div>
-
-
-    </div>
-    <div class="content" id="shipping">
-      <form>
-        <div>
-          <input type="radio" name = "shipping" id="shipping_0" value="0"/><label for="shipping_0"> Free Shipping(10 business days)</label>
-<br />
-          <input type="radio" name = "shipping" id="shipping_1" value="1"/><label for="shipping_1"> Standard Shipping(5-7 business days) $4.00</label>
-<br />
-          <input type="radio" name = "shipping" id="shipping_2" value="2"/><label for="shipping_2"> Express Shipping(2-3 business days) $8.00</label>
-<br />  
-          <input type="radio" name = "shipping" id="shipping_3" value="3"/><label for="shipping_3"> Overnight Shipping $12.00</label>
-        </div>
-      </form>
-
-    </div>
-    <div class="step" id="step4">
-      <div class="number">
-        <span>4</span>
-      </div>
-      <div class="title">
-        <h5>Payment Method</h5>
-      </div>
-    </div>
-    <div class="content" id="payment">
-      <div class="left credit_card">
-      <form class="go-right">
-        <div>
-        <input type="text" name="card_number" value="" id="card_number" placeholder="xxxx-xxxx-xxxx-xxxx" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Number"/><label for="card_number">Card Number</label>
-        </div>
-        <div>
-          <div class="expiry">  
-              <div class="month_select">
-                <select name="exp_month" value="" id="exp_month" placeholder="" data-trigger="change" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Expiration Date">
-              <option value = "1">01 (Jan)</option>
-                        <option value = "2">02 (Feb)</option>
-                        <option value = "3">03 (Mar)</option>
-                        <option value = "4">04 (Apr)</option>
-                        <option value = "5">05 (May)</option>
-                        <option value = "6">06 (Jun)</option>
-                        <option value = "7">07 (Jul)</option>
-                        <option value = "8">08 (Aug)</option>
-                        <option value = "9">09 (Sep)</option>
-                        <option value = "10">10 (Oct)</option>
-                        <option value = "11">11 (Nov)</option>
-                        <option value = "12">12 (Dec)</option>
-                        </select>
-                      </div>
-                      <span class="divider">-</span>
-                      <div class="year_select">
-                <select name="exp_year" value="" id="exp_year" placeholder="" data-trigger="change" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Expiration Date">
-              <option value = "1">01 </option>
-                        <option value = "2">02 </option>
-                        <option value = "3">03 </option>
-                        <option value = "4">04 </option>
-                        <option value = "5">05 </option>
-                        <option value = "6">06 </option>
-                        <option value = "7">07 </option>
-                        <option value = "8">08 </option>
-                        <option value = "9">09 </option>
-                        <option value = "10">10 </option>
-                        <option value = "11">11 </option>
-                        <option value = "12">12 </option>
-                            <option value = "13">13 </option>
-                        <option value = "14">14 </option>
-                        <option value = "15">15 </option>
-                        <option value = "16">16 </option>
-                        <option value = "17">17 </option>
-                        <option value = "18">18 </option>
-                        <option value = "19">19 </option>
-                        <option value = "20">20 </option>
-                            <option value = "21">21 </option>
-                        <option value = "22">22 </option>
-                        <option value = "23">23 </option>
-                        <option value = "24">24 </option>
-                        <option value = "25">25 </option>
-                        <option value = "26">26 </option>
-                        <option value = "27">27 </option>
-                        <option value = "28">28 </option>
-                        <option value = "29">29 </option>
-                        <option value = "30">30 </option>
-                        <option value = "31">31 </option>
-                        </select>
+    <div class="large-12 columns" align="right"> <a href="index.html" class="button tiny" onclick="goBack()">Back</a> <a href="javascript:void(0)" onclick = "document.getElementById('checkout1').style.display='block';document.getElementById('fade').style.display='block'" class="button tiny">Proceed</a>
+      <div id="checkout1" class="white_content">
+        <table align="left" width="100%" style="border:0px">
+          <div id="accordian" style="width:40%">
+            <tr>
+              <td><div id="wrap1" >
+                  <div class="step" id="step1">
+                    <div >
+                      <h6 style="color:black" align = "left"><strong> 1. Shipping Address </strong></h6>
                     </div>
                   </div>
-                 <label class="exp_date" for="Exp_Date">Exp Date</label>
-              </div>
-              <div class="sec_num">
-              <div>
-                <input type="text" name="ccv" value="" id="ccv" placeholder="123" data-trigger="change" data-validation-minlength="3" data-type="name" data-required="true" data-error-message="Enter Your Card Security Code"/>
-                <label for="ccv">Security Code</label>
+                  <div class="content" id="address1">
+                    <form class="go-right">
+                      <div>
+                        <input type="name" name="first_name" value="" id="first_name" placeholder="Mike" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/>
+                        <label for="first_name">First Name</label>
+                      </div>
+                      <div>
+                        <label for="last_name">Last Name</label>
+                        <input type="name" name="last_name" value="" id="last_name" placeholder="Smith" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Last Name"/>
+                        <label for="last_name">Last Name</label>
+                      </div>
+                      <div>
+                        <input type="phone" name="telephone" value="" id="telephone" placeholder="(555)-867-5309" data-trigger="change" data-validation-minlength="1" data-type="number" data-required="true" data-error-message="Enter Your Phone Number"/>
+                        <label for="telephone">Phone Number</label>
+                      </div>
+                      <div>
+                        <input type="name" name="address" value="" id="addressShipping" placeholder="123 Main Street" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Address"/>
+                        <label for="Address">Address</label>
+                      </div>
+                      <div>
+                        <input type="name" name="city" value="" id="city" placeholder="City" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing City"/>
+                        <label for="city">City</label>
+                      </div>
+                      <div>
+                        <input type="name" name="emailaddress" value="" id="emailaddress" placeholder="mike123@gmail.com" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing City"/>
+                        <label for="emailaddress">Email Address</label>
+                      </div>
+                      <div class="select" style="height:35px">
+                        <select id="state">
+                          <option value = "1">Alabama</option>
+                          <option value = "2">Alaska</option>
+                          <option value = "3">Arkansas</option>
+                        </select>
+                      </div>
+                      <div>
+                        <input type="name" name="zip" value="" id="zip" placeholder="12345" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Zip Code"/>
+                        <label for="zip">Zip Code</label>
+                      </div>
+                      <div class="country_options">
+                        <div class="select">
+                          <select id="country">
+                            <option value = "1">United States</option>
+                            <option value = "2">United Kingdom</option>
+                            <option value = "3">Uganda</option>
+                          </select>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div></td>
+              <td><div id="wrap2" align = "right">
+                  <div class="step" id="step2">
+                    <div class="title">
+                      <h6 style="color:black" align="left"><strong>2. Billing Address </strong></h6>
+                    </div>
+                  </div>
+                  <div class="content" id="address2">
+                    <form class="go-right">
+                      <div>
+                        <input type="name" name="first_name" value="" id="first_name1" placeholder="Mike" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/>
+                        <label for="first_name">First Name</label>
+                      </div>
+                      <div>
+                        <label for="last_name">Last Name</label>
+                        <input type="name" name="last_name" value="" id="last_name1" placeholder="Smith" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Last Name"/>
+                        <label for="last_name">Last Name</label>
+                      </div>
+                      <div>
+                        <input type="phone" name="telephone" value="" id="telephone1" placeholder="(555)-867-5309" data-trigger="change" data-validation-minlength="1" data-type="number" data-required="true" data-error-message="Enter Your Telephone Number"/>
+                        <label for="telephone">Telephone</label>
+                      </div>
+                      <div>
+                        <input type="name" name="address" value="" id="addressBilling" placeholder="123 Main Street" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Address"/>
+                        <label for="Address">Address</label>
+                      </div>
+                      <div>
+                        <input type="name" name="city" value="" id="city1" placeholder="City" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing City"/>
+                        <label for="city">City</label>
+                      </div>
+                      <div>
+                        <input type="name" name="emailAddress1" value="" id="emailaddress1" placeholder="mike123@gmail.comm" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing City"/>
+                        <label for="emailAddress1">Email Address</label>
+                      </div>
+                      <div class="select" style="height:35px">
+                        <select id="state1">
+                          <option value = "1">Alabama</option>
+                          <option value = "2">Alaska</option>
+                          <option value = "3">Arkansas</option>
+                        </select>
+                      </div>
+                      <div>
+                        <input type="name" name="zip1" value="" id="zip" placeholder="12345" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Zip Code"/>
+                        <label for="zip1">Zip Code</label>
+                      </div>
+                      <div class="country_options">
+                        <div class="select">
+                          <select id="country1">
+                            <option value = "1">United States</option>
+                            <option value = "2">United Kingdom</option>
+                            <option value = "3">Uganda</option>
+                          </select>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td align="left"><div>
+                  <input type="checkbox"  onclick = "copy()" checked>
+                  <label class="same" for="same_as_shipping" name = "checkbox" id = "shipBillCheck">Same As Shipping Address</label>
+                </div></td>
+              <td align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a id = "BackCheckout1" href = "javascript:void(0)" class="tiny button" onclick = "document.getElementById('checkout1').style.display='none';document.getElementById('fade').style.display='none'">Back</a> &nbsp; <a id = "ContinueCheckout1" href = "javascript:void(0)" class="tiny button" onclick = "document.getElementById('checkout1').style.display='none';document.getElementById('checkout2').style.display='block'">Continue</a></td>
+            </tr>
+          </div>
+        </table>
+      </div>
+    </div>
+    <!-- new add checkout page 2-->
+    <div id="checkout2" class="white_content"> 
+      <div>
+       <table align="left" width="100%" style="border:0px; height:400px" >
+         <div id="accordian3">
+        <tr>
+        <td  colspan="2">
+              <div class="title">
+                  <h6 style="color:black" align="left"><strong>3. Shipping Method</strong></h6>
+                </div>              
+        </td>
+        </tr>
+        <tr>
+        <td colspan="2">
+            <div>
+                 <input type="radio" name = "shipping" id="shipping_0" value="0" checked> Free Shipping(10 business days) <br />
+                 <input type="radio" name = "shipping" id="shipping_1" value="1" > Standard Shipping(5-7 business days) $4.00 <br />
+                 <input type="radio" name = "shipping" id="shipping_2" value="2" > Express Shipping(2-3 business days) $8.00 <br />
+                 <input type="radio" name = "shipping" id="shipping_3" value="3" > Overnight Shipping $12.00 <br />
+             </div>
+             
+		</td>
+        </tr>
+        <tr>
+        	<td colspan="2">
+            <div class="title">
+                  <h6 style="color:black" align="left"><strong>4. Payment Method</strong></h6>
+                </div>
+            </td>
+        </tr>
+        <tr>
+        <td width="245px" valign="top">
+			<div class="content" id="payment">
+                  <div class="left credit_card">
+                    <form class="go-right">
+                      <div>
+                        <input type="text" name="card_number" value="" id="card_number" placeholder="xxxx-xxxx-xxxx-xxxx" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Number" style="width:250px"/>
+                        <label for="card_number" style="height:37px">Card Number</label>
+                      </div>
+                      <div>
+                        <div class="expiry">
+                          <div class="month_select">
+                            <select name="exp_month" value="" id="exp_month" placeholder="" data-trigger="change" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Expiration Date" style="width:80px">
+                              <option value = "1">01 (Jan)</option>
+                              <option value = "2">02 (Feb)</option>
+                              <option value = "3">03 (Mar)</option>
+                              <option value = "4">04 (Apr)</option>
+                              <option value = "5">05 (May)</option>
+                              <option value = "6">06 (Jun)</option>
+                              <option value = "7">07 (Jul)</option>
+                              <option value = "8">08 (Aug)</option>
+                              <option value = "9">09 (Sep)</option>
+                              <option value = "10">10 (Oct)</option>
+                              <option value = "11">11 (Nov)</option>
+                              <option value = "12">12 (Dec)</option>
+                            </select>
+                          -       
+                            <select name="exp_year" value="" id="exp_year" placeholder="" data-trigger="change" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Expiration Date" style="width:80px">
+                              <option value = "15">2015 </option>
+                              <option value = "16">2016 </option>
+                              <option value = "17">2017 </option>
+                              <option value = "18">2018 </option>
+                              <option value = "19">2019 </option>
+                              <option value = "20">2020 </option>
+                              <option value = "21">2021 </option>
+                              <option value = "22">2022 </option>
+                            </select>
+                          <label class="exp_date" for="Exp_Date" style="height:37px; width:80px ; color:black">&nbsp;&nbsp;Exp Date</label>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <div class="sec_num">
+                        <div>
+                          <input type="text" name="ccv" value="" id="ccv" placeholder="123" data-trigger="change" data-validation-minlength="3" data-type="name" data-required="true" data-error-message="Enter Your Card Security Code"/>
+                          <label for="ccv" style="height:37px">Security Code</label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+        </td>
+        <td>
+        <div class="right">
+                    <div class="accepted"> 
+                    <span><img src="http://i.imgur.com/Z5HVIOt.png" style="max-width:30%"></span> 
+                    <span><img src="http://i.imgur.com/Le0Vvgx.png" style="max-width:30%"></span> 
+                    <span><img src="http://i.imgur.com/D2eQTim.png" style="max-width:30%"></span> 
+                    <span><img src="http://i.imgur.com/Pu4e7AT.png" style="max-width:30%"></span> 
+                    <span><img src="http://i.imgur.com/ewMjaHv.png" style="max-width:30%"></span> 
+                    <span><img src="http://i.imgur.com/3LmmFFV.png" style="max-width:30%"></span> 
+                   </div>
+                   </div>
+        </td>
+        </tr>
+        <tr align="right">
+        <td colspan="2">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a id = "BackCheckout2" href = "javascript:void(0)" class="tiny button" onclick = "document.getElementById('checkout2').style.display='none';document.getElementById('checkout1').style.display='block'">Back</a> &nbsp; 
+        <a id = "ContinueCheckout2" href = "javascript:void(0)" class="tiny button" onclick = "document.getElementById('checkout2').style.display='none';document.getElementById('checkout3').style.display='block'">Continue</a>
+        
+        </td>
+        </tr>
+        </div>
+        </table>
+        <div class = "large-12 columns" align = "left">
+          <div class="row">
+            <div id="wrap3">
+              
             </div>
           </div>
-          </form>
-      </div>
-      <div class="right">
-        <div class="accepted">
-          <span><img src="http://i.imgur.com/Z5HVIOt.png"></span>
-          <span><img src="http://i.imgur.com/Le0Vvgx.png"></span>
-          <span><img src="http://i.imgur.com/D2eQTim.png"></span>
-          <span><img src="http://i.imgur.com/Pu4e7AT.png"></span>
-          <span><img src="http://i.imgur.com/ewMjaHv.png"></span>
-          <span><img src="http://i.imgur.com/3LmmFFV.png"></span>
         </div>
-        <br>
-        </br>
-        <br>
-        </br>
-<a class="continue" href = "javascript:void(0)" onclick = "document.getElementById('checkout2').style.display='none';document.getElementById('checkout3').style.display='block'">Continue</a>
       </div>
-
-
     </div>
-    </div> 
-</div>
-</div>
-    </div>
-</div>
-    </div>
-    <div id="checkout3" class="white_content" align = "left">
-<!-- Add check out 3 content --> 
-      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css' class="small-offset-5">
-<body>
-<div class = "large-12 columns">
-  <div class="row">
-<div id="wrap">
-  <div id="accordian">
+    <div id="checkout3" class="white_content" align = "left"> 
+            <div id="accordian">
+            <table>
+            <tr>
+            <td colspan="5">
+                <div class="title">
+                  <h6 style="color:black" align="left"><strong>5. Finalize Order </strong></h6>
+                </div>
+            <td>
+            </tr>
+            <td>
+            	<div class="product_image"> <a href="product detail_1.html"><img src="images/vitamin1.jpg"/></a> </div>
+            </td>
+            <td>
+                    <div class="product_details"> <span class="product_name">Prevagen</span> </div>
+            </td>
+            
+            <td>
+           		 <span class="quantity">1</span> <span class="price">$39.99</span>
+            </td>
+            <td>
+	            <span class="title">Billing:</span>
+            </td>
+            <td>
+				 <div class="address_reviewed"> <span class="name">Mike Smith</span> <span class="address">123 Main Street</span> 			<span class="location">Everytown, USA, 12345</span> <span class="phone">(123)867-5309</span> </div>
+            </td>
+            <tr align="right">
+            <td>
+            </td>
+            <td colspan="2">
+              <div class="totals"> <span>Subtotal <span id="sub_price">$39.99</span></span> <br /> <span>Tax <span id="sub_tax">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$2.00</span></span><br /> <span >Shipping <span id="sub_ship">$4.00</span></span> </div>          
+            </td>
+  		    <td>
+	            <span class="title">Shipping:</span>
+            </td>
+            <td>
+				 <div class="address_reviewed"> <span class="name">Mike Smith</span> <span class="address">123 Main Street</span> 			<span class="location">Everytown, USA, 12345</span> <span class="phone">(123)867-5309</span> </div>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            <div > <span>Total <span id="calculated_total">$45.99</span></span> </div>
+            </td>
+            <td>
+				 <span class="title">Payment:</span>
+            </td>
+            <td>
+            	        <div class="payment_reviewed"> <span class="method">Visa</span> <span class="number_hidden">xxxx-xxxx-xxxx-1111</span> </div>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="3">
+            </td>
+            <td colspan="2">
+        <a id = "BackCheckout3" href = "javascript:void(0)" class="tiny button" onclick = "document.getElementById('checkout3').style.display='none';document.getElementById('checkout2').style.display='block'">Back</a> &nbsp;
 
-
-
-    <div class="step" id="step5">
-      <div class="number">
-        <span>5</span>
+         <a class="tiny button" id="complete" href="checkout - Successful page update.html">Complete Order</a> <br />
+                  <span class="sub">By selecting this button you agree to the purchase and subsequent payment for this order.</span> 
+            </td>
+            </tr>
+            </table>                
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="title">
-        <h5>Finalize Order</h5>
-      </div>
-
     </div>
-    <div class="content" id="final_products">
-      <div class="left" id="ordered">
-        <div class="products">
-          <div class="product_image"> <a href="product detail_1.html"><img src="images/vitamin1.jpg"/></a>
-          </div>
-          <div class="product_details">
-            <span class="product_name">Prevagen</span>
-            <span class="quantity">1</span>
-            <span class="price">$39.99</span>
-          </div>
-        </div>
-        <div class="totals">
-          <span class="subtitle">Subtotal <span id="sub_price">$39.99</span></span>
-          <span class="subtitle">Tax <span id="sub_tax">$2.00</span></span>
-          <span class="subtitle">Shipping <span id="sub_ship">$4.00</span></span>
-        </div>
-        <div class="final">
-          <span class="title">Total <span id="calculated_total">$45.99</span></span>
-        </div>
-      </div>  
-      <div class="right" id="reviewed">
-        <div class="billing">
-          <span class="title">Billing:</span>
-          <div class="address_reviewed">
-            <span class="name">John Smith</span>
-            <span class="address">123 Main Street</span>
-            <span class="location">Everytown, USA, 12345</span>
-            <span class="phone">(123)867-5309</span>
-          </div>
-        </div>
-        <div class="shipping">
-          <span class="title">Shipping:</span>
-          <div class="address_reviewed">
-            <span class="name">John Smith</span>
-            <span class="address">123 Main Street</span>
-            <span class="location">Everytown, USA, 12345</span>
-            <span class="phone">(123)867-5309</span>
-          </div>
-        </div>
-        <div class="payment">
-          <span class="title">Payment:</span>
-          <div class="payment_reviewed">
-            <span class="method">Visa</span>
-            <span class="number_hidden">xxxx-xxxx-xxxx-1111</span>
-          </div>
-        </div>
-        <div id="complete">
-        <a class="big_button" id="complete" href="checkout - Successful page update.html">Complete Order</a>
-        <span class="sub">By selecting this button you agree to the purchase and subsequent payment for this order.</span> 
-      </div>
-
-
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-        <div id="fade" class="black_overlay"></div>
-  <div class="row">
+    <div id="fade" class="black_overlay"></div>
+    <div class="row">
       <div class="large-12 columns" align = "left">
         <div class="radius panel">
           <h5><b>You may also like</b></h5>
         </div>
-       </div>
-   </div>
-  <div class="row">
-    <div class="large-3 small-6 columns"> <a href="product detail_1.html">
-      <div class="image-wrapper overlay-fade-in"> 
-        <!-- <img
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-3 small-6 columns"> <a href="product detail_1.html">
+        <div class="image-wrapper overlay-fade-in"> 
+          <!-- <img
 src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
 /> --> 
-        <img src="images/vitamin1.jpg"/>
-        <div class="image-overlay-content">
-          <h2>Prevagen</h2>
-          <p class="price">$39.99</p>
-          <!-- <a href="images/vitamin1.jpg" class="button">Get it</a> --> 
-        </div>
-      </div>
-      </a> </div>
-    <div class="large-3 small-6 columns"> <a href="product detail_2.html">
-      <div class="image-wrapper overlay-fade-in"> 
-        <!-- <img
-src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
-/> --> 
-        <img src="images/vitamin2.jpg"/>
-        <div class="image-overlay-content">
-          <h2>Natures Bounty</h2>
-          <p class="price">$9.99</p>
-          <!-- <a href="images/vitamin2.jpg" class="button">Get it</a> --> 
-        </div>
-      </div>
-      </a> </div>
-    <div class="large-3 small-6 columns"> <a href="product detail_1.html">
-      <div class="image-wrapper overlay-fade-in"> 
-        <!-- <img
-src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
-/> --> 
-        <img src="images/vitamin3.jpg"/>
-        <div class="image-overlay-content">
-          <h2>Gummies</h2>
-          <p class="price">$14.99</p>
-          <!-- <a href="images/vitamin3.jpg" class="button">Get it</a> --> 
-        </div>
-      </div>
-      </a> </div>
-    <div class="large-3 small-6 columns"> <a href="product detail_2.html">
-      <div class="image-wrapper overlay-fade-in"> 
-        <!-- <img
-src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
-/> --> 
-        <img src="images/vitamin5.jpg"/>
-        <div class="image-overlay-content">
-          <h2>Nova Homeopathic</h2>
-          <p class="price">$16.29</p>
-          <!-- <a href="images/vitamin4.jpg" class="button">Get it</a> --> 
-        </div>
-      </div>
-      </a> </div>
-  </div>  
-</div> </div>
-<footer class="row">
-        <div class="large-12 columns">
-          <hr>
-          <div class="row">
-            <div class="large-6 columns">
-              <p>© Copyright Super Eight.</p>
-            </div>
-            <div class="large-6 columns">
-              <ul class="inline-list right">
-                <li><a href="under_construction.html">Terms of Use</a></li>
-                <li><a href="under_construction.html">Accessibility</a></li>
-                <li><a href="under_construction.html">Privacy Policy</a></li>
-              </ul>
-            </div>
+          <img src="images/vitamin1.jpg"/>
+          <div class="image-overlay-content">
+            <h2>Prevagen</h2>
+            <p class="price">$39.99</p>
+            <!-- <a href="images/vitamin1.jpg" class="button">Get it</a> --> 
           </div>
         </div>
-        </footer>
+        </a> </div>
+      <div class="large-3 small-6 columns"> <a href="product detail_2.html">
+        <div class="image-wrapper overlay-fade-in"> 
+          <!-- <img
+src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
+/> --> 
+          <img src="images/vitamin2.jpg"/>
+          <div class="image-overlay-content">
+            <h2>Natures Bounty</h2>
+            <p class="price">$9.99</p>
+            <!-- <a href="images/vitamin2.jpg" class="button">Get it</a> --> 
+          </div>
+        </div>
+        </a> </div>
+      <div class="large-3 small-6 columns"> <a href="product detail_1.html">
+        <div class="image-wrapper overlay-fade-in"> 
+          <!-- <img
+src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
+/> --> 
+          <img src="images/vitamin3.jpg"/>
+          <div class="image-overlay-content">
+            <h2>Gummies</h2>
+            <p class="price">$14.99</p>
+            <!-- <a href="images/vitamin3.jpg" class="button">Get it</a> --> 
+          </div>
+        </div>
+        </a> </div>
+      <div class="large-3 small-6 columns"> <a href="product detail_2.html">
+        <div class="image-wrapper overlay-fade-in"> 
+          <!-- <img
+src="https://tourneau.scene7.com/is/image/tourneau/DEV9900004?hei=450&wid=300&fmt=png-alpha&resMode=bicub&op_sharpen=1"
+/> --> 
+          <img src="images/vitamin5.jpg"/>
+          <div class="image-overlay-content">
+            <h2>Nova Homeopathic</h2>
+            <p class="price">$16.29</p>
+            <!-- <a href="images/vitamin4.jpg" class="button">Get it</a> --> 
+          </div>
+        </div>
+        </a> </div>
+    </div>
+  </div>
 </div>
+<footer class="row">
+  <div class="large-12 columns">
+    <hr>
+    <div class="row">
+      <div class="large-6 columns">
+        <p>© Copyright Super Eight.</p>
+      </div>
+      <div class="large-6 columns">
+        <ul class="inline-list right">
+          <li><a href="under_construction.html">Terms of Use</a></li>
+          <li><a href="under_construction.html">Accessibility</a></li>
+          <li><a href="under_construction.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 <div id="fade" class="black_overlayRegistrationLogin"></div>
 </body>
 </html>
